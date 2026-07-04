@@ -61,7 +61,11 @@ are all legitimate values.
   name-transfer donor/receiver pairs, e.g. 9th ↔ James M. Wood.
 - **categories** — at least one. Add new categories to `CATEGORIES` freely, but
   check whether an existing one fits first. Current set: person, alive, governor,
-  destination, aspiration, renamed, borrowed, disputed.
+  destination, aspiration, renamed, borrowed, disputed, nature, descriptive,
+  place, number, event, unresearched. Use "unresearched" for an entry with
+  `namedAfter: null` and genuinely nothing found yet (not simply an uncertain
+  candidate — that's "disputed") — e.g. a street outside Kines's coverage where
+  no source turned up an origin at all. Swap it out once research lands.
 - **sources** — every entry needs at least one; include the Kines page whenever
   one exists, plus whatever justifies each specific year/name claim.
 

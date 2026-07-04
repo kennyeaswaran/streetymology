@@ -455,6 +455,141 @@ const STREET_DATA = {
         ]
       }
     ]
+  },
+
+  "Towne Avenue": {
+    name: "Towne Avenue",
+    namedAfter: "Alban Nelson Towne (1829–1895), general manager of the Southern Pacific Railroad",
+    namedAfterLink: null,
+    planned: null,
+    built: "1887",
+    note: "Named alongside [[Stanford Avenue]] and [[Crocker Street]] when subdividers of Joseph Wolfskill's old DTLA orchard donated 13 acres at 4th & Alameda for a new SPRR station (the Arcade Depot, opened 1888) and honored the railroad's brass.",
+    categories: ["person", "alive"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Towne Avenue", url: "https://lastreetnames.com/street/towne-avenue-dtla/" }
+    ]
+  },
+
+  "Crocker Street": {
+    name: "Crocker Street",
+    namedAfter: "{{Charles Crocker}} (1822–1888), Southern Pacific Railroad executive and one of the “Big Four” financiers of the Central Pacific",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Charles_Crocker",
+    planned: null,
+    built: "1887 (as Stanford Avenue)",
+    nameHistory: [
+      { from: "1887", until: "?", name: "Stanford Avenue",
+        origin: "named for SPRR president Leland Stanford, part of the same 1887 package as Towne and Ruth (now Stanford) Avenues {{(source)}}",
+        originLink: "https://lastreetnames.com/street/towne-avenue-dtla/" },
+      { from: "?", until: null, name: "Crocker Street",
+        origin: "renamed for Crocker once the “Stanford” name moved a block over to the former Ruth Avenue {{(source)}}",
+        originLink: "https://lastreetnames.com/street/towne-avenue-dtla/" }
+    ],
+    note: "Sibling to [[Towne Avenue]] and [[Stanford Avenue]] — all three trace to the 1887 SPRR station land deal. The exact renaming year is not yet researched.",
+    categories: ["person", "renamed"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Towne Avenue (recounts the Crocker/Stanford street swap)", url: "https://lastreetnames.com/street/towne-avenue-dtla/" },
+      { title: "Wikipedia: Charles Crocker", url: "https://en.wikipedia.org/wiki/Charles_Crocker" }
+    ]
+  },
+
+  "Stanford Avenue": {
+    name: "Stanford Avenue",
+    namedAfter: "{{Leland Stanford}} (1824–1893), president of the Southern Pacific Railroad and governor of California 1862–1863",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Leland_Stanford",
+    planned: null,
+    built: "1887 (as Ruth Avenue)",
+    nameHistory: [
+      { from: "1887", until: "?", name: "Ruth Avenue",
+        origin: "presumably named for a daughter of landowner Joseph Wolfskill, whose old DTLA orchard was being subdivided {{(source)}}",
+        originLink: "https://lastreetnames.com/street/towne-avenue-dtla/" },
+      { from: "?", until: null, name: "Stanford Avenue",
+        origin: "took over the Stanford name once the original Stanford Avenue, a block over, was renamed Crocker Street {{(source)}}",
+        originLink: "https://lastreetnames.com/street/towne-avenue-dtla/" }
+    ],
+    note: "Sibling to [[Towne Avenue]] and [[Crocker Street]] — all three trace to the 1887 SPRR station land deal. The exact renaming year is not yet researched.",
+    categories: ["person", "renamed", "governor"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Towne Avenue (recounts the Crocker/Stanford street swap)", url: "https://lastreetnames.com/street/towne-avenue-dtla/" },
+      { title: "Wikipedia: Leland Stanford", url: "https://en.wikipedia.org/wiki/Leland_Stanford" }
+    ]
+  },
+
+  "Wall Street": {
+    name: "Wall Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "The Southern California Flower Market (1912, at 421 Wall St.) and later the American Florists' Exchange settled here, making it the core of today's Flower District. The name's own origin is not yet researched: not covered by Kines, and a search across Wikipedia, Homestead Museum, Los Angeles Revisited, LAPL, and a citywide SurveyLA historic context statement turned up no source tying it to New York's Wall Street or to an actual wall.",
+    categories: ["unresearched"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Wholesale District, Los Angeles", url: "https://en.wikipedia.org/wiki/Wholesale_District,_Los_Angeles" },
+      { title: "Wikipedia: Los Angeles Flower District", url: "https://en.wikipedia.org/wiki/Los_Angeles_Flower_District" }
+    ]
+  },
+
+  "Santee Street": {
+    name: "Santee Street",
+    namedAfter: "{{Milton Santee}} (1835–1901), city councilman 1884–1886; later a mining and railroad investor in San Diego County",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Milton_Santee",
+    planned: null,
+    built: "1886",
+    note: "Santee later moved to San Diego County, where his second wife had the town of Cowleston renamed Santee in his honor in 1893 — a name that town keeps today.",
+    categories: ["person", "alive", "governor"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Santee Street", url: "https://lastreetnames.com/street/santee-street/" },
+      { title: "Wikipedia: Milton Santee", url: "https://en.wikipedia.org/wiki/Milton_Santee" }
+    ]
+  },
+
+  "Santee Alley": {
+    name: "Santee Alley",
+    namedAfter: "Named for adjacent Santee Street, itself honoring 1880s city councilman {{Milton Santee}} (1835–1901)",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Milton_Santee",
+    planned: null,
+    built: "not yet researched (known as just \"The Alley\" as of 1982; rebranded Santee Alley sometime after)",
+    note: "Runs between [[Santee Street]] and Maple Avenue; grew out of wholesale vendors in the Fashion District selling overstock through their back doors on weekends.",
+    categories: ["person"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Los Angeles Fashion District", url: "https://en.wikipedia.org/wiki/Los_Angeles_Fashion_District" },
+      { title: "The Santee Alley: The Story of Santee Alley", url: "http://thesanteealley.blogspot.com/2013/09/the-story-of-santee-alley.html" }
+    ]
+  },
+
+  "Maple Avenue": {
+    name: "Maple Avenue",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "The western edge of today's Flower District and Fashion District (Maple to Main, 7th to 12th by 1982); not covered by Kines, and no source found for the origin of the name itself — plausibly just the tree, as with Olive and Flower Streets, but that's unconfirmed here.",
+    categories: ["unresearched"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Los Angeles Flower District", url: "https://en.wikipedia.org/wiki/Los_Angeles_Flower_District" },
+      { title: "Wikipedia: Los Angeles Fashion District", url: "https://en.wikipedia.org/wiki/Los_Angeles_Fashion_District" }
+    ]
+  },
+
+  "San Julian Street": {
+    name: "San Julian Street",
+    namedAfter: "Possibly {{St. Julian the Hospitaller}}, patron saint of travelers and innkeepers — an interpretive reading (per J. Michael Walker's 2008 book on L.A.'s saint-named streets) rather than a documented namesake",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Julian_the_Hospitaller",
+    planned: null,
+    built: { text: "1880s", url: "https://uscatholic.org/articles/200909/street-saints-los-angeles-is-full-of-them/" },
+    note: null,
+    categories: ["person", "disputed"],
+    disputed: true,
+    sources: [
+      { title: "J. Michael Walker, “Street Saints: Los Angeles Is Full of Them,” U.S. Catholic (Sept. 2009)", url: "https://uscatholic.org/articles/200909/street-saints-los-angeles-is-full-of-them/" },
+      { title: "Wikipedia: Skid Row, Los Angeles", url: "https://en.wikipedia.org/wiki/Skid_Row,_Los_Angeles" }
+    ]
   }
 };
 
@@ -611,7 +746,8 @@ const CATEGORIES = [
   { id: "descriptive", label: "Descriptive of role or position" },
   { id: "place",       label: "Named for a place" },
   { id: "number",      label: "Numbered streets" },
-  { id: "event",       label: "Named for an event" }
+  { id: "event",       label: "Named for an event" },
+  { id: "unresearched",label: "Origin not yet researched" }
 ];
 
 // Similar / related projects, shown from the title-bar button.
