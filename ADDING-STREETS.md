@@ -68,6 +68,14 @@ are all legitimate values.
   no source turned up an origin at all. Swap it out once research lands.
 - **sources** — every entry needs at least one; include the Kines page whenever
   one exists, plus whatever justifies each specific year/name claim.
+- **When research comes up empty** — a street you've genuinely looked into but
+  whose origin no source explains gets `namedAfter: null` plus the "unknown"
+  category ("Researched — origin not yet found"; renders violet on the map,
+  distinct from grey = not yet researched at all). The checker enforces that
+  `namedAfter: null` and "unknown" travel together. Keep sources as the record
+  of what WAS found (context, dates, neighboring history), and use the note for
+  clearly-labeled leads (e.g. Gladys and the Wolfskill-family naming pattern) —
+  speculation is fine in a note as long as it's flagged as speculation.
 
 ## Segments (streets whose stretches have different histories)
 
@@ -92,6 +100,32 @@ When one modern street absorbed several older ones, split it:
   origin line in BOTH roadways' histories: the receiving segment ("name
   transferred from …") and, when we add it, the donor street ("renamed …, its
   name passing to …").
+
+## Official records for renamings and tracts
+
+Street renamings and new subdivisions left paper trails; when a date matters,
+prefer citing the official record (or a newspaper report of it) over a
+secondary summary:
+
+- **City Council ordinances and minutes** — every official renaming (e.g.
+  Wolfskill→Central 1897, Castelar→Hill 1960) was a Council action. The L.A.
+  City Archives & Records Center (Erwin Piper Technical Center) holds minutes
+  and indexes back to 1850; recent decades are searchable online via the City
+  Clerk's Council File Index.
+- **Newspaper reports of Council actions** — often the easiest linkable proxy
+  for the ordinance itself. The California Digital Newspaper Collection
+  (cdnc.ucr.edu) has the Herald from the 1870s–1900s free (see the Hill Street
+  entry's 1874 citation); the L.A. Times archive via LAPL/ProQuest covers the
+  rest.
+- **Tract maps** — new streets (and their first names) appear on recorded
+  subdivision maps, e.g. the Wolfskill Tract or Kysor's Central Park tract.
+  L.A. County recorded tract maps are searchable through the County DPW map
+  index, and the city's NavigateLA (navigatela.lacity.org) overlays recorded
+  tract boundaries and numbers.
+- **Bernice Kimball, “Street Names of Los Angeles” (Bureau of Engineering,
+  1988)** — the BOE's own compendium of name changes, compiled from city
+  records; not online, but LAPL holds it, and Kines relies on it. Worth
+  consulting to pin dates the web can't.
 
 ## Freeways and numbered streets
 

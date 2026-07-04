@@ -108,6 +108,7 @@
   <div class="legend">
     <div><span class="swatch" style="background:#2e6f9e"></span> history available</div>
     <div><span class="swatch" style="background:#e8a020"></span> highlighted by filter</div>
+    <div><span class="swatch" style="background:#8e6bb8"></span> researched, origin not yet found</div>
     <div><span class="swatch" style="background:#c0c0c0"></span> not yet researched</div>
   </div>
   <div class="count" id="count"></div>
@@ -144,6 +145,7 @@ const COLOR_DATA      = "#2e6f9e";
 const COLOR_HIGHLIGHT = "#e8a020";
 const COLOR_NODATA    = "#c0c0c0";
 const COLOR_DIMMED    = "#dcd6c8";
+const COLOR_UNKNOWN   = "#8e6bb8"; // researched, but origin not yet found
 
 // visible line weight by highway class (roughly matches drawn width)
 const WEIGHTS = { motorway: 9, trunk: 8, primary: 7, secondary: 6, tertiary: 5,
@@ -247,7 +249,11 @@ function clearFilters() {
 function styleFor(street) {
   const data = street.entry;
   if (!data) return { color: COLOR_NODATA, opacity: 0.7 };
-  if (activeFilters.size === 0) return { color: COLOR_DATA, opacity: 0.9 };
+  if (activeFilters.size === 0) {
+    return data.categories.includes("unknown")
+      ? { color: COLOR_UNKNOWN, opacity: 0.9 }
+      : { color: COLOR_DATA, opacity: 0.9 };
+  }
   const matches = data.categories.some(c => activeFilters.has(c));
   return matches ? { color: COLOR_HIGHLIGHT, opacity: 1 }
                  : { color: COLOR_DIMMED, opacity: 0.8 };
@@ -286,14 +292,17 @@ function linkify(text, url) {
   return `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`;
 }
 
-// Notes may cross-reference other streets with [[Street Key]] or
-// [[Street Key|display label]] — rendered as a link that jumps the map to
-// that street and opens its box.
-function renderNote(text) {
-  return esc(text).replace(/\[\[(.+?)\]\]/g, (m, inner) => {
+// Notes, namedAfter, and nameHistory origins may cross-reference other streets
+// with [[Street Key]] or [[Street Key|display label]] — rendered as a link
+// that jumps the map to that street and opens its box.
+function crossLinks(html) {
+  return html.replace(/\[\[(.+?)\]\]/g, (m, inner) => {
     const [key, label] = inner.split("|");
     return `<a href="#" data-street="${key}">${label || key}</a>`;
   });
+}
+function renderNote(text) {
+  return crossLinks(esc(text));
 }
 
 function popupHtml(street) {
@@ -314,7 +323,7 @@ function popupHtml(street) {
     }).join("") + `</div>`;
   }
   if (d.namedAfter) {
-    html += `<div class="namedafter">Named after: ${linkify(d.namedAfter, d.namedAfterLink)}</div>`;
+    html += `<div class="namedafter">Named after: ${crossLinks(linkify(d.namedAfter, d.namedAfterLink))}</div>`;
   }
   // planned/built accept a plain string or { text, url }
   const fact = v => {
@@ -334,7 +343,7 @@ function popupHtml(street) {
       const span = f.until === null ? esc(f.from) + "–" : esc(f.from) + "–" + esc(f.until);
       html += `<li>${span} ${esc(f.name)}`;
       if (f.origin) {
-        html += `<ul><li class="origin">${linkify(f.origin, f.originLink)}</li></ul>`;
+        html += `<ul><li class="origin">${crossLinks(linkify(f.origin, f.originLink))}</li></ul>`;
       }
       html += `</li>`;
     });

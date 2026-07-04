@@ -60,3 +60,7 @@ Full workflow in ADDING-STREETS.md.
 - Solano Canyon street-name histories (Buena Vista/N. Broadway dates): https://www.solanocanyon.org/street-name-histories.html
 - Ord/Hutton 1849 survey (LAPL): https://tessa2.lapl.org/digital/collection/maps/id/42/
 - Calisphere (historic maps & photos): https://calisphere.org/
+- California Digital Newspaper Collection (Herald etc., renaming ordinances): https://cdnc.ucr.edu/
+- L.A. City Archives & Records Center (Council minutes/ordinances to 1850): https://clerk.lacity.gov/records
+- NavigateLA (recorded tract boundaries): https://navigatela.lacity.org/
+- Bernice Kimball, "Street Names of Los Angeles" (BOE, 1988) — at LAPL; the city's own renaming compendium

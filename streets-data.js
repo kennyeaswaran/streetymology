@@ -200,7 +200,7 @@ const STREET_DATA = {
     namedAfterLink: "https://en.wikipedia.org/wiki/San_Pedro,_Los_Angeles",
     planned: null,
     built: "by 1853",
-    note: "No longer reaches San Pedro; it merges into Avalon Blvd.",
+    note: "No longer reaches San Pedro; it merges into Avalon Blvd. Its northernmost block, on the edge of Little Tokyo, became [[Judge John Aiso Street]] in 1997.",
     categories: ["destination"],
     disputed: false,
     sources: [
@@ -457,6 +457,143 @@ const STREET_DATA = {
     ]
   },
 
+  "Wilde Street": {
+    name: "Wilde Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "Sits in the same warehouse pocket as [[Industrial Street]] and [[Merchant Street]], near Central Ave and 4th Place; no source found for the name's origin, and not covered by Kines.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Industrial Street": {
+    name: "Industrial Street",
+    namedAfter: "Descriptive of the surrounding warehouse and manufacturing district",
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "Today lined with early-20th-century warehouses turned lofts (Toy Factory Lofts, Biscuit Company Lofts) in the Arts District.",
+    categories: ["descriptive"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Merchant Street": {
+    name: "Merchant Street",
+    namedAfter: "Descriptive — presumably for the wholesale merchants of the surrounding produce/warehouse district",
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: null,
+    categories: ["descriptive"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Wholesale District, Los Angeles", url: "https://en.wikipedia.org/wiki/Wholesale_District,_Los_Angeles" }
+    ]
+  },
+
+  // TODO when South L.A. coverage is added: segment Central — the Wolfskill→
+  // Central (1897) lineage below applies to the downtown stretch only; the
+  // southern stretch carried the Central name from 1883 (central to Vernon).
+  "Central Avenue": {
+    name: "Central Avenue",
+    namedAfter: "Central not to Los Angeles but to {{Vernon}}, just south of the city limits when it was platted",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Vernon,_California",
+    planned: null,
+    built: "by 1883; put on the map by 1887 via developer Ezra F. Kysor's Central Park tract",
+    nameHistory: [
+      { from: "?", until: "1897", name: "Wolfskill Street",
+        origin: "named for {{William Wolfskill}}'s old citrus ranch, which this stretch ran through",
+        originLink: "https://en.wikipedia.org/wiki/William_Wolfskill" },
+      { from: "1897", until: null, name: "Central Avenue", origin: null, originLink: null }
+    ],
+    note: "Central's stretch through South L.A. became the heart of Black Los Angeles in the 20th century — jazz clubs, the California Eagle newspaper — a history outside this map's downtown coverage.",
+    categories: ["descriptive", "renamed"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Central Avenue", url: "https://lastreetnames.com/street/central-avenue/" },
+      { title: "Wikipedia: William Wolfskill", url: "https://en.wikipedia.org/wiki/William_Wolfskill" }
+    ]
+  },
+
+  "Alameda Street": {
+    name: "Alameda Street",
+    namedAfter: "Spanish for a tree-lined avenue, from {{álamo}} (“cottonwood tree”)",
+    namedAfterLink: "https://en.wiktionary.org/wiki/alameda",
+    planned: null,
+    built: "named Feb. 2, 1855, though the road (or an earlier one nearby) may already have been informally called an alameda",
+    note: "Runs from Chinatown to Wilmington (20+ miles); railroad tracks have paralleled it since 1869, when the Los Angeles & San Pedro Railroad — SoCal's first locomotive line — opened.",
+    categories: ["nature", "descriptive"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Alameda Street", url: "https://lastreetnames.com/street/alameda-street/" }
+    ]
+  },
+
+  "Agatha Street": {
+    name: "Agatha Street",
+    namedAfter: "Agatha Sabichi (1871–1963), daughter of prominent landowner and City Council president {{Frank Sabichi}} (1842–1900), on whose land the street was platted",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Frank_Sabichi",
+    planned: null,
+    built: "1897",
+    note: "Her mother Magdalena was a daughter of pioneer settler William Wolfskill; Agatha herself later married water-board president John Joseph Fay Jr.",
+    categories: ["person", "alive"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Agatha Street", url: "https://lastreetnames.com/street/agatha-street/" },
+      { title: "Wikipedia: Frank Sabichi", url: "https://en.wikipedia.org/wiki/Frank_Sabichi" }
+    ]
+  },
+
+  "Kohler Street": {
+    name: "Kohler Street",
+    namedAfter: "Charles Kohler (1830–1887), San Francisco-based wine merchant (of Kohler & Frohling) whose vineyards once covered this ground",
+    namedAfterLink: null,
+    planned: null,
+    built: "1887",
+    note: "A different, earlier Kohler Street once ran where [[9th Street]] now lies, between San Pedro and Alameda; this stretch took on the name in 1887, months after Kohler suffered a fatal stroke on a San Francisco cable car.",
+    categories: ["person"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Kohler Street", url: "https://lastreetnames.com/street/kohler-street/" }
+    ]
+  },
+
+  "Gladys Avenue": {
+    name: "Gladys Avenue",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "In the heart of Skid Row (Gladys Park sits at 6th & Gladys). Given its proximity to [[Stanford Avenue]] (originally Ruth Avenue, 1887) and [[Agatha Street]] (1897) — both apparently named for women connected to the Wolfskill family, on land they or their in-laws were subdividing — Gladys might follow the same pattern, but no source names a Wolfskill relative called Gladys, and Kines hasn't covered this street.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "LA Parks: Gladys Park (6th & Gladys St.)", url: "https://recreation.parks.lacity.gov/park/6th-gladys-street" }
+    ]
+  },
+
+  "Ceres Avenue": {
+    name: "Ceres Avenue",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "Ceres was the Roman goddess of agriculture — a tempting fit for a street in the old produce district — but no source confirms that was the actual reasoning here; not covered by Kines.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Ceres (mythology)", url: "https://en.wikipedia.org/wiki/Ceres_(mythology)" }
+    ]
+  },
+
   "Towne Avenue": {
     name: "Towne Avenue",
     namedAfter: "Alban Nelson Towne (1829–1895), general manager of the Southern Pacific Railroad",
@@ -524,7 +661,7 @@ const STREET_DATA = {
     planned: null,
     built: "not yet researched",
     note: "The Southern California Flower Market (1912, at 421 Wall St.) and later the American Florists' Exchange settled here, making it the core of today's Flower District. The name's own origin is not yet researched: not covered by Kines, and a search across Wikipedia, Homestead Museum, Los Angeles Revisited, LAPL, and a citywide SurveyLA historic context statement turned up no source tying it to New York's Wall Street or to an actual wall.",
-    categories: ["unresearched"],
+    categories: ["unknown"],
     disputed: false,
     sources: [
       { title: "Wikipedia: Wholesale District, Los Angeles", url: "https://en.wikipedia.org/wiki/Wholesale_District,_Los_Angeles" },
@@ -569,7 +706,7 @@ const STREET_DATA = {
     planned: null,
     built: "not yet researched",
     note: "The western edge of today's Flower District and Fashion District (Maple to Main, 7th to 12th by 1982); not covered by Kines, and no source found for the origin of the name itself — plausibly just the tree, as with Olive and Flower Streets, but that's unconfirmed here.",
-    categories: ["unresearched"],
+    categories: ["unknown"],
     disputed: false,
     sources: [
       { title: "Wikipedia: Los Angeles Flower District", url: "https://en.wikipedia.org/wiki/Los_Angeles_Flower_District" },
@@ -589,6 +726,178 @@ const STREET_DATA = {
     sources: [
       { title: "J. Michael Walker, “Street Saints: Los Angeles Is Full of Them,” U.S. Catholic (Sept. 2009)", url: "https://uscatholic.org/articles/200909/street-saints-los-angeles-is-full-of-them/" },
       { title: "Wikipedia: Skid Row, Los Angeles", url: "https://en.wikipedia.org/wiki/Skid_Row,_Los_Angeles" }
+    ]
+  },
+
+  "Judge John Aiso Street": {
+    name: "Judge John Aiso Street",
+    namedAfter: "{{John Fujio Aiso}} (1909–1987), the highest-ranking Japanese American officer in the U.S. Army in World War II and the first Japanese American named to the California State Judiciary",
+    namedAfterLink: "https://en.wikipedia.org/wiki/John_Aiso",
+    planned: null,
+    built: "not yet researched",
+    nameHistory: [
+      { from: "?", until: "1997", name: "San Pedro Street",
+        origin: "this was the northernmost block of [[San Pedro Street]], on the outskirts of Little Tokyo",
+        originLink: null },
+      { from: "1997", until: null, name: "Judge John Aiso Street", origin: null, originLink: null }
+    ],
+    note: null,
+    categories: ["person", "renamed"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Judge John Aiso Street", url: "https://lastreetnames.com/street/judge-john-aiso-street/" },
+      { title: "Wikipedia: John Aiso", url: "https://en.wikipedia.org/wiki/John_Aiso" }
+    ]
+  },
+
+  "Astronaut Ellison S Onizuka Street": {
+    name: "Astronaut Ellison S. Onizuka Street",
+    namedAfter: "{{Ellison Onizuka}} (1946–1986), the first Asian American in space, killed in the 1986 Space Shuttle Challenger disaster",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Ellison_Onizuka",
+    planned: null,
+    built: "not yet researched",
+    nameHistory: [
+      { from: "?", until: "1988", name: "Weller Street", origin: "not yet researched", originLink: null },
+      { from: "1988", until: null, name: "Astronaut Ellison S. Onizuka Street",
+        origin: "renamed in Onizuka's honor two years after the Challenger explosion, with a memorial plaque and shuttle model at the street's center {{(source)}}",
+        originLink: "https://lastreetnames.com/street/astronaut-ellison-s-onizuka-street/" }
+    ],
+    note: "The longest street name in the city.",
+    categories: ["person", "renamed"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Astronaut Ellison S. Onizuka Street", url: "https://lastreetnames.com/street/astronaut-ellison-s-onizuka-street/" },
+      { title: "LAPL: The Long and Winding Story of the Streets of Los Angeles", url: "https://www.lapl.org/news-stories/articles/long-and-winding-story-streets-los-angeles" },
+      { title: "Wikipedia: Ellison Onizuka", url: "https://en.wikipedia.org/wiki/Ellison_Onizuka" }
+    ]
+  },
+
+  "Ducommun Street": {
+    name: "Ducommun Street",
+    namedAfter: "{{Charles Louis Ducommun}} (1820–1896), watchmaker and merchant who had a mansion here; his hardware store grew into today's Ducommun Inc., California's oldest continuously operating company",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Ducommun",
+    planned: null,
+    built: "by 1875",
+    note: null,
+    categories: ["person", "alive"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Ducommun Street", url: "https://lastreetnames.com/street/ducommun-street/" },
+      { title: "Wikipedia: Ducommun", url: "https://en.wikipedia.org/wiki/Ducommun" }
+    ]
+  },
+
+  "Vignes Street": {
+    name: "Vignes Street",
+    namedAfter: "{{Jean-Louis Vignes}} (1780–1862), California's first commercial winemaker, whose El Aliso vineyard once covered this ground",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Jean-Louis_Vignes",
+    planned: null,
+    built: "1874",
+    note: "Modern historians favor Jean-Louis, but two nephews who worked at the winery — Jean-Marie and Vital Vignes — were also nominated as namesakes in their own obituaries; the street may honor the family generally.",
+    categories: ["person", "disputed"],
+    disputed: true,
+    sources: [
+      { title: "L.A. Street Names: Vignes Street", url: "https://lastreetnames.com/street/vignes-street/" },
+      { title: "Wikipedia: Jean-Louis Vignes", url: "https://en.wikipedia.org/wiki/Jean-Louis_Vignes" }
+    ]
+  },
+
+  "Garey Street": {
+    name: "Garey Street",
+    namedAfter: "Almost certainly Thomas Andrew Garey (1830–1909), citrus nurseryman and co-founder of Pomona — his was the only Garey family in town when the street was named",
+    namedAfterLink: null,
+    planned: null,
+    built: "c. 1877",
+    note: "Later absorbed the former Amelia and Messer streets.",
+    categories: ["person", "alive"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Garey Street", url: "https://lastreetnames.com/street/garey-street/" }
+    ]
+  },
+
+  "Jackson Street": {
+    name: "Jackson Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "A short Little Tokyo street near [[Judge John Aiso Street]] and Ducommun St. Not covered by Kines (whose only \"Jackson Street\" entry is an unrelated street in Burbank), and no source found for this one's origin.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Little Tokyo, Los Angeles", url: "https://en.wikipedia.org/wiki/Little_Tokyo,_Los_Angeles" }
+    ]
+  },
+
+  "Rose Street": {
+    name: "Rose Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "by 1898 (Sanjuro Mizuno's Santa Fe Hotel, the city's first Japanese boardinghouse, stood at 1st and Rose)",
+    note: "Not covered by Kines; no source found for the name's origin.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Little Tokyo, Los Angeles", url: "https://en.wikipedia.org/wiki/Little_Tokyo,_Los_Angeles" }
+    ]
+  },
+
+  "Toriumi Plaza": {
+    name: "Toriumi Plaza",
+    namedAfter: "Rev. Howard Toriumi (1916–1987), Union Church minister who led the fight to preserve Little Tokyo through 1960s–70s redevelopment",
+    namedAfterLink: null,
+    planned: null,
+    built: "2012",
+    note: "Sits atop a parking garage at the northwest corner of 1st and [[Judge John Aiso Street]].",
+    categories: ["person"],
+    disputed: false,
+    sources: [
+      { title: "Little Tokyo Historical Society: Naming Projects (Rev. Howard Toriumi, 2012)", url: "https://www.littletokyohs.org/naming-projects" }
+    ]
+  },
+
+  "Japanese Village Plaza Mall": {
+    name: "Japanese Village Plaza Mall",
+    namedAfter: "Descriptive — a shopping plaza built in traditional Japanese village style as part of Little Tokyo's 1970s redevelopment",
+    namedAfterLink: null,
+    planned: null,
+    built: "1978",
+    note: "Designed by architect David Hyun, with a Yagura fire tower as its centerpiece, meant to keep the neighborhood's mom-and-pop shops intact through redevelopment.",
+    categories: ["descriptive"],
+    disputed: false,
+    sources: [
+      { title: "Discover Nikkei: Shopping Mall in Little Tokyo", url: "https://discovernikkei.org/en/journal/2016/11/16/shopping-mall/" }
+    ]
+  },
+
+  "Winston Street": {
+    name: "Winston Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "by 1887 (118 Winston St. dates to that year)",
+    note: "Runs through the Toy District/Skid Row; also home to \"Indian Alley,\" a hub of the Native American community since the 1960s. No source found for the street name's own origin.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "These Days LA: The Arcane History of 118 Winston, Part I", url: "https://www.thesedaysla.com/blogs/communique/los-angeles-history-lesson-118-winston-st" },
+      { title: "Wikipedia: Indian Alley", url: "https://en.wikipedia.org/wiki/Indian_Alley" }
+    ]
+  },
+
+  "Boyd Street": {
+    name: "Boyd Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "In the Toy District, part of the historic Wholesale District. No source found for the street name's own origin.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Wholesale District, Los Angeles", url: "https://en.wikipedia.org/wiki/Wholesale_District,_Los_Angeles" }
     ]
   }
 };
@@ -631,7 +940,7 @@ Object.assign(STREET_DATA, {
   "7th Street": numberedStreet("7th Street"),
   "8th Street": numberedStreet("8th Street"),
   "9th Street": numberedStreet("9th Street", {
-    note: "A donor street twice over: its stretch west of Figueroa became [[James M Wood Boulevard|James M. Wood Blvd]] in 1997, and its continuation east of Central Ave was absorbed by [[Olympic Boulevard|Olympic Blvd]] by 1945.",
+    note: "A donor street twice over: its stretch west of Figueroa became [[James M Wood Boulevard|James M. Wood Blvd]] in 1997, and its continuation east of Central Ave was absorbed by [[Olympic Boulevard|Olympic Blvd]] by 1945. It was also a receiver: between San Pedro and Alameda, this stretch absorbed the path of an earlier, separate [[Kohler Street]].",
     sources: [
       { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
       { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
@@ -747,7 +1056,7 @@ const CATEGORIES = [
   { id: "place",       label: "Named for a place" },
   { id: "number",      label: "Numbered streets" },
   { id: "event",       label: "Named for an event" },
-  { id: "unresearched",label: "Origin not yet researched" }
+  { id: "unknown",     label: "Researched — origin not yet found" }
 ];
 
 // Similar / related projects, shown from the title-bar button.

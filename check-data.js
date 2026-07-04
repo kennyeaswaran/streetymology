@@ -33,13 +33,22 @@ function checkEntry(id, v) {
   if (v.note && /click it|see the|this stretch has/i.test(v.note)) warn(id, "note looks like a cross-reference — segment chips handle that");
   checkBraces(id, "namedAfter", v.namedAfter, v.namedAfterLink);
   (v.nameHistory || []).forEach((h, j) => checkBraces(id, `nameHistory[${j}].origin`, h.origin, h.originLink));
-  // [[Street Key]] cross-links in notes must point at existing entries
-  if (v.note) {
-    for (const m of v.note.matchAll(/\[\[(.+?)\]\]/g)) {
+  // [[Street Key]] cross-links must point at existing entries
+  const checkCross = (field, text) => {
+    if (!text) return;
+    for (const m of text.matchAll(/\[\[(.+?)\]\]/g)) {
       const key = m[1].split("|")[0];
-      if (!STREET_DATA[key]) err(id, "note cross-link target not in STREET_DATA:", key);
+      if (!STREET_DATA[key]) err(id, field, "cross-link target not in STREET_DATA:", key);
     }
-  }
+  };
+  checkCross("note", v.note);
+  checkCross("namedAfter", v.namedAfter);
+  (v.nameHistory || []).forEach((h, j) => checkCross(`nameHistory[${j}].origin`, h.origin));
+  // "unknown" = researched but origin not found: goes hand in hand with namedAfter: null
+  if (v.namedAfter === null && !v.categories.includes("unknown"))
+    warn(id, "namedAfter is null but 'unknown' category missing");
+  if (v.categories.includes("unknown") && v.namedAfter !== null)
+    warn(id, "'unknown' category but namedAfter is set — pick one");
 }
 
 // {{...}} link-span markers: at most one per field, balanced, and pointless without a link
