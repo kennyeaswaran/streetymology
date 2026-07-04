@@ -45,6 +45,13 @@ are defined in `CATEGORIES` in the same file — add new ones freely.
   confirm permissions/attribution with Mark Tapio Kines, and diversify sources
   (newspapers.com, LAPL, county tract maps).
 
+## Expanding coverage
+
+Coverage is neighborhood-based: `NEIGHBORHOODS` in `streets-data.js` drives the
+Overpass query, the dashed coverage outlines, and the geometry-file staleness
+check. `node coverage-report.js` prints the per-neighborhood research to-do list.
+Full workflow in ADDING-STREETS.md.
+
 ## Research resources
 
 - L.A. Street Names (Mark Tapio Kines): https://lastreetnames.com/

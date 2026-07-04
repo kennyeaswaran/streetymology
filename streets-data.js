@@ -52,6 +52,14 @@
 // pavement, not names. See ADDING-STREETS.md for the full authoring guide;
 // run `node check-data.js` after editing.
 
+// Coverage areas. Adding a neighborhood here expands the map query and redraws
+// the dashed coverage outlines; see ADDING-STREETS.md ("Adding a neighborhood").
+// Bboxes are rough rectangles; for what counts as each neighborhood, use the
+// L.A. Times Mapping L.A. boundaries as the reference.
+const NEIGHBORHOODS = [
+  { id: "dtla", name: "Downtown", bbox: { s: 34.033, w: -118.272, n: 34.068, e: -118.225 } }
+];
+
 const ORD_SURVEY = {
   title: "Ord/Hutton survey, “Plan de la Ciudad de Los Angeles” (Aug. 29, 1849)",
   url: "https://tessa2.lapl.org/digital/collection/maps/id/42/"

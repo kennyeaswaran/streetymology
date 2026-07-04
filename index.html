@@ -124,7 +124,14 @@
 // ---------------------------------------------------------------
 // Config
 // ---------------------------------------------------------------
-const BBOX = { s: 34.033, w: -118.272, n: 34.068, e: -118.225 }; // downtown LA
+// Coverage comes from NEIGHBORHOODS in streets-data.js; the map queries and
+// displays streets in the union of the neighborhood bboxes.
+const COVERAGE = NEIGHBORHOODS.map(n => n.bbox);
+const SIGNATURE = JSON.stringify(COVERAGE); // changes when coverage changes
+const UNION = {
+  s: Math.min(...COVERAGE.map(b => b.s)), w: Math.min(...COVERAGE.map(b => b.w)),
+  n: Math.max(...COVERAGE.map(b => b.n)), e: Math.max(...COVERAGE.map(b => b.e))
+};
 const OVERPASS_ENDPOINTS = [
   "https://overpass-api.de/api/interpreter",
   "https://overpass.kumi.systems/api/interpreter",
@@ -146,11 +153,19 @@ const HIT_WEIGHT = 18; // invisible click-target width
 // ---------------------------------------------------------------
 // Map
 // ---------------------------------------------------------------
-const map = L.map("map").setView([34.049, -118.248], 15);
+const map = L.map("map");
+map.fitBounds([[UNION.s, UNION.w], [UNION.n, UNION.e]]);
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+
+// dashed outlines showing which neighborhoods are covered so far
+NEIGHBORHOODS.forEach(nb => {
+  L.rectangle([[nb.bbox.s, nb.bbox.w], [nb.bbox.n, nb.bbox.e]], {
+    color: "#8a6d1f", weight: 1, dashArray: "4 6", fill: false, interactive: false
+  }).addTo(map);
+});
 
 // ---------------------------------------------------------------
 // Street name normalization: strip directional prefixes so that
@@ -357,11 +372,14 @@ map.on("popupopen", e => {
 const statusEl = document.getElementById("status");
 statusEl.style.display = "block";
 
+// one bbox clause per neighborhood; Overpass unions and dedups ways
 const query = `[out:json][timeout:60];
-way["highway"~"^(${HIGHWAY_TYPES})$"]["name"](${BBOX.s},${BBOX.w},${BBOX.n},${BBOX.e});
+(
+${COVERAGE.map(b => `way["highway"~"^(${HIGHWAY_TYPES})$"]["name"](${b.s},${b.w},${b.n},${b.e});`).join("\n")}
+);
 out geom;`;
 
-const CACHE_KEY = "streetymology-osm-" + JSON.stringify(BBOX);
+const CACHE_KEY = "streetymology-osm-" + SIGNATURE;
 const CACHE_AGE_MS = 7 * 24 * 3600 * 1000;
 
 function loadFromCache() {
@@ -382,9 +400,14 @@ function saveToCache(json) {
 const FETCH_TIMEOUT_MS = 20000;
 
 async function fetchStreets() {
-  // 1. Pre-downloaded geometry file, if present (streets-geometry.js)
-  if (typeof STREET_GEOMETRY !== "undefined" && STREET_GEOMETRY.elements) {
-    return STREET_GEOMETRY;
+  // 1. Pre-downloaded geometry file, if present AND its coverage matches.
+  //    (A legacy or stale file — saved before a neighborhood was added — is
+  //    ignored; fetch fresh and re-save from the panel button.)
+  if (typeof STREET_GEOMETRY !== "undefined") {
+    if (STREET_GEOMETRY.signature === SIGNATURE && STREET_GEOMETRY.data) {
+      return STREET_GEOMETRY.data;
+    }
+    console.warn("streets-geometry.js does not match current coverage — refetching from Overpass");
   }
   // 2. Browser cache from a previous successful load
   const cached = loadFromCache();
@@ -420,7 +443,8 @@ function showSaveButton(json) {
   const btn = document.getElementById("saveGeom");
   btn.style.display = "inline-block";
   btn.onclick = () => {
-    const blob = new Blob(["const STREET_GEOMETRY = ", JSON.stringify(json), ";\n"],
+    const blob = new Blob(["const STREET_GEOMETRY = ",
+                           JSON.stringify({ signature: SIGNATURE, data: json }), ";\n"],
                           { type: "text/javascript" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);

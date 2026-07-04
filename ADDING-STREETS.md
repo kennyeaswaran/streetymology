@@ -85,6 +85,29 @@ When one modern street absorbed several older ones, split it:
   transferred from …") and, when we add it, the donor street ("renamed …, its
   name passing to …").
 
+## Adding a neighborhood
+
+Coverage grows neighborhood by neighborhood via the `NEIGHBORHOODS` array at the
+top of `streets-data.js` (rough bbox rectangles; use L.A. Times Mapping L.A.
+boundaries as the reference for what counts as the neighborhood).
+
+1. Add the neighborhood `{ id, name, bbox }` to `NEIGHBORHOODS`.
+2. Open the map. The saved geometry file no longer matches the new coverage, so
+   the map refetches from Overpass automatically. Click "Save geometry file" and
+   replace `streets-geometry.js` with the download.
+3. Run `node coverage-report.js`. It prints, per neighborhood, which streets
+   have entries and which still need research, longest first — work down the
+   list. It also prints an **extension review** section: single-entry streets
+   that now span multiple neighborhoods. For each, decide explicitly:
+   - same name lineage along the new stretch → nothing to do;
+   - different lineage → split into segments, giving the new stretch its own
+     entry (or a "not yet researched" placeholder — never let the old entry
+     silently claim the new stretch).
+4. Extending a street often crosses a renaming boundary even within one
+   neighborhood (Pearl ended at Pico) — check the renaming ordinance's stated
+   extent whenever a source gives one.
+5. `node check-data.js`, reload the map, commit, push.
+
 ## Validation
 
 `node check-data.js` checks: schema completeness, defined categories, source

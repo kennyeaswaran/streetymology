@@ -3,9 +3,13 @@
 
 const fs = require("fs");
 const src = fs.readFileSync(__dirname + "/streets-data.js", "utf8");
-const { STREET_DATA, CATEGORIES } = new Function(src + "; return {STREET_DATA, CATEGORIES};")();
+const { STREET_DATA, CATEGORIES, NEIGHBORHOODS } = new Function(src + "; return {STREET_DATA, CATEGORIES, NEIGHBORHOODS};")();
 
-const BBOX = { s: 34.033, w: -118.272, n: 34.068, e: -118.225 }; // keep in sync with index.html
+// coverage = union of neighborhood bboxes (same as the map)
+const BBOX = {
+  s: Math.min(...NEIGHBORHOODS.map(n => n.bbox.s)), w: Math.min(...NEIGHBORHOODS.map(n => n.bbox.w)),
+  n: Math.max(...NEIGHBORHOODS.map(n => n.bbox.n)), e: Math.max(...NEIGHBORHOODS.map(n => n.bbox.e))
+};
 const catIds = new Set(CATEGORIES.map(c => c.id));
 let errors = 0;
 const err = (...m) => { errors++; console.error("ERROR:", ...m); };
@@ -38,6 +42,11 @@ function checkBraces(id, field, text, url) {
   if (open !== close || open > 1) err(id, field, "unbalanced or multiple {{}} markers");
   if (open && !url) warn(id, field, "has {{}} marker but no link");
 }
+
+NEIGHBORHOODS.forEach(nb => {
+  if (!nb.id || !nb.name || !nb.bbox) err("NEIGHBORHOODS", nb.id || "?", "needs id, name, bbox");
+  else if (nb.bbox.s >= nb.bbox.n || nb.bbox.w >= nb.bbox.e) err("NEIGHBORHOODS", nb.id, "bbox has s>=n or w>=e");
+});
 
 for (const [key, v] of Object.entries(STREET_DATA)) {
   if (/^(North|South|East|West)\s/i.test(key)) err(key, "keys must omit directional prefixes");
