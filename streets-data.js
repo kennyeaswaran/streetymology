@@ -496,7 +496,7 @@ Object.assign(STREET_DATA, {
   "7th Street": numberedStreet("7th Street"),
   "8th Street": numberedStreet("8th Street"),
   "9th Street": numberedStreet("9th Street", {
-    note: "A donor street twice over: its stretch west of Figueroa became [[James M Wood Boulevard|James M. Wood Blvd]] in 1997, and Eastside portions were absorbed by [[Olympic Boulevard|Olympic Blvd]] by 1945.",
+    note: "A donor street twice over: its stretch west of Figueroa became [[James M Wood Boulevard|James M. Wood Blvd]] in 1997, and its continuation east of Central Ave was absorbed by [[Olympic Boulevard|Olympic Blvd]] by 1945.",
     sources: [
       { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
       { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
@@ -519,29 +519,60 @@ Object.assign(STREET_DATA, {
   "17th Street": numberedStreet("17th Street", { planned: "not yet researched" }),
   "18th Street": numberedStreet("18th Street", { planned: "not yet researched" }),
 
-  // TODO when Eastside (Boyle Heights / East L.A.) coverage is added: split
-  // Olympic into segments — the stretches east of the river were 9th Street
-  // and Mines Ave., not 10th, before Olympic absorbed them (by 1945).
+  // TODO when Mines Ave. territory (Boyle Heights / East L.A.) enters coverage,
+  // extend the eastern segment story; the ex-9th stretch already begins at
+  // Central Ave downtown, where 9th's alignment merges into Olympic's.
   "Olympic Boulevard": {
     name: "Olympic Boulevard",
-    namedAfter: "The {{1932 Summer Olympics}}, held in Los Angeles",
-    namedAfterLink: "https://en.wikipedia.org/wiki/1932_Summer_Olympics",
-    planned: { text: "by 1849 (as 10th Street)", url: ORD_SURVEY.url },
-    built: "not yet researched",
-    nameHistory: [
-      { from: "by 1849", until: "1935", name: "10th Street",
-        origin: "ordinal position in the downtown grid", originLink: null },
-      { from: "1935", until: null, name: "Olympic Boulevard",
-        origin: "renaming requested July 1929, before the Games; that they were the 10th Olympiad apparently went unremarked at the time {{(source)}}",
-        originLink: "https://lastreetnames.com/street/olympic-boulevard/" }
-    ],
-    note: "The name first landed (1929) on part of Country Club Drive; by 1945 Olympic had also absorbed Louisiana Ave., Santa Monica's Pennsylvania Ave., and parts of [[9th Street]] and Mines Ave.",
-    categories: ["event", "renamed", "number"],
-    disputed: false,
-    sources: [
-      { title: "L.A. Street Names: Olympic Boulevard", url: "https://lastreetnames.com/street/olympic-boulevard/" },
-      { title: "L.A. Street Names: 10th Street", url: "https://lastreetnames.com/street/010th-street/" },
-      { title: "Wikipedia: Olympic Boulevard (Los Angeles)", url: "https://en.wikipedia.org/wiki/Olympic_Boulevard_(Los_Angeles)" }
+    orientation: "EW",
+    segments: [
+      {
+        label: "west of Central Ave (former 10th St)",
+        maxLng: -118.2471,
+        name: "Olympic Boulevard",
+        namedAfter: "The {{1932 Summer Olympics}}, held in Los Angeles",
+        namedAfterLink: "https://en.wikipedia.org/wiki/1932_Summer_Olympics",
+        planned: { text: "by 1849 (as 10th Street)", url: ORD_SURVEY.url },
+        built: "not yet researched",
+        nameHistory: [
+          { from: "by 1849", until: "1935", name: "10th Street",
+            origin: "ordinal position in the downtown grid", originLink: null },
+          { from: "1935", until: null, name: "Olympic Boulevard",
+            origin: "renaming requested July 1929, before the Games; that they were the 10th Olympiad apparently went unremarked at the time {{(source)}}",
+            originLink: "https://lastreetnames.com/street/olympic-boulevard/" }
+        ],
+        note: "The name first landed (1929) on part of Country Club Drive; expansion continued to 1945, also absorbing Louisiana Ave. and Santa Monica's Pennsylvania Ave. on the Westside.",
+        categories: ["event", "renamed", "number"],
+        disputed: false,
+        sources: [
+          { title: "L.A. Street Names: Olympic Boulevard", url: "https://lastreetnames.com/street/olympic-boulevard/" },
+          { title: "L.A. Street Names: 10th Street", url: "https://lastreetnames.com/street/010th-street/" },
+          { title: "Wikipedia: Olympic Boulevard (Los Angeles)", url: "https://en.wikipedia.org/wiki/Olympic_Boulevard_(Los_Angeles)" }
+        ]
+      },
+      {
+        label: "east of Central Ave (former 9th St)",
+        minLng: -118.2471,
+        name: "Olympic Boulevard",
+        namedAfter: "Extension of the Olympic name (for the {{1932 Summer Olympics}}) over the eastern reach of 9th Street",
+        namedAfterLink: "https://en.wikipedia.org/wiki/1932_Summer_Olympics",
+        planned: "not yet researched",
+        built: "not yet researched",
+        nameHistory: [
+          { from: "?", until: "by 1945", name: "9th Street",
+            origin: "ordinal position in the downtown grid; east of Central Ave, 9th's alignment continues as today's Olympic", originLink: null },
+          { from: "by 1945", until: null, name: "Olympic Boulevard",
+            origin: "absorbed during Olympic's eastward expansion (1935–1945); the exact renaming date for this stretch is not yet researched {{(source)}}",
+            originLink: "https://lastreetnames.com/street/olympic-boulevard/" }
+        ],
+        note: "The donor street survives to the west as [[9th Street]].",
+        categories: ["event", "renamed", "number"],
+        disputed: false,
+        sources: [
+          { title: "L.A. Street Names: Olympic Boulevard", url: "https://lastreetnames.com/street/olympic-boulevard/" },
+          { title: "L.A. Street Names: James M. Wood Boulevard", url: "https://lastreetnames.com/street/james-m-wood-boulevard/" }
+        ]
+      }
     ]
   },
 
