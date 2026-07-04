@@ -308,16 +308,61 @@ const STREET_DATA = {
 
   "Los Angeles Street": {
     name: "Los Angeles Street",
-    namedAfter: "The city itself — ultimately from {{Nuestra Señora de los Ángeles de Porciúncula}}, the 1769 Spanish naming of the L.A. River",
-    namedAfterLink: "https://en.wikipedia.org/wiki/History_of_Los_Angeles",
-    planned: "not yet researched",
-    built: "by 1854",
-    note: "Its northernmost block was the separate Calle de los Negros — site of L.A.'s first Chinatown and the 1871 anti-Chinese massacre — absorbed into Los Angeles Street in 1910.",
-    categories: ["place"],
+    orientation: "NS",
+    segments: [
+      {
+        label: "Plaza block (former Calle de los Negros)",
+        minLat: 34.0551,
+        name: "Los Angeles Street",
+        namedAfter: "Extension of the Los Angeles Street name when it absorbed this block in 1910",
+        namedAfterLink: null,
+        planned: null,
+        built: "not yet researched",
+        nameHistory: [
+          { from: "?", until: "1910", name: "Calle de los Negros (“Negro Alley”)",
+            origin: "origin of the name is debated, and few if any Black residents are documented; the block became L.A.'s first Chinatown and was the site of the {{1871 anti-Chinese massacre}}",
+            originLink: "https://en.wikipedia.org/wiki/Chinese_massacre_of_1871" },
+          { from: "1910", until: null, name: "Los Angeles Street", origin: null, originLink: null }
+        ],
+        note: null,
+        categories: ["renamed", "place", "disputed"],
+        disputed: true,
+        sources: [
+          { title: "L.A. Street Names: Los Angeles Street", url: "https://lastreetnames.com/street/los-angeles-street/" },
+          { title: "Wikipedia: Calle de los Negros", url: "https://en.wikipedia.org/wiki/Calle_de_los_Negros" }
+        ]
+      },
+      {
+        label: "south of Arcadia St",
+        maxLat: 34.0551,
+        name: "Los Angeles Street",
+        namedAfter: "The city itself — ultimately from {{Nuestra Señora de los Ángeles de Porciúncula}}, the 1769 Spanish naming of the L.A. River",
+        namedAfterLink: "https://en.wikipedia.org/wiki/History_of_Los_Angeles",
+        planned: "not yet researched",
+        built: "by 1854",
+        note: null,
+        categories: ["place"],
+        disputed: false,
+        sources: [
+          { title: "L.A. Street Names: Los Angeles Street", url: "https://lastreetnames.com/street/los-angeles-street/" },
+          { title: "Wikipedia: Los Angeles Street", url: "https://en.wikipedia.org/wiki/Los_Angeles_Street" }
+        ]
+      }
+    ]
+  },
+
+  "1st Street": {
+    name: "1st Street",
+    namedAfter: "Its ordinal position in the downtown grid — the numbering system was in place by 1849",
+    namedAfterLink: null,
+    planned: { text: "by 1849", url: ORD_SURVEY.url },
+    built: "by 1849",
+    note: "Since 1883, 1st Street divides north from south in L.A. addresses (as Main Street divides east from west). Claims dating the numbering to 1846 are doubtful.",
+    categories: ["number"],
     disputed: false,
     sources: [
-      { title: "L.A. Street Names: Los Angeles Street", url: "https://lastreetnames.com/street/los-angeles-street/" },
-      { title: "Wikipedia: Calle de los Negros", url: "https://en.wikipedia.org/wiki/Calle_de_los_Negros" }
+      { title: "L.A. Street Names: 1st Street", url: "https://lastreetnames.com/street/0001st-street/" },
+      { title: ORD_SURVEY.title, url: ORD_SURVEY.url }
     ]
   },
 
@@ -413,6 +458,112 @@ const STREET_DATA = {
   }
 };
 
+// ---------------------------------------------------------------------------
+// Numbered streets share a template (see ADDING-STREETS.md): ordinal position
+// in the downtown grid, numbering in place by 1849. Quirks go in `opts`.
+// Streets south of the survey's edge (14th+) get planned: "not yet researched".
+// ---------------------------------------------------------------------------
+function numberedStreet(name, opts = {}) {
+  return Object.assign({
+    name,
+    namedAfter: "Its ordinal position in the downtown grid — the numbering system was in place by 1849",
+    namedAfterLink: null,
+    planned: { text: "by 1849", url: ORD_SURVEY.url },
+    built: "not yet researched",
+    note: null,
+    categories: ["number"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
+      { title: ORD_SURVEY.title, url: ORD_SURVEY.url }
+    ]
+  }, opts);
+}
+
+Object.assign(STREET_DATA, {
+  "2nd Street": numberedStreet("2nd Street"),
+  "3rd Street": numberedStreet("3rd Street"),
+  "4th Street": numberedStreet("4th Street", {
+    note: "The 1890 petition that turned Fort Street into Broadway cited confusion between “Fort” and “Fourth”.",
+    sources: [
+      { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
+      { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+      { title: "L.A. Street Names: Broadway (the Fort/Fourth confusion)", url: "https://lastreetnames.com/street/broadway/" }
+    ]
+  }),
+  "5th Street": numberedStreet("5th Street"),
+  "6th Street": numberedStreet("6th Street"),
+  "7th Street": numberedStreet("7th Street"),
+  "8th Street": numberedStreet("8th Street"),
+  "9th Street": numberedStreet("9th Street", {
+    note: "A donor street twice over: its stretch west of Figueroa became James M. Wood Blvd in 1997, and Eastside portions were absorbed by Olympic Blvd by 1945.",
+    sources: [
+      { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
+      { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+      { title: "L.A. Street Names: James M. Wood Boulevard", url: "https://lastreetnames.com/street/james-m-wood-boulevard/" },
+      { title: "L.A. Street Names: Olympic Boulevard", url: "https://lastreetnames.com/street/olympic-boulevard/" }
+    ]
+  }),
+  "10th Street": numberedStreet("10th Street", {
+    note: "A remnant: most of 10th became Olympic Blvd in 1935, its citywide widening already underway by 1928.",
+    sources: [
+      { title: "L.A. Street Names: 10th Street", url: "https://lastreetnames.com/street/010th-street/" },
+      { title: "L.A. Street Names: Olympic Boulevard", url: "https://lastreetnames.com/street/olympic-boulevard/" },
+      { title: ORD_SURVEY.title, url: ORD_SURVEY.url }
+    ]
+  }),
+  "11th Street": numberedStreet("11th Street"),
+  "12th Street": numberedStreet("12th Street"),
+  "14th Street": numberedStreet("14th Street", { planned: "not yet researched" }),
+  "15th Street": numberedStreet("15th Street", { planned: "not yet researched" }),
+  "17th Street": numberedStreet("17th Street", { planned: "not yet researched" }),
+  "18th Street": numberedStreet("18th Street", { planned: "not yet researched" }),
+
+  "Olympic Boulevard": {
+    name: "Olympic Boulevard",
+    namedAfter: "The {{1932 Summer Olympics}}, held in Los Angeles",
+    namedAfterLink: "https://en.wikipedia.org/wiki/1932_Summer_Olympics",
+    planned: { text: "by 1849 (as 10th Street)", url: ORD_SURVEY.url },
+    built: "not yet researched",
+    nameHistory: [
+      { from: "by 1849", until: "1935", name: "10th Street",
+        origin: "ordinal position in the downtown grid", originLink: null },
+      { from: "1935", until: null, name: "Olympic Boulevard",
+        origin: "renaming requested July 1929, before the Games; that they were the 10th Olympiad apparently went unremarked at the time {{(source)}}",
+        originLink: "https://lastreetnames.com/street/olympic-boulevard/" }
+    ],
+    note: "The name first landed (1929) on part of Country Club Drive; by 1945 Olympic had also absorbed Louisiana Ave., Santa Monica's Pennsylvania Ave., and parts of 9th St. and Mines Ave.",
+    categories: ["event", "renamed", "number"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Olympic Boulevard", url: "https://lastreetnames.com/street/olympic-boulevard/" },
+      { title: "L.A. Street Names: 10th Street", url: "https://lastreetnames.com/street/010th-street/" },
+      { title: "Wikipedia: Olympic Boulevard (Los Angeles)", url: "https://en.wikipedia.org/wiki/Olympic_Boulevard_(Los_Angeles)" }
+    ]
+  },
+
+  "James M Wood Boulevard": {
+    name: "James M. Wood Boulevard",
+    namedAfter: "James Michael Wood (1945–1996), labor leader and chair of the Community Redevelopment Agency",
+    namedAfterLink: null,
+    planned: { text: "by 1849 (as 9th Street)", url: ORD_SURVEY.url },
+    built: "not yet researched",
+    nameHistory: [
+      { from: "by 1849", until: "1997", name: "9th Street",
+        origin: "ordinal position in the downtown grid", originLink: null },
+      { from: "1997", until: null, name: "James M. Wood Boulevard",
+        origin: "City Council renamed the stretch between Figueroa and Western to honor Wood the year after his death {{(source)}}",
+        originLink: "https://lastreetnames.com/street/james-m-wood-boulevard/" }
+    ],
+    note: null,
+    categories: ["person", "renamed"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: James M. Wood Boulevard", url: "https://lastreetnames.com/street/james-m-wood-boulevard/" }
+    ]
+  }
+});
+
 const CATEGORIES = [
   { id: "person",      label: "Named after a person" },
   { id: "alive",       label: "Namesake alive when named" },
@@ -424,7 +575,9 @@ const CATEGORIES = [
   { id: "disputed",    label: "Origin disputed" },
   { id: "nature",      label: "Named for a plant, tree, or landform" },
   { id: "descriptive", label: "Descriptive of role or position" },
-  { id: "place",       label: "Named for a place" }
+  { id: "place",       label: "Named for a place" },
+  { id: "number",      label: "Numbered streets" },
+  { id: "event",       label: "Named for an event" }
 ];
 
 // Similar / related projects, shown from the title-bar button.

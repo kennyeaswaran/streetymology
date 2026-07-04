@@ -85,6 +85,23 @@ When one modern street absorbed several older ones, split it:
   transferred from …") and, when we add it, the donor street ("renamed …, its
   name passing to …").
 
+## Freeways and numbered streets
+
+- Freeways are in scope. For most, `namedAfter` is the route number's meaning in
+  its numbering system — the 5, the 10, and the 405 are meaningful Interstate
+  identifiers even on stretches with no other name. Link the system's page and
+  add a "system" category when the first such entry lands. The older routes
+  (Arroyo Seco Parkway, Harbor/Hollywood/Santa Ana freeways) predate the
+  Interstate plan and have genuine name histories deserving full entries.
+- Numbered streets share a template via the `numberedStreet(name, opts)` helper
+  in streets-data.js: `namedAfter` = ordinal position in the downtown grid,
+  numbering in place by 1849 (1846 claims are doubtful — see 1st Street, the
+  anchor entry). Category "number"; streets south of the survey's edge (14th+)
+  override planned with "not yet researched". Still check each one for its own
+  history: renamings flow both ways (10th → Olympic Blvd 1935; 9th west of
+  Figueroa → James M. Wood Blvd 1997), so a numbered street can be a donor or
+  absorber like any other — record transfers on both sides via `opts`.
+
 ## Adding a neighborhood
 
 Coverage grows neighborhood by neighborhood via the `NEIGHBORHOODS` array at the
