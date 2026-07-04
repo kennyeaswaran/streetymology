@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Dropbox sync artifacts
+*conflicted copy*
+.dropbox
+.dropbox.cache
+
+# editors
+*.swp
+.vscode/
