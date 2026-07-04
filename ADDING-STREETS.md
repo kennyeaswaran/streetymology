@@ -54,7 +54,11 @@ are all legitimate values.
   Streets that have carried one name since planning/building omit nameHistory
   entirely and just end with the planned/built dates.
 - **note** — optional, one line, real content only. No cross-references to other
-  stretches (chips handle navigation) and no restating of nameHistory.
+  stretches of the same street (chips handle that) and no restating of
+  nameHistory. Cross-references to OTHER streets use `[[Street Key]]` or
+  `[[Street Key|display label]]` — rendered as a link that jumps the map to that
+  street and opens its box (the checker verifies targets exist). Use these for
+  name-transfer donor/receiver pairs, e.g. 9th ↔ James M. Wood.
 - **categories** — at least one. Add new categories to `CATEGORIES` freely, but
   check whether an existing one fits first. Current set: person, alive, governor,
   destination, aspiration, renamed, borrowed, disputed.

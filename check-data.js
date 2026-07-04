@@ -33,6 +33,13 @@ function checkEntry(id, v) {
   if (v.note && /click it|see the|this stretch has/i.test(v.note)) warn(id, "note looks like a cross-reference — segment chips handle that");
   checkBraces(id, "namedAfter", v.namedAfter, v.namedAfterLink);
   (v.nameHistory || []).forEach((h, j) => checkBraces(id, `nameHistory[${j}].origin`, h.origin, h.originLink));
+  // [[Street Key]] cross-links in notes must point at existing entries
+  if (v.note) {
+    for (const m of v.note.matchAll(/\[\[(.+?)\]\]/g)) {
+      const key = m[1].split("|")[0];
+      if (!STREET_DATA[key]) err(id, "note cross-link target not in STREET_DATA:", key);
+    }
+  }
 }
 
 // {{...}} link-span markers: at most one per field, balanced, and pointless without a link

@@ -286,6 +286,16 @@ function linkify(text, url) {
   return `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`;
 }
 
+// Notes may cross-reference other streets with [[Street Key]] or
+// [[Street Key|display label]] — rendered as a link that jumps the map to
+// that street and opens its box.
+function renderNote(text) {
+  return esc(text).replace(/\[\[(.+?)\]\]/g, (m, inner) => {
+    const [key, label] = inner.split("|");
+    return `<a href="#" data-street="${key}">${label || key}</a>`;
+  });
+}
+
 function popupHtml(street) {
   const d = street.entry;
   if (!d) {
@@ -330,7 +340,7 @@ function popupHtml(street) {
     });
     html += `</ul>`;
   }
-  if (d.note) html += `<div class="note">${esc(d.note)}</div>`;
+  if (d.note) html += `<div class="note">${renderNote(d.note)}</div>`;
   html += `<div class="tags">` + d.categories.map(c => {
     const cat = CATEGORIES.find(x => x.id === c);
     return `<span>${esc(cat ? cat.label : c)}</span>`;
@@ -356,13 +366,26 @@ function jumpToSegment(key) {
   L.popup({ maxWidth: 340 }).setLatLng(pt).setContent(popupHtml(street)).openOn(map);
 }
 
-// wire up segment-chip links whenever a popup opens
+// Jump to a street by normalized name (first segment if segmented).
+function jumpToStreet(name) {
+  const matches = [...streets.values()].filter(s => s.name === name);
+  if (!matches.length) return;
+  const bounds = L.featureGroup(matches.flatMap(s => s.ways)).getBounds();
+  map.fitBounds(bounds, { maxZoom: 16, padding: [60, 60] });
+  const target = matches[0];
+  const midWay = target.ways[Math.floor(target.ways.length / 2)].getLatLngs();
+  const pt = midWay[Math.floor(midWay.length / 2)];
+  L.popup({ maxWidth: 340 }).setLatLng(pt).setContent(popupHtml(target)).openOn(map);
+}
+
+// wire up segment-chip and cross-street links whenever a popup opens
 map.on("popupopen", e => {
-  e.popup.getElement().querySelectorAll("a[data-seg]").forEach(a => {
-    a.addEventListener("click", ev => {
-      ev.preventDefault();
-      jumpToSegment(a.dataset.seg);
-    });
+  const el = e.popup.getElement();
+  el.querySelectorAll("a[data-seg]").forEach(a => {
+    a.addEventListener("click", ev => { ev.preventDefault(); jumpToSegment(a.dataset.seg); });
+  });
+  el.querySelectorAll("a[data-street]").forEach(a => {
+    a.addEventListener("click", ev => { ev.preventDefault(); jumpToStreet(a.dataset.street); });
   });
 });
 

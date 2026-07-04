@@ -395,7 +395,7 @@ const STREET_DATA = {
         origin: "the commission's initial replacement choice, almost immediately displaced by Johnson's objection", originLink: null },
       { from: "1897", until: null, name: "Boylston Street", origin: null, originLink: null }
     ],
-    note: "The donor side of the Figueroa name transfer — see Figueroa Street's history for the receiving side.",
+    note: "The donor side of the [[Figueroa Street]] name transfer.",
     categories: ["borrowed", "renamed"],
     disputed: false,
     sources: [
@@ -496,7 +496,7 @@ Object.assign(STREET_DATA, {
   "7th Street": numberedStreet("7th Street"),
   "8th Street": numberedStreet("8th Street"),
   "9th Street": numberedStreet("9th Street", {
-    note: "A donor street twice over: its stretch west of Figueroa became James M. Wood Blvd in 1997, and Eastside portions were absorbed by Olympic Blvd by 1945.",
+    note: "A donor street twice over: its stretch west of Figueroa became [[James M Wood Boulevard|James M. Wood Blvd]] in 1997, and Eastside portions were absorbed by [[Olympic Boulevard|Olympic Blvd]] by 1945.",
     sources: [
       { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
       { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
@@ -505,7 +505,7 @@ Object.assign(STREET_DATA, {
     ]
   }),
   "10th Street": numberedStreet("10th Street", {
-    note: "A remnant: most of 10th became Olympic Blvd in 1935, its citywide widening already underway by 1928.",
+    note: "A remnant: most of 10th became [[Olympic Boulevard|Olympic Blvd]] in 1935, its citywide widening already underway by 1928.",
     sources: [
       { title: "L.A. Street Names: 10th Street", url: "https://lastreetnames.com/street/010th-street/" },
       { title: "L.A. Street Names: Olympic Boulevard", url: "https://lastreetnames.com/street/olympic-boulevard/" },
@@ -519,6 +519,9 @@ Object.assign(STREET_DATA, {
   "17th Street": numberedStreet("17th Street", { planned: "not yet researched" }),
   "18th Street": numberedStreet("18th Street", { planned: "not yet researched" }),
 
+  // TODO when Eastside (Boyle Heights / East L.A.) coverage is added: split
+  // Olympic into segments — the stretches east of the river were 9th Street
+  // and Mines Ave., not 10th, before Olympic absorbed them (by 1945).
   "Olympic Boulevard": {
     name: "Olympic Boulevard",
     namedAfter: "The {{1932 Summer Olympics}}, held in Los Angeles",
@@ -532,7 +535,7 @@ Object.assign(STREET_DATA, {
         origin: "renaming requested July 1929, before the Games; that they were the 10th Olympiad apparently went unremarked at the time {{(source)}}",
         originLink: "https://lastreetnames.com/street/olympic-boulevard/" }
     ],
-    note: "The name first landed (1929) on part of Country Club Drive; by 1945 Olympic had also absorbed Louisiana Ave., Santa Monica's Pennsylvania Ave., and parts of 9th St. and Mines Ave.",
+    note: "The name first landed (1929) on part of Country Club Drive; by 1945 Olympic had also absorbed Louisiana Ave., Santa Monica's Pennsylvania Ave., and parts of [[9th Street]] and Mines Ave.",
     categories: ["event", "renamed", "number"],
     disputed: false,
     sources: [
