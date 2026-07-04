@@ -281,6 +281,84 @@ const STREET_DATA = {
     ]
   },
 
+  "Main Street": {
+    name: "Main Street",
+    namedAfter: "Its status as the pueblo's principal street — an anglicization of Calle Principal",
+    namedAfterLink: null,
+    planned: null,
+    built: "by 1781 (likely one of the original pueblo's two roads from the plaza)",
+    nameHistory: [
+      { from: "c. 1781", until: "?", name: "Calle Real (“Royal Road”)",
+        origin: "standard Spanish colonial designation for a settlement's principal road", originLink: null },
+      { from: "?", until: "c. 1849", name: "Calle Principal",
+        origin: "descriptive — the principal street", originLink: null },
+      { from: "c. 1849", until: null, name: "Main Street",
+        origin: "anglicization, fixed by the Ord/Hutton survey; first found in print May 1851 {{(source)}}",
+        originLink: "https://lastreetnames.com/street/main-street-los-angeles/" }
+    ],
+    note: "Some historians argue Ord mislabeled the 1849 map and the true Calle Principal is today's Los Angeles Street.",
+    categories: ["descriptive", "renamed", "disputed"],
+    disputed: true,
+    sources: [
+      { title: "L.A. Street Names: Main Street", url: "https://lastreetnames.com/street/main-street-los-angeles/" },
+      { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+      { title: "Wikipedia: Main Street (Los Angeles)", url: "https://en.wikipedia.org/wiki/Main_Street_(Los_Angeles)" }
+    ]
+  },
+
+  "Los Angeles Street": {
+    name: "Los Angeles Street",
+    namedAfter: "The city itself — ultimately from {{Nuestra Señora de los Ángeles de Porciúncula}}, the 1769 Spanish naming of the L.A. River",
+    namedAfterLink: "https://en.wikipedia.org/wiki/History_of_Los_Angeles",
+    planned: "not yet researched",
+    built: "by 1854",
+    note: "Its northernmost block was the separate Calle de los Negros — site of L.A.'s first Chinatown and the 1871 anti-Chinese massacre — absorbed into Los Angeles Street in 1910.",
+    categories: ["place"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Los Angeles Street", url: "https://lastreetnames.com/street/los-angeles-street/" },
+      { title: "Wikipedia: Calle de los Negros", url: "https://en.wikipedia.org/wiki/Calle_de_los_Negros" }
+    ]
+  },
+
+  "Flower Street": {
+    name: "Flower Street",
+    namedAfter: "Supposedly the blossom-covered hills behind the street",
+    namedAfterLink: null,
+    planned: { text: "by 1849", url: ORD_SURVEY.url },
+    built: "c. 1869 (vacant for twenty years after the survey)",
+    note: "The tale that it was once “Faith Street” (completing Faith/Hope/Charity, per Harris Newmark's 1916 memoir) has zero documentary support — Flower has been its only name.",
+    categories: ["nature", "disputed"],
+    disputed: true,
+    sources: [
+      { title: "L.A. Street Names: Flower Street", url: "https://lastreetnames.com/street/flower-street/" },
+      { title: ORD_SURVEY.title, url: ORD_SURVEY.url }
+    ]
+  },
+
+  "Boylston Street": {
+    name: "Boylston Street",
+    namedAfter: "Boston's {{Boylston Street}}, suggested in 1897 by financier O.T. Johnson (1839–1916)",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Boylston_Street",
+    planned: null,
+    built: "c. 1853–1857 (as the original Figueroa Street)",
+    nameHistory: [
+      { from: "c. 1853–1857", until: "Jan. 1897", name: "Figueroa Street",
+        origin: "honored Gov. José Figueroa; in Jan. 1897 a city commission moved the name a few blocks east onto the former Pearl Street {{(source)}}",
+        originLink: "https://lastreetnames.com/street/boylston-street/" },
+      { from: "Jan. 1897", until: "Jan. 1897", name: "De La Guerra Street",
+        origin: "the commission's initial replacement choice, almost immediately displaced by Johnson's objection", originLink: null },
+      { from: "1897", until: null, name: "Boylston Street", origin: null, originLink: null }
+    ],
+    note: "The donor side of the Figueroa name transfer — see Figueroa Street's history for the receiving side.",
+    categories: ["borrowed", "renamed"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Boylston Street", url: "https://lastreetnames.com/street/boylston-street/" },
+      { title: "L.A. Street Names: Figueroa Street", url: "https://lastreetnames.com/street/figueroa-street/" }
+    ]
+  },
+
   "Hill Street": {
     name: "Hill Street",
     orientation: "NS",
@@ -344,7 +422,9 @@ const CATEGORIES = [
   { id: "renamed",     label: "Has former names" },
   { id: "borrowed",    label: "Borrowed from another city" },
   { id: "disputed",    label: "Origin disputed" },
-  { id: "nature",      label: "Named for a plant, tree, or landform" }
+  { id: "nature",      label: "Named for a plant, tree, or landform" },
+  { id: "descriptive", label: "Descriptive of role or position" },
+  { id: "place",       label: "Named for a place" }
 ];
 
 // Similar / related projects, shown from the title-bar button.
