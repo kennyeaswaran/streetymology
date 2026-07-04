@@ -83,11 +83,11 @@ const STREET_DATA = {
             origin: "named after the insect: grasshoppers crossing this line from the western plains doomed the grape harvest",
             originLink: null },
           { from: "1874", until: "1897", name: "Pearl Street",
-            origin: "renamed Feb. 26, 1874, apparently for gentility as the street became a fashionable address; no specific namesake documented {{(source)}}",
-            originLink: "https://www.pbssocal.org/shows/lost-la/the-evolution-of-a-corner-downtown-l-a-at-figueroa-seventh" },
+            origin: "property owners along Grasshopper Street petitioned for “Pearl Street” over a rival “Union Avenue” proposal; the Herald's report of the Feb. 26, 1874 council debate names no specific petitioner or namesake {{(source)}}",
+            originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18740227.2.10" },
           { from: "1897", until: null, name: "Figueroa Street",
-            origin: "name transferred from an older Figueroa Street (c. 1853–1857) a few blocks west, which simultaneously became Boylston {{(source)}}",
-            originLink: "https://lastreetnames.com/street/figueroa-street/" }
+            origin: "Pearl Street was renamed Figueroa Street “being a continuation of that thoroughfare”; the older Figueroa Street (c. 1853–1857) a few blocks west was simultaneously renamed De La Guerra, then Boylston within weeks {{(source)}}",
+            originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970202.2.34" }
         ],
         note: null,
         categories: ["person", "governor", "renamed"],
@@ -97,7 +97,10 @@ const STREET_DATA = {
           { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
           { title: "Lost LA: The Evolution of a Corner (PBS SoCal)", url: "https://www.pbssocal.org/shows/lost-la/the-evolution-of-a-corner-downtown-l-a-at-figueroa-seventh" },
           { title: "Los Angeles Revisited: The Pulchritude of Pearl Street", url: "https://losangelesrevisited.blogspot.com/2019/01/the-pulchritude-of-pearl-street.html" },
-          { title: "Wikipedia: Figueroa Street", url: "https://en.wikipedia.org/wiki/Figueroa_Street" }
+          { title: "Wikipedia: Figueroa Street", url: "https://en.wikipedia.org/wiki/Figueroa_Street" },
+          { title: "Los Angeles Herald, “City and Suburbs,” Feb. 27, 1874", url: "https://cdnc.ucr.edu/?a=d&d=LAH18740227.2.10" },
+          { title: "Los Angeles Herald, “Work for Unemployed,” Feb. 2, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970202.2.34" },
+          { title: "Los Angeles Herald, “Party Lines Knocked Out in the Council,” Feb. 24, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970224.2.20" }
         ]
       },
       {
@@ -388,11 +391,12 @@ const STREET_DATA = {
     planned: null,
     built: "c. 1853–1857 (as the original Figueroa Street)",
     nameHistory: [
-      { from: "c. 1853–1857", until: "Jan. 1897", name: "Figueroa Street",
-        origin: "honored Gov. José Figueroa; in Jan. 1897 a city commission moved the name a few blocks east onto the former Pearl Street {{(source)}}",
-        originLink: "https://lastreetnames.com/street/boylston-street/" },
-      { from: "Jan. 1897", until: "Jan. 1897", name: "De La Guerra Street",
-        origin: "the commission's initial replacement choice, almost immediately displaced by Johnson's objection", originLink: null },
+      { from: "c. 1853–1857", until: "Feb. 1897", name: "Figueroa Street",
+        origin: "honored Gov. José Figueroa; the 1897 street-renaming committee moved the name a few blocks east onto the former Pearl Street, “being a continuation of that thoroughfare” {{(source)}}",
+        originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970202.2.34" },
+      { from: "Feb. 1897", until: "Feb. 1897", name: "De La Guerra Street",
+        origin: "the committee's proposed replacement name for the stretch between 3rd and 6th; at the Feb. 23, 1897 council session O.T. Johnson's representative objected and Boylston was substituted on the spot, on motion of Councilman Toll {{(source)}}",
+        originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970224.2.20" },
       { from: "1897", until: null, name: "Boylston Street", origin: null, originLink: null }
     ],
     note: "The donor side of the [[Figueroa Street]] name transfer.",
@@ -400,7 +404,9 @@ const STREET_DATA = {
     disputed: false,
     sources: [
       { title: "L.A. Street Names: Boylston Street", url: "https://lastreetnames.com/street/boylston-street/" },
-      { title: "L.A. Street Names: Figueroa Street", url: "https://lastreetnames.com/street/figueroa-street/" }
+      { title: "L.A. Street Names: Figueroa Street", url: "https://lastreetnames.com/street/figueroa-street/" },
+      { title: "Los Angeles Herald, “Work for Unemployed,” Feb. 2, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970202.2.34" },
+      { title: "Los Angeles Herald, “Party Lines Knocked Out in the Council,” Feb. 24, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970224.2.20" }
     ]
   },
 
@@ -509,17 +515,20 @@ const STREET_DATA = {
     planned: null,
     built: "by 1883; put on the map by 1887 via developer Ezra F. Kysor's Central Park tract",
     nameHistory: [
-      { from: "?", until: "1897", name: "Wolfskill Street",
+      { from: "?", until: "Feb. 1897", name: "Wolfskill Avenue",
         origin: "named for {{William Wolfskill}}'s old citrus ranch, which this stretch ran through",
         originLink: "https://en.wikipedia.org/wiki/William_Wolfskill" },
-      { from: "1897", until: null, name: "Central Avenue", origin: null, originLink: null }
+      { from: "Feb. 1897", until: null, name: "Central Avenue",
+        origin: "renamed per the city's street-renaming committee's report, among changes made “in response to urgent requests made before the committee” {{(source)}}",
+        originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
     ],
     note: "Central's stretch through South L.A. became the heart of Black Los Angeles in the 20th century — jazz clubs, the California Eagle newspaper — a history outside this map's downtown coverage.",
     categories: ["descriptive", "renamed"],
     disputed: false,
     sources: [
       { title: "L.A. Street Names: Central Avenue", url: "https://lastreetnames.com/street/central-avenue/" },
-      { title: "Wikipedia: William Wolfskill", url: "https://en.wikipedia.org/wiki/William_Wolfskill" }
+      { title: "Wikipedia: William Wolfskill", url: "https://en.wikipedia.org/wiki/William_Wolfskill" },
+      { title: "Los Angeles Herald, “Talking Retrenchment,” Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
     ]
   },
 

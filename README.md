@@ -52,6 +52,12 @@ Overpass query, the dashed coverage outlines, and the geometry-file staleness
 check. `node coverage-report.js` prints the per-neighborhood research to-do list.
 Full workflow in ADDING-STREETS.md.
 
+## Research process
+
+Batched by neighborhood (see ADDING-STREETS.md, "Scaling research"). Unverified
+hunches and open questions live in `research-leads.md`; sourced claims go
+straight into the data even when found incidentally.
+
 ## Research resources
 
 - L.A. Street Names (Mark Tapio Kines): https://lastreetnames.com/

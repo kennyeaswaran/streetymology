@@ -102,5 +102,11 @@ for (const [key, v] of Object.entries(STREET_DATA)) {
 }
 
 if (errors) { console.error(`\n${errors} error(s).`); process.exit(1); }
-console.log(`All checks pass: ${Object.keys(STREET_DATA).length} streets, ` +
-  Object.values(STREET_DATA).reduce((n, v) => n + (v.segments ? v.segments.length : 1), 0) + " entries.");
+
+// primary-anchor coverage (see ADDING-STREETS.md): survey, ordinance,
+// contemporary newspaper, or recorded tract map
+const PRIMARY = /tessa2?\.lapl\.org|cdnc\.ucr\.edu|clerk\.lacity\.org|navigatela\.lacity\.org|pqarchiver|newspapers\.com/;
+const allEntries = Object.values(STREET_DATA).flatMap(v => v.segments || [v]);
+const anchored = allEntries.filter(v => (v.sources || []).some(s => PRIMARY.test(s.url))).length;
+console.log(`All checks pass: ${Object.keys(STREET_DATA).length} streets, ${allEntries.length} entries. ` +
+  `Primary-record anchor: ${anchored}/${allEntries.length}.`);

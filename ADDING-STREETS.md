@@ -101,11 +101,38 @@ When one modern street absorbed several older ones, split it:
   transferred from …") and, when we add it, the donor street ("renamed …, its
   name passing to …").
 
+## Scaling research: batches, leads, and review
+
+- **Work in per-neighborhood batches of ~5–8 streets** (from the
+  coverage-report to-do list), one instance per batch. Don't research streets
+  one-at-a-time in isolation: the payoff is cross-street context — renaming
+  petitions covered several streets at once, families named clusters of
+  streets, and one street's Kines page routinely documents its neighbors.
+- **Sourced beats complete.** A claim that arrives incidentally (street B's
+  history found on street A's page) goes straight into B's entry with that
+  citation, even if B hasn't had its full pass — partial entries with
+  "not yet researched" fields are fine. Only UNSOURCED material (inferences,
+  patterns, recollections) waits in `research-leads.md`.
+- **research-leads.md** is the parking lot for hunches and open questions,
+  dated, one bullet each. Consume a street's leads during its full pass;
+  sweep the file periodically; move closed items to its Resolved section.
+- **Separate author from reviewer.** Draft entries in one session (or
+  sub-agent), review in another: run `node check-data.js`, spot-check the
+  boldest claim of the batch against its source, and check keys against
+  geometry via `node coverage-report.js` (orphan section). For large sweeps,
+  one sub-agent per neighborhood — never per street — handed this guide and
+  the leads file.
+
 ## Official records for renamings and tracts
 
-Street renamings and new subdivisions left paper trails; when a date matters,
-prefer citing the official record (or a newspaper report of it) over a
-secondary summary:
+**The primary-anchor principle: every entry should ultimately carry at least
+one primary-record source** — the Ord/Hutton survey, a Council
+ordinance/minutes, a contemporary newspaper report of the action, or a
+recorded tract map. Not every name had a Council action (organic pre-1849
+names, tract-map names), but every *dated claim* traces to one of these
+trails. Secondary sources (Kines, blogs) are fine as interim citations;
+upgrading to a primary anchor is standing work — `node check-data.js` reports
+how many entries have one. The trails:
 
 - **City Council ordinances and minutes** — every official renaming (e.g.
   Wolfskill→Central 1897, Castelar→Hill 1960) was a Council action. The L.A.
@@ -116,7 +143,9 @@ secondary summary:
   for the ordinance itself. The California Digital Newspaper Collection
   (cdnc.ucr.edu) has the Herald from the 1870s–1900s free (see the Hill Street
   entry's 1874 citation); the L.A. Times archive via LAPL/ProQuest covers the
-  rest.
+  rest. NOTE for automated instances: CDNC pages are JavaScript-rendered, so
+  fetch tools see empty pages — reading them requires a browser (Claude in
+  Chrome) or a human; prepared search recipes live in research-leads.md.
 - **Tract maps** — new streets (and their first names) appear on recorded
   subdivision maps, e.g. the Wolfskill Tract or Kysor's Central Park tract.
   L.A. County recorded tract maps are searchable through the County DPW map
