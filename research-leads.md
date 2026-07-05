@@ -126,18 +126,61 @@ can be added here as future leads warrant a CDNC sweep.)
 
 ## Open leads (continued)
 
-- **"Mills and Wicks Subdn."** (2026-07): while re-checking the F.P. Howard/Bliss
-  Tract map (M.R. 12-42) for Molino/Hewitt content, its margin note names the
-  neighboring subdivision immediately east of Carolina St (now Hewitt) as
-  "Mills and Wicks Subdn." That's the likely source tract for Mateo and/or
-  Molino streets (both sit east of Hewitt, outside the Bliss Tract's own
-  Alameda–Seaton–Colyton–Carolina street list). Worth a NavigateLA Legal
-  Search for "MILLS AND WICKS" or "WICKS" to find its recorded map — would
-  give Molino a real shot at a primary source instead of `unknown`. Also
-  worth double-checking whether "Mills" here has any relation to Mill
-  Street's name (probably coincidental — Mill St's own tract, the Industrial
-  Tract, is a different, later, unrelated subdivision several blocks south;
-  see Resolved below).
+- **Goodwin/Thomas/Mills-Wicks batch, loose ends** (2026-07): reading the three
+  downloaded tracts closely (Kenny's tip — read the local PDFs directly rather
+  than the browser viewer, much easier for side-by-side comparison) confirmed
+  Hewitt's segment split, 2nd St's "Guadalupe" stretch, Traction Ave's "Second
+  St" predecessor, and Imperial/Santa Fe's "Palm"/"Tulip" predecessors (all
+  now in streets-data.js). Three loose ends remain:
+  - **Spruce Street** (Goodwin Tract, immediately west of Imperial/"Palm"):
+    no modern street identified yet. Might be gone entirely (industrial
+    redevelopment south of 6th is heavy here), might survive under another
+    name. Not yet checked via NavigateLA.
+  - **Second unnamed "STREET" on the Thomas Tract's north sheet (M.R. 3-61)**:
+    the sheet shows TWO unlabeled N-S streets between "Guadalupe" and
+    "Georgia." One is very likely [[Rose Street|Rose]] (flagged in that
+    entry, geographically plausible but not a literal label match — confirmed
+    Rose St crosses E 2nd St right at the Guadalupe/Georgia band, and a
+    nearby parcel at Alameda/Traction/Rose shows all three streets meeting,
+    though that parcel's own Tract/Map-Ref is a 20th-century resubdivision,
+    not the 1875 Thomas Tract, so it's positional evidence only). The OTHER
+    unnamed street (further east, lots 13-22 on that sheet) is still
+    completely unidentified — not checked against any modern street yet.
+  - **4th Place west of Hewitt**: Kenny's read of the downloaded Mills and
+    Wicks tract suggested 4th Place (west of Hewitt) AND 4th St (east of
+    Hewitt) were both once "Third St." Close re-examination of M.R. 13-87
+    (the Apr.–May 1886 sheet) shows the "Third" band — including Lot 77,
+    confirmed via NavigateLA as 813 E 4th Place — sitting entirely EAST of
+    Hewitt (Lot B/C/D, the area west of Hewitt on this same sheet, are large
+    unsubdivided lots with no through street drawn at all). Applied the part
+    that checks out (4th Place AND 4th St's "east of Hewitt" segment both
+    trace to this same "Third" band, immediately adjacent to Hewitt) to both
+    entries. The "west of Hewitt" half of the claim doesn't have a source in
+    the three tracts on hand — possibly it's on the Bliss Tract (M.R. 12-42,
+    already cited elsewhere for Huber/Poplar/Carolina/Colyton/Seaton/
+    Palmetto but not re-examined this pass) or possibly a mix-up given how
+    disorienting the diagonal, non-north-up plat pages are. Worth Kenny
+    double-checking directly, or downloading MR012-042.pdf for a fresh look,
+    before treating "west of Hewitt" as resolved either way.
+
+
+- **"Mills and Wicks Subdn."** (2026-07, partially resolved 2026-07): while
+  re-checking the F.P. Howard/Bliss Tract map (M.R. 12-42) for Molino/Hewitt
+  content, its margin note names the neighboring subdivision immediately east
+  of Carolina St (now Hewitt) as "Mills and Wicks Subdn." Found via an
+  unrelated NavigateLA lookup (813 E 4th Place, tract-batch pass): this is the
+  "Mills and Wicks Extension of Second St. and adjoining subdivision," M.R.
+  13-87/88 — a big two-page filing. Page 87 (Apr.–May 1886) covers the
+  Georgia/Second/Third/Hewitt/Huber grid, north of the Bliss Tract; page 88
+  (the "additional subdivisions," Jan. 1887) covers the block bordering "O.H.
+  Bliss," and DOES show Mateo Street directly, right against a "Keller Est."
+  label — added as Mateo's primary source. Molino still doesn't appear on
+  either page — that lead stays open; the only remaining unexplored angle is
+  whatever lies between this sheet and the Bliss Tract's own drawn extent.
+  Also: the same page 87 shows Hewitt St by name directly (Apr.–May 1886,
+  same year as but a few months before the Bliss Tract's "Carolina Street" —
+  added to Hewitt's entry as a complication, since the two tracts apparently
+  used different names for the same street corridor in the same year).
 - **Molino Street tract lookup — blocked by modern redevelopment** (2026-07):
   tried multiple addresses (530 S Molino St and others); NavigateLA returns
   only one giant modern parcel, Tract TR 060507-C / M.B. 1313-4/5 (the

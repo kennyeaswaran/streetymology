@@ -49,6 +49,16 @@ function checkEntry(id, v) {
     warn(id, "namedAfter is null but 'unknown' category missing");
   if (v.categories.includes("unknown") && v.namedAfter !== null)
     warn(id, "'unknown' category but namedAfter is set — pick one");
+  // style budget (see ADDING-STREETS.md): popups are fact boxes, not essays
+  if (v.note && v.note.length > 420) warn(id, `note is ${v.note.length} chars — trim toward one or two lines`);
+  if (v.namedAfter && v.namedAfter.length > 190) warn(id, `namedAfter is ${v.namedAfter.length} chars — one line`);
+  (v.nameHistory || []).forEach((h, j) => {
+    if (h.origin && h.origin.length > 320) warn(id, `nameHistory[${j}].origin is ${h.origin.length} chars — sub-bullets should be short`);
+  });
+  for (const text of [v.namedAfter, ...(v.nameHistory || []).map(h => h.origin)]) {
+    const m = text && text.match(/\{\{(.+?)\}\}/);
+    if (m && m[1].length > 45) warn(id, `{{}} span "${m[1].slice(0, 30)}..." is ${m[1].length} chars — link a few words, not a clause`);
+  }
 }
 
 // {{...}} link-span markers: at most one per field, balanced, and pointless without a link

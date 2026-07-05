@@ -5,8 +5,18 @@ Recorded subdivision maps give: the recording date, the original platted
 street names, the subdivider, and the surveyor — often the single best
 primary anchor for `planned` and for pre-newspaper street names.
 
-REQUIRES A BROWSER (Claude in Chrome or a human): NavigateLA and the Assessor
-portal are JavaScript apps; fetch tools see nothing.
+REQUIRES A BROWSER for HARVESTING ONLY (NavigateLA and the Assessor portal are
+JavaScript apps; fetch tools see nothing). READING maps is different:
+
+**RULE — downloads first.** Before opening any map PDF in a browser viewer,
+`ls tracts/` — if the map is already downloaded, read it locally
+(`pdftoppm -png -r 150`, then Read the PNGs; re-render at `-r 300` for fine
+labels). If it is NOT there, add its verified URL to a shopping list for
+Kenny to download rather than reading it online; only read online when it's a
+single map the session genuinely can't wait for. Local reading is faster, the
+resolution is under your control, side-by-side comparison across maps is easy,
+and it avoids the Chrome-PDF-viewer and Google-viewer flakiness documented
+below. Browser time is for collecting Map-Refs, not for squinting at plats.
 
 ## The pipeline
 
