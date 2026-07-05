@@ -21,6 +21,11 @@ Periodically sweep the whole file. Keep entries dated.
   was presumably printed in full as a legal notice and passed in early 1897.
   Search CDNC Herald, Jan.–Apr. 1897, for the ordinance text; also City
   Archives. One document ≈ citations for dozens of coverage streets.
+- **omnibus-1897-renaming-full.md** (2026-07): CDNC hunt DONE — full text (326
+  changes, signed Feb. 26, 1897) confirmed NOT printed in the Herald/CDNC;
+  companion docs banked there (Feb. 2/3/9/19/24/27, Mar. 5 permalinks + all
+  itemized changes); next trail = City Archives ordinance book, L.A. Times
+  Feb. 3 & 24 1897 (ProQuest), Express/Record legal ads, Burks map.
 
 ## Open leads
 
@@ -44,11 +49,10 @@ From the Herald's Feb. 24, 1897 council report
 (https://cdnc.ucr.edu/?a=d&d=LAH18970224.2.20) — primary citations ready for
 when these streets get entries (cross-check each against its Kines page):
 
-- **Georgia Street** (in coverage): the renaming commission changed "Georgia
-  Bell street" to "Nevada street"; Major Horace Bell protested furiously at the
-  Feb. 23 session (the street was named for his wife, Georgia Bell, its
-  dedicator; his objection to "Nevada" was, uh, colorful) and the council
-  settled on "Georgia street" instead. Namesake: Georgia Bell, alive at naming.
+- **Marion Avenue** (in coverage): the 1897 ordinance renamed it "Stilson
+  place"; restored at the Feb. 18 joint session
+  (https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24). Namesake of Marion itself
+  unknown — check Kines for a Marion Avenue page before writing the entry.
 - **Court Street** (in coverage): the commission's proposed change to
   "Bradbury street" was rejected at the same session — property owners AND
   Mrs. Bradbury objected — so Court kept its name.

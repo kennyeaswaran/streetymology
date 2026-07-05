@@ -40,7 +40,7 @@ Status: ☐ unprocessed · ✔ applied to data · ⏸ out of coverage · † str
 - ⏸ Way 15–24 → Avenues 36–45; Way 30–38 → Avenues 50–58 [OCR "Way 82→Avenue 62" read as Way 32→Avenue 52] (Highland Park/Eagle Rock "Avenues" — a wholesale system conversion, bank for that neighborhood)
 - ⏸ Mono street name reinstated
 - ⏸ Ash street, from Main to Date → Queirolo [OCR "QuelrolOL"]
-- ⏸ Marion avenue restored
+- ☐ IN COVERAGE — Marion avenue restored (ordinance had renamed it "Stilson place"; see omnibus-1897-renaming-full.md; entry not yet written)
 - ✔ **Ruth avenue restored** (applied: Stanford Ave + Crocker St — proves Ruth→Stanford swap postdates Feb. 1897)
 - ⏸ Tolande street restored
 - ✔ Vine street, from Second to First → **Central avenue** (applied: Central Ave note; segment candidate — Central's 1st–2nd block was Vine St)

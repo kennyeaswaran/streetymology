@@ -83,9 +83,9 @@ const STREET_DATA = {
             origin: "named after the insect: grasshoppers crossing this line from the western plains doomed the grape harvest",
             originLink: null },
           { from: "1874", until: "1897", name: "Pearl Street",
-            origin: "property owners along Grasshopper Street petitioned for “Pearl Street” over a rival “Union Avenue” proposal; the Herald's report of the Feb. 26, 1874 council debate names no specific petitioner or namesake {{(source)}}",
+            origin: "property owners along Grasshopper Street petitioned for “Pearl Street” over a rival “Union Avenue” proposal; the Herald's report of the Feb. 26, 1874 council debate names no petitioner or namesake — though in 1897, ex-Mayor J. R. Toberman claimed the naming as his own {{(source)}}",
             originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18740227.2.10" },
-          { from: "1897", until: null, name: "Figueroa Street",
+          { from: "Feb. 1897", until: null, name: "Figueroa Street",
             origin: "Pearl Street was renamed Figueroa Street “being a continuation of that thoroughfare”; the older Figueroa Street (c. 1853–1857) a few blocks west was simultaneously renamed De La Guerra, then Boylston within weeks {{(source)}}",
             originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970202.2.34" }
         ],
@@ -100,7 +100,8 @@ const STREET_DATA = {
           { title: "Wikipedia: Figueroa Street", url: "https://en.wikipedia.org/wiki/Figueroa_Street" },
           { title: "Los Angeles Herald, “City and Suburbs,” Feb. 27, 1874", url: "https://cdnc.ucr.edu/?a=d&d=LAH18740227.2.10" },
           { title: "Los Angeles Herald, “Work for Unemployed,” Feb. 2, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970202.2.34" },
-          { title: "Los Angeles Herald, “Party Lines Knocked Out in the Council,” Feb. 24, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970224.2.20" }
+          { title: "Los Angeles Herald, “Party Lines Knocked Out in the Council,” Feb. 24, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970224.2.20" },
+          { title: "Los Angeles Herald, “A Storm of Words” (Toberman's protest; Pearl→Figueroa upheld), Feb. 19, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" }
         ]
       },
       {
@@ -410,6 +411,57 @@ const STREET_DATA = {
     ]
   },
 
+  "Georgia Street": {
+    name: "Georgia Street",
+    namedAfter: "{{Georgia Herrick Bell}} (1845–1899), wife of Major Horace Bell, on whose land the street was laid out",
+    namedAfterLink: "https://lastreetnames.com/street/georgia-street/",
+    planned: null,
+    built: "by 1874",
+    nameHistory: [
+      { from: "1874", until: "1883–1890 (sources differ)", name: "Georgia Street",
+        origin: "christened on Bell land; later renamed Georgia Bell to avoid conflict with another, now-defunct Georgia Street {{(source)}}",
+        originLink: "https://lastreetnames.com/street/georgia-street/" },
+      { from: "by 1890", until: "Feb. 1897", name: "Georgia Bell Street",
+        origin: "adjoining stretches platted as Nevada Street (on 1886 Downey Harvey and Dunnigan tract maps) were folded in as Georgia Bell on May 10, 1889, per Gen. Forman's 1897 testimony {{(source)}}",
+        originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" },
+      { from: "Feb. 1897", until: null, name: "Georgia Street",
+        origin: "the renaming commission proposed reverting to “Nevada”; after Major Bell's furious protest the council compromised on Georgia — one of the street's own former names — and Bell dropped his threatened lawsuit {{(source)}}",
+        originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970227.2.12" }
+    ],
+    note: "The Georgia→Georgia Bell renaming date is unsettled: Kines says 1883; Forman testified Sept. 11, 1890 (or 1880 — OCR unclear). Council ordinance books would settle it.",
+    categories: ["person", "alive", "renamed"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Georgia Street", url: "https://lastreetnames.com/street/georgia-street/" },
+      { title: "Los Angeles Herald, “A Storm of Words” (Forman's dated history), Feb. 19, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" },
+      { title: "Los Angeles Herald, editorial note (Georgia compromise passed), Feb. 24, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970224.2.15" },
+      { title: "Los Angeles Herald, “Signed the Ordinance,” Feb. 27, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970227.2.12" }
+    ]
+  },
+
+  "Delong Street": {
+    name: "Delong Street",
+    namedAfter: "{{George W. De Long}} (1844–1881), Arctic explorer who died leading the Jeannette expedition",
+    namedAfterLink: "https://en.wikipedia.org/wiki/George_W._DeLong",
+    planned: null,
+    built: "not yet researched",
+    nameHistory: [
+      { from: "?", until: "by 1897", name: "Virginia Street",
+        origin: "per Major Horace Bell, named for his daughter Virginia {{(source)}}",
+        originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" },
+      { from: "by 1897", until: null, name: "Delong Street",
+        origin: "renamed by City Engineer Dockweiler in the explorer's honor — as Dockweiler himself confirmed at the Feb. 18, 1897 hearing {{(source)}}",
+        originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" }
+    ],
+    note: "Not covered by Kines; renaming date (pre-1897) not yet researched.",
+    categories: ["person", "renamed"],
+    disputed: false,
+    sources: [
+      { title: "Los Angeles Herald, “A Storm of Words,” Feb. 19, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" },
+      { title: "Wikipedia: George W. DeLong", url: "https://en.wikipedia.org/wiki/George_W._DeLong" }
+    ]
+  },
+
   "Hill Street": {
     name: "Hill Street",
     orientation: "NS",
@@ -528,7 +580,8 @@ const STREET_DATA = {
     sources: [
       { title: "L.A. Street Names: Central Avenue", url: "https://lastreetnames.com/street/central-avenue/" },
       { title: "Wikipedia: William Wolfskill", url: "https://en.wikipedia.org/wiki/William_Wolfskill" },
-      { title: "Los Angeles Herald, “Talking Retrenchment,” Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
+      { title: "Los Angeles Herald, “Talking Retrenchment,” Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" },
+      { title: "Los Angeles Herald, “A Storm of Words” (Vine St extent: south of 1st), Feb. 19, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" }
     ]
   },
 
@@ -938,20 +991,22 @@ Object.assign(STREET_DATA, {
   "2nd Street": numberedStreet("2nd Street"),
   "3rd Street": numberedStreet("3rd Street"),
   "4th Street": numberedStreet("4th Street", {
-    note: "The 1890 petition that turned Fort Street into Broadway cited confusion between “Fort” and “Fourth”. In the Feb. 1897 citywide renaming, Larkin Street and Short Street (“from Fourth street to Santa Fe grounds”) were folded into 4th's eastern reach.",
+    note: "The 1890 petition that turned Fort Street into Broadway cited confusion between “Fort” and “Fourth”. In the Feb. 1897 citywide renaming, Larkin Street and Short Street (“from Fourth street to Santa Fe grounds”) were folded into 4th's eastern reach, and Boyle Heights' 2nd Street east of the river also became 4th, at ex-Mayor Workman's request.",
     sources: [
       { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
       { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
       { title: "L.A. Street Names: Broadway (the Fort/Fourth confusion)", url: "https://lastreetnames.com/street/broadway/" },
-      { title: "Los Angeles Herald, “Talking Retrenchment” (renaming committee report), Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
+      { title: "Los Angeles Herald, “Talking Retrenchment” (renaming committee report), Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" },
+      { title: "Los Angeles Herald, “A Storm of Words” (east-of-river changes), Feb. 19, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" }
     ]
   }),
   "5th Street": numberedStreet("5th Street", {
-    note: "In the Feb. 1897 citywide renaming, Lugo Street was folded into 5th (extent not yet researched).",
+    note: "In the Feb. 1897 citywide renaming, Lugo Street was folded into 5th (extent not yet researched), and Boyle Heights' 4th Street east of the river likewise became 5th.",
     sources: [
       { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
       { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
-      { title: "Los Angeles Herald, “Talking Retrenchment” (renaming committee report), Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
+      { title: "Los Angeles Herald, “Talking Retrenchment” (renaming committee report), Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" },
+      { title: "Los Angeles Herald, “A Storm of Words” (east-of-river changes), Feb. 19, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" }
     ]
   }),
   "6th Street": numberedStreet("6th Street"),
