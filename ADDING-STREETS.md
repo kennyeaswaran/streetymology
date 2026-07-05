@@ -123,6 +123,32 @@ When one modern street absorbed several older ones, split it:
   one sub-agent per neighborhood — never per street — handed this guide and
   the leads file.
 
+## Omnibus documents (one article, dozens of streets)
+
+Some primary documents — the 1897 street-renaming committee report, big
+annexation ordinances, tract filings — document many street actions at once.
+When you find one, STOP working your current street and bank the document
+first:
+
+1. **Transcribe the full list immediately** into a dedicated file
+   `omnibus-<year>-<slug>.md` (e.g. omnibus-1897-renaming.md): permalink at
+   the top, then every renaming/creation/extension the document records, one
+   line each, keeping the document's extent language verbatim ("X street from
+   A to B changed to Y") — the extents are what later decide whole-street vs.
+   segment. Transcribe even the streets you don't care about yet; the article
+   was hard to find and OCR is painful to re-read.
+2. **Classify each item** against current coverage (the geometry street list —
+   `node coverage-report.js` names them all): IN COVERAGE / OUT (parked for
+   future neighborhoods) / GONE (street no longer exists).
+3. **Apply to in-coverage streets**: add the citation to each affected entry,
+   and for each decide — whole-street renaming (nameHistory line), partial
+   extent (new segment), or mere context (note). Tick items off in the omnibus
+   file as applied, so partial progress is visible.
+4. **Point research-leads.md at the file** with a one-line status (e.g.
+   "omnibus-1897-renaming.md: 12/40 applied"). Parked items stay in the
+   omnibus file — when a new neighborhood is added, sweep the omnibus files
+   before doing fresh research; citations may be waiting.
+
 ## Official records for renamings and tracts
 
 **The primary-anchor principle: every entry should ultimately carry at least

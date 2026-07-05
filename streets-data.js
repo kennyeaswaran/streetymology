@@ -522,7 +522,7 @@ const STREET_DATA = {
         origin: "renamed per the city's street-renaming committee's report, among changes made “in response to urgent requests made before the committee” {{(source)}}",
         originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
     ],
-    note: "Central's stretch through South L.A. became the heart of Black Los Angeles in the 20th century — jazz clubs, the California Eagle newspaper — a history outside this map's downtown coverage.",
+    note: "The same Feb. 1897 ordinance also folded Vine Street (2nd to 1st) into Central's north end — a segment candidate. Central's stretch through South L.A. became the heart of Black Los Angeles in the 20th century — jazz clubs, the California Eagle newspaper — a history outside this map's downtown coverage.",
     categories: ["descriptive", "renamed"],
     disputed: false,
     sources: [
@@ -647,18 +647,19 @@ const STREET_DATA = {
     planned: null,
     built: "1887 (as Ruth Avenue)",
     nameHistory: [
-      { from: "1887", until: "?", name: "Ruth Avenue",
-        origin: "presumably named for a daughter of landowner Joseph Wolfskill, whose old DTLA orchard was being subdivided {{(source)}}",
-        originLink: "https://lastreetnames.com/street/towne-avenue-dtla/" },
-      { from: "?", until: null, name: "Stanford Avenue",
+      { from: "1887", until: "after Feb. 1897", name: "Ruth Avenue",
+        origin: "presumably named for a daughter of landowner Joseph Wolfskill, whose old DTLA orchard was being subdivided; the 1897 renaming commission proposed changing it, but the council committee restored the name {{(source)}}",
+        originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" },
+      { from: "after Feb. 1897", until: null, name: "Stanford Avenue",
         origin: "took over the Stanford name once the original Stanford Avenue, a block over, was renamed Crocker Street {{(source)}}",
         originLink: "https://lastreetnames.com/street/towne-avenue-dtla/" }
     ],
-    note: "Sibling to [[Towne Avenue]] and [[Crocker Street]] — all three trace to the 1887 SPRR station land deal. The exact renaming year is not yet researched.",
+    note: "Sibling to [[Towne Avenue]] and [[Crocker Street]] — all three trace to the 1887 SPRR station land deal. Still Ruth Avenue in Feb. 1897; the exact swap year is not yet researched.",
     categories: ["person", "renamed", "governor"],
     disputed: false,
     sources: [
       { title: "L.A. Street Names: Towne Avenue (recounts the Crocker/Stanford street swap)", url: "https://lastreetnames.com/street/towne-avenue-dtla/" },
+      { title: "Los Angeles Herald, “Talking Retrenchment” (Ruth Avenue restored), Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" },
       { title: "Wikipedia: Leland Stanford", url: "https://en.wikipedia.org/wiki/Leland_Stanford" }
     ]
   },
@@ -937,14 +938,22 @@ Object.assign(STREET_DATA, {
   "2nd Street": numberedStreet("2nd Street"),
   "3rd Street": numberedStreet("3rd Street"),
   "4th Street": numberedStreet("4th Street", {
-    note: "The 1890 petition that turned Fort Street into Broadway cited confusion between “Fort” and “Fourth”.",
+    note: "The 1890 petition that turned Fort Street into Broadway cited confusion between “Fort” and “Fourth”. In the Feb. 1897 citywide renaming, Larkin Street and Short Street (“from Fourth street to Santa Fe grounds”) were folded into 4th's eastern reach.",
     sources: [
       { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
       { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
-      { title: "L.A. Street Names: Broadway (the Fort/Fourth confusion)", url: "https://lastreetnames.com/street/broadway/" }
+      { title: "L.A. Street Names: Broadway (the Fort/Fourth confusion)", url: "https://lastreetnames.com/street/broadway/" },
+      { title: "Los Angeles Herald, “Talking Retrenchment” (renaming committee report), Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
     ]
   }),
-  "5th Street": numberedStreet("5th Street"),
+  "5th Street": numberedStreet("5th Street", {
+    note: "In the Feb. 1897 citywide renaming, Lugo Street was folded into 5th (extent not yet researched).",
+    sources: [
+      { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
+      { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+      { title: "Los Angeles Herald, “Talking Retrenchment” (renaming committee report), Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
+    ]
+  }),
   "6th Street": numberedStreet("6th Street"),
   "7th Street": numberedStreet("7th Street"),
   "8th Street": numberedStreet("8th Street"),

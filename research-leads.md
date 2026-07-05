@@ -9,6 +9,19 @@ Workflow: when doing a street's full pass, check here first and consume its
 leads (verify → into the entry; debunk → delete, noting why if instructive).
 Periodically sweep the whole file. Keep entries dated.
 
+## Omnibus documents
+
+- **omnibus-1897-renaming.md** (Herald, Feb. 21, 1897 committee report):
+  ~50 items transcribed; 6 applied to in-coverage streets; rest parked for
+  Lincoln Heights / Highland Park / other neighborhoods.
+- **⭐ TOP TARGET: the full 1897 renaming ordinance (350+ changes).** The
+  Feb. 21 article is only the committee's amendments to it. The commission's
+  complete ordinance — six weeks of work, 350+ renamings, the city's great
+  anglicization moment (final tally ≈1,250 English vs. 150 Spanish names) —
+  was presumably printed in full as a legal notice and passed in early 1897.
+  Search CDNC Herald, Jan.–Apr. 1897, for the ordinance text; also City
+  Archives. One document ≈ citations for dozens of coverage streets.
+
 ## Open leads
 
 - **Gladys Avenue** (2026-07): Stanford Ave (orig. Ruth Ave, 1887) and Agatha St
