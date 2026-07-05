@@ -199,13 +199,11 @@ how many entries have one. The trails:
   Chrome) or a human; prepared search recipes live in research-leads.md.
 - **Tract maps** — new streets (and their first names) appear on recorded
   subdivision maps, e.g. the Wolfskill Tract or Kysor's Central Park tract.
-  THE standardized portal: L.A. County Public Works Land Records
-  (https://pw.lacounty.gov/smpm/landrecords/TractMaps.aspx) — search recorded
-  tract maps by tract name or map book/page and get the scanned map itself,
-  with recording date. This turns testimony like "Downey Harvey tract,
-  recorded Aug. 2, 1886" into a linkable primary scan. The city's NavigateLA
-  (navigatela.lacity.org) overlays recorded tract boundaries geographically
-  (find which tract a street sits in, then look up its map).
+  Full verified street→tract→scanned-map workflow: see **TRACT-RESEARCH.md**
+  (NavigateLA Parcel Description Report gives tract name + Map-Ref; DPW Land
+  Records serves the scan; Assessor Legal Search goes tract-name→location).
+  This turns testimony like "Downey Harvey tract, recorded Aug. 2, 1886" into
+  a linkable primary scan.
 - **Bernice Kimball, “Street Names of Los Angeles” (Bureau of Engineering,
   1988)** — the BOE's own compendium of name changes, compiled from city
   records; not online, but LAPL holds it, and Kines relies on it. Worth

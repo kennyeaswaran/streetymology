@@ -70,4 +70,5 @@ straight into the data even when found incidentally.
 - L.A. City Archives & Records Center (Council minutes/ordinances to 1850): https://clerk.lacity.gov/records
 - NavigateLA (recorded tract boundaries): https://navigatela.lacity.org/
 - L.A. County tract map search (recorded subdivision maps, scanned): https://pw.lacounty.gov/smpm/landrecords/TractMaps.aspx
+  — full street→tract→map workflow in TRACT-RESEARCH.md
 - Bernice Kimball, "Street Names of Los Angeles" (BOE, 1988) — at LAPL; the city's own renaming compendium
