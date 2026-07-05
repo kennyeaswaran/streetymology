@@ -101,6 +101,31 @@ When one modern street absorbed several older ones, split it:
   transferred from …") and, when we add it, the donor street ("renamed …, its
   name passing to …").
 
+### Executing a split (turning a "segment candidate" note into segments)
+
+1. Confirm the extent from the source ("Vine street, south of First" — you
+   need the bounding cross-street, not a vague "north end").
+2. Get the boundary coordinate: `node intersect.js "Central Avenue" "2nd Street"`
+   prints the intersection lat/lng and the band value to use.
+3. Restructure the entry: top level `{ name, orientation, segments: [...] }`,
+   canonical order (N→S / W→E), each segment complete with its own
+   nameHistory/categories/sources. The stretch whose history you DON'T know
+   still gets a segment with honest unknowns.
+4. Remove the "segment candidate" note text; the chips now say it.
+5. `node check-data.js` (band tiling + order are verified), reload the map,
+   click both stretches, and check the chips jump correctly.
+6. If only part of a boundary is known (e.g. Central's Wolfskill/original-
+   Central line), split where you CAN and leave a note in the southern segment
+   saying it may split again — don't wait for perfect knowledge.
+
+### Batch verification (for humans)
+
+End every research batch by listing all new or substantially changed entries
+in the final message/commit description. The reviewer (usually Kenny) can then
+type each name into the map's search box — it lists every entry, including
+segments — to eyeball the popup: links work, dates read right, chips point the
+right way.
+
 ## Scaling research: batches, leads, and review
 
 - **Work in per-neighborhood batches of ~5–8 streets** (from the
@@ -174,9 +199,13 @@ how many entries have one. The trails:
   Chrome) or a human; prepared search recipes live in research-leads.md.
 - **Tract maps** — new streets (and their first names) appear on recorded
   subdivision maps, e.g. the Wolfskill Tract or Kysor's Central Park tract.
-  L.A. County recorded tract maps are searchable through the County DPW map
-  index, and the city's NavigateLA (navigatela.lacity.org) overlays recorded
-  tract boundaries and numbers.
+  THE standardized portal: L.A. County Public Works Land Records
+  (https://pw.lacounty.gov/smpm/landrecords/TractMaps.aspx) — search recorded
+  tract maps by tract name or map book/page and get the scanned map itself,
+  with recording date. This turns testimony like "Downey Harvey tract,
+  recorded Aug. 2, 1886" into a linkable primary scan. The city's NavigateLA
+  (navigatela.lacity.org) overlays recorded tract boundaries geographically
+  (find which tract a street sits in, then look up its map).
 - **Bernice Kimball, “Street Names of Los Angeles” (Bureau of Engineering,
   1988)** — the BOE's own compendium of name changes, compiled from city
   records; not online, but LAPL holds it, and Kines relies on it. Worth

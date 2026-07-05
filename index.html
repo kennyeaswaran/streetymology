@@ -24,7 +24,12 @@
     padding: 10px 14px; max-width: 250px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     font-size: 13px;
   }
-  #panel h2 { margin: 0 0 6px; font-size: 14px; }
+  #panel h2 { margin: 8px 0 6px; font-size: 14px; }
+  #searchBox {
+    width: 100%; box-sizing: border-box; padding: 4px 8px;
+    border: 1px solid #c9b98a; border-radius: 4px; font: inherit; font-size: 13px;
+    background: #fffef7;
+  }
   #panel label { display: block; margin: 3px 0; cursor: pointer; }
   #panel .legend { margin-top: 10px; padding-top: 8px; border-top: 1px solid #ddd; }
   #panel .legend div { display: flex; align-items: center; gap: 6px; margin: 2px 0; }
@@ -101,6 +106,8 @@
 </div>
 
 <div id="panel">
+  <input id="searchBox" list="streetList" placeholder="Find a street with history…" autocomplete="off">
+  <datalist id="streetList"></datalist>
   <h2>Highlight streets…</h2>
   <div id="filters"></div>
   <button class="clear" onclick="clearFilters()">Clear highlights</button>
@@ -387,6 +394,36 @@ function jumpToStreet(name) {
   L.popup({ maxWidth: 340 }).setLatLng(pt).setContent(popupHtml(target)).openOn(map);
 }
 
+// ---------------------------------------------------------------
+// Search box: type a street with an entry, jump to it. Segmented
+// streets get one option per segment ("Broadway — Chinatown …").
+// ---------------------------------------------------------------
+const searchIndex = new Map(); // display label -> street key
+function populateSearch() {
+  const dl = document.getElementById("streetList");
+  dl.innerHTML = "";
+  searchIndex.clear();
+  const labels = [];
+  streets.forEach((street, key) => {
+    if (!street.entry) return;
+    const label = street.entry.label ? `${street.name} — ${street.entry.label}` : street.name;
+    searchIndex.set(label, key);
+    labels.push(label);
+  });
+  labels.sort((a, b) => a.localeCompare(b));
+  labels.forEach(l => {
+    const opt = document.createElement("option");
+    opt.value = l;
+    dl.appendChild(opt);
+  });
+}
+document.getElementById("searchBox").addEventListener("change", e => {
+  const key = searchIndex.get(e.target.value);
+  if (key === undefined) return;
+  jumpToSegment(key); // works for unsegmented streets too (key = plain name)
+  e.target.value = "";
+});
+
 // wire up segment-chip and cross-street links whenever a popup opens
 map.on("popupopen", e => {
   const el = e.popup.getElement();
@@ -514,6 +551,7 @@ fetchStreets()
       hit.bindTooltip(norm, { sticky: true });
     });
     restyleAll();
+    populateSearch();
     const withData = [...streets.values()].filter(s => s.entry).length;
     statusEl.textContent = `${streets.size} streets loaded · ${withData} with history`;
     setTimeout(() => statusEl.style.display = "none", 4000);

@@ -29,6 +29,30 @@ Periodically sweep the whole file. Keep entries dated.
 
 ## Open leads
 
+- **Arts District warehouse-pocket streets** (2026-07): two batch passes done.
+  Batch 1 — Mateo, Traction, Colyton, Santa Fe (full Kines sources); Hewitt
+  (partial: formerly Carolina Street per the Colyton page, own namesake/rename
+  date open); Palmetto, Factory Place, Willow, Molino, Merrick, Imperial
+  (`unknown`, web search exhausted, not covered by Kines). Batch 2 — Seaton
+  (full Kines source, shares the Colyton/Howard-tract page); Myers, Anderson,
+  Mill, Utah, Decatur, Jesse, Mesquit (`unknown`, same story — nothing found,
+  not covered by Kines; Mill/Utah/Decatur/Mesquit each carry a flagged
+  speculative note — mill history, state-name tract pattern, Stephen Decatur,
+  mesquite — none confirmed). Next step for all `unknown` entries in this
+  pocket: a CDNC sweep (Feb.–Apr. 1897 renaming ordinance is the top target
+  already flagged above; also try 1880s Herald tract-sale notices) and/or
+  L.A. County tract-map lookups via NavigateLA — both need a real browser,
+  not fetch tools.
+- **Arts District warehouse-pocket streets, batch 3** (2026-07): Keller Street
+  now has a full source (L.A. Revisited: promoted by Matthew Keller — the same
+  "Don Mateo" of Mateo Street — as part of the 1869 Aliso Tract; geographically
+  just north of the Arts District core, near Ramirez St/Piper Tech, not inside
+  the Arts District bbox proper but thematically tied to Mateo). 4th Place and
+  7th Place entered as spurs of the numbered grid (category "number"), not
+  distinct namesakes. Channing St, Conway Place, Lawrence St, Avery St, Plaza
+  Del Sol all `unknown` — web search exhausted, not covered by Kines. Same
+  CDNC/tract-map follow-up as the rest of the pocket applies.
+
 - **Gladys Avenue** (2026-07): Stanford Ave (orig. Ruth Ave, 1887) and Agatha St
   (1897) appear to be named for women of the Wolfskill orbit, platted on
   ex-Wolfskill land. Was there a Gladys in the family/associates? Check

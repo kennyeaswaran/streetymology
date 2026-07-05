@@ -69,4 +69,5 @@ straight into the data even when found incidentally.
 - California Digital Newspaper Collection (Herald etc., renaming ordinances): https://cdnc.ucr.edu/
 - L.A. City Archives & Records Center (Council minutes/ordinances to 1850): https://clerk.lacity.gov/records
 - NavigateLA (recorded tract boundaries): https://navigatela.lacity.org/
+- L.A. County tract map search (recorded subdivision maps, scanned): https://pw.lacounty.gov/smpm/landrecords/TractMaps.aspx
 - Bernice Kimball, "Street Names of Los Angeles" (BOE, 1988) — at LAPL; the city's own renaming compendium

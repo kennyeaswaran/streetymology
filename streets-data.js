@@ -557,31 +557,461 @@ const STREET_DATA = {
     ]
   },
 
-  // TODO when South L.A. coverage is added: segment Central — the Wolfskill→
-  // Central (1897) lineage below applies to the downtown stretch only; the
-  // southern stretch carried the Central name from 1883 (central to Vernon).
-  "Central Avenue": {
-    name: "Central Avenue",
-    namedAfter: "Central not to Los Angeles but to {{Vernon}}, just south of the city limits when it was platted",
-    namedAfterLink: "https://en.wikipedia.org/wiki/Vernon,_California",
+  "Mateo Street": {
+    name: "Mateo Street",
+    namedAfter: "{{Matthew Keller}} (c. 1811–1881), Irish-born shopkeeper, vintner, and city councilman known by the Spanish honorary “Don Mateo”",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Matthew_Keller",
     planned: null,
-    built: "by 1883; put on the map by 1887 via developer Ezra F. Kysor's Central Park tract",
-    nameHistory: [
-      { from: "?", until: "Feb. 1897", name: "Wolfskill Avenue",
-        origin: "named for {{William Wolfskill}}'s old citrus ranch, which this stretch ran through",
-        originLink: "https://en.wikipedia.org/wiki/William_Wolfskill" },
-      { from: "Feb. 1897", until: null, name: "Central Avenue",
-        origin: "renamed per the city's street-renaming committee's report, among changes made “in response to urgent requests made before the committee” {{(source)}}",
-        originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
-    ],
-    note: "The same Feb. 1897 ordinance also folded Vine Street (2nd to 1st) into Central's north end — a segment candidate. Central's stretch through South L.A. became the heart of Black Los Angeles in the 20th century — jazz clubs, the California Eagle newspaper — a history outside this map's downtown coverage.",
-    categories: ["descriptive", "renamed"],
+    built: "named by 1887",
+    note: "Keller's Rising Sun Vineyard once covered the ground just west of the street; he also owned Rancho Topanga Malibu, sold by his son to the {{Rindge}} family in 1892.",
+    categories: ["person"],
     disputed: false,
     sources: [
-      { title: "L.A. Street Names: Central Avenue", url: "https://lastreetnames.com/street/central-avenue/" },
-      { title: "Wikipedia: William Wolfskill", url: "https://en.wikipedia.org/wiki/William_Wolfskill" },
-      { title: "Los Angeles Herald, “Talking Retrenchment,” Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" },
-      { title: "Los Angeles Herald, “A Storm of Words” (Vine St extent: south of 1st), Feb. 19, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" }
+      { title: "L.A. Street Names: Mateo Street", url: "https://lastreetnames.com/street/mateo-street/" },
+      { title: "Wikipedia: Matthew Keller", url: "https://en.wikipedia.org/wiki/Matthew_Keller" },
+      { title: "Los Angeles Revisited: Downtown's Mateo Street & Keller Street", url: "https://losangelesrevisited.blogspot.com/2011/02/downtowns-mateo-street-keller-street.html" }
+    ]
+  },
+
+  "Traction Avenue": {
+    name: "Traction Avenue",
+    namedAfter: "The electric traction motor that powered streetcars via a trolley pole and overhead wire — the streetcars once ran along it to the nearby [[Santa Fe Avenue|Santa Fe]] depot",
+    namedAfterLink: null,
+    planned: null,
+    built: null,
+    nameHistory: [
+      { from: "?", until: "1915", name: "Stephenson Avenue",
+        origin: "no namesake documented", originLink: null },
+      { from: "1915", until: null, name: "Traction Avenue",
+        origin: "renamed to avoid confusion with the Eastside's bigger, busier Stephenson Avenue, which itself was renamed Whittier Boulevard just five years later {{(source)}}",
+        originLink: "https://lastreetnames.com/street/traction-avenue/" }
+    ],
+    note: "Ground zero for the Arts District's punk-era scene: Al's Bar (1979–2001) and Joel Bloom's General Store (1994) both sat at Traction & [[Hewitt Street|Hewitt]].",
+    categories: ["renamed", "descriptive"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Traction Avenue", url: "https://lastreetnames.com/street/traction-avenue/" }
+    ]
+  },
+
+  "Colyton Street": {
+    name: "Colyton Street",
+    namedAfter: "The English town of {{Colyton}}, Devon, near the birthplace of tract developer Dr. Frederick Preston Howard (1835–1900), who platted the street",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Colyton",
+    planned: null,
+    built: "1886",
+    note: "One block east of Seaton Street, also named in 1886 on Howard's tract for a nearby English town (Seaton is 3 miles from Colyton). Howard's tract also included Huber Street (now part of [[4th Street]]) and Carolina Street (now [[Hewitt Street]]); Kines hasn't found a record proving Howard specifically hailed from the Colyton/Seaton area, though it's a reasonable inference.",
+    categories: ["place", "borrowed"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Colyton Street", url: "https://lastreetnames.com/street/colyton-street/" },
+      { title: "Wikipedia: Colyton", url: "https://en.wikipedia.org/wiki/Colyton" }
+    ]
+  },
+
+  "Santa Fe Avenue": {
+    name: "Santa Fe Avenue",
+    namedAfter: "The {{Atchison, Topeka & Santa Fe Railway}} (“the Santa Fe”), whose passenger depot opened near the street's junction with [[1st Street]]",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Atchison,_Topeka_and_Santa_Fe_Railway",
+    planned: null,
+    built: "named May 1887, when the AT&SF officially reached Los Angeles",
+    note: "“Santa Fe” was aspirational even for the railroad itself — no AT&SF train reached the city of Santa Fe until 1880. The company's “La Grande” station opened at Santa Fe & 3rd in 1893; passenger service moved to Union Station in 1939 and the AT&SF folded in 1996. The old freight depot near 2nd is now home to SCI-Arc.",
+    categories: ["place", "aspiration"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Santa Fe Avenue", url: "https://lastreetnames.com/street/santa-fe-avenue/" }
+    ]
+  },
+
+  "Hewitt Street": {
+    name: "Hewitt Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: null,
+    nameHistory: [
+      { from: "1886", until: "?", name: "Carolina Street",
+        origin: "named on Dr. Frederick Preston Howard's tract, likely for his wife Caroline (née Huber) {{(source)}}",
+        originLink: "https://lastreetnames.com/street/colyton-street/" },
+      { from: "?", until: null, name: "Hewitt Street",
+        origin: "not yet researched — namesake and rename date unconfirmed; not covered by Kines",
+        originLink: null }
+    ],
+    note: "Home to Al's Bar (1979–2001) and Joel Bloom's General Store (opened 1994 at Traction & Hewitt) — the punk-and-DIY-era venues credited with giving the Arts District its name and its first unofficial mayor.",
+    categories: ["renamed", "unknown"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Colyton Street (Carolina St. → Hewitt St., on the Howard tract)", url: "https://lastreetnames.com/street/colyton-street/" },
+      { title: "L.A. Weekly: How the Arts District Got Its Name", url: "https://www.laweekly.com/how-the-arts-district-got-its-name/" }
+    ]
+  },
+
+  "Palmetto Street": {
+    name: "Palmetto Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "In the Arts District warehouse pocket alongside [[Mateo Street]] and [[Hewitt Street]]; not covered by Kines and no tract record or namesake turned up yet.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Factory Place": {
+    name: "Factory Place",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "buildings on it date to the 1920s (Factory Place Arts Complex)",
+    note: "Possibly descriptive of the warehouse/manufacturing buildings lining it, but unconfirmed — flagged as speculation. 1300 and 1308 Factory Place began as a smoked-fish plant and a stationery warehouse before their 1981 conversion into some of L.A.'s first artist lofts; not covered by Kines.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Factory Place Arts Complex: About", url: "https://factorypl.com/about/" },
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Willow Street": {
+    name: "Willow Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "In the Arts District warehouse pocket; not covered by Kines. Possibly descriptive (a tree name, as with several other downtown streets), but unconfirmed — flagged as speculation, not a sourced claim.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Molino Street": {
+    name: "Molino Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "“Molino” is Spanish for “mill” — possibly descriptive of a mill once on or near the street, but this is speculation; no source confirms it and Kines hasn't covered the street.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Merrick Street": {
+    name: "Merrick Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "Meets [[4th Street]] at the former Coca-Cola bottling plant (built 1915, now the Fourth & Traction complex); not covered by Kines and no namesake found yet.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Imperial Street": {
+    name: "Imperial Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "Unrelated to Imperial Highway (named 1929–31 for Imperial County produce traffic, far to the south); this short Arts District street's naming is a separate, unresearched event. Not covered by Kines.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Seaton Street": {
+    name: "Seaton Street",
+    namedAfter: "The English seaside town of {{Seaton}}, Devon, three miles from Colyton — likely the birthplace region of tract developer Dr. Frederick Preston Howard (1835–1900), who platted the street",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Seaton,_Devon",
+    planned: null,
+    built: "1886",
+    note: "One block west of [[Colyton Street]], named the same year on the same Howard tract, which also included Huber Street (now part of [[4th Street]]) and Carolina Street (now [[Hewitt Street]]).",
+    categories: ["place", "borrowed"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Seaton Street", url: "https://lastreetnames.com/street/seaton-street/" }
+    ]
+  },
+
+  "Myers Street": {
+    name: "Myers Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "Runs along the Arts District's LA River edge, historically linked to Boyle Heights by the First Street Bridge/Viaduct; not covered by Kines and no namesake confirmed yet.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Anderson Street": {
+    name: "Anderson Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "Runs along the Arts District's southeastern edge toward the river; not covered by Kines (whose Anderson Avenue entry, a 1969 Vietnam-veteran memorial street in Carson, is a different roadway) and no namesake found yet.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Mill Street": {
+    name: "Mill Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "Possibly descriptive, recalling one of early Los Angeles's zanja-powered gristmills (e.g. the 1830s \"Stearns' Mill\" on N. Spring St) — but no source ties this specific street to a mill, so flagged as speculation only. Not covered by Kines.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Utah Street": {
+    name: "Utah Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "Possibly part of a state-name tract pattern (cf. [[Georgia Street]], Connecticut Street) common in 1880s L.A. subdivisions, but unconfirmed for this street — flagged as speculation. Not covered by Kines.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Decatur Street": {
+    name: "Decatur Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "Possibly for naval hero Stephen Decatur (1779–1820), a common namesake for American streets of this name, but unconfirmed here — flagged as speculation. Not covered by Kines.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Jesse Street": {
+    name: "Jesse Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "Runs along the Arts District's southeastern edge toward Boyle Heights; not covered by Kines and no namesake found yet.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Mesquit Street": {
+    name: "Mesquit Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "Between the 6th and 7th Street viaducts; possibly descriptive (mesquite), but unconfirmed — flagged as speculation. Site of the planned Bjarke Ingels-designed 670 Mesquit mixed-use project. Not covered by Kines.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Keller Street": {
+    name: "Keller Street",
+    namedAfter: "{{Matthew Keller}} (c. 1811–1881) — the same “Don Mateo” Keller honored on [[Mateo Street]] — who was one of the promoters of the Aliso Tract that this street was platted as part of",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Matthew_Keller",
+    planned: "1869, on the Aliso Tract survey",
+    built: "not yet researched",
+    note: "Originally the tract's northernmost street, with house lots platted on both sides per a historic Aliso Tract map (Seaver Center, Natural History Museum); today a quiet back street behind the city's Piper Tech building, reachable from Ramirez Street.",
+    categories: ["person"],
+    disputed: false,
+    sources: [
+      { title: "Los Angeles Revisited: Downtown's Mateo Street & Keller Street", url: "https://losangelesrevisited.blogspot.com/2011/02/downtowns-mateo-street-keller-street.html" },
+      { title: "Wikipedia: Matthew Keller", url: "https://en.wikipedia.org/wiki/Matthew_Keller" }
+    ]
+  },
+
+  "4th Place": {
+    name: "4th Place",
+    namedAfter: "A short spur off [[4th Street]] in the numbered downtown grid — not a distinct namesake",
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "Runs between Mateo and Molino streets; home to the 1980s gallery/performance space Dangerous Curve (on an unsafe bend of the street) and, around the corner on Hewitt, the youth arts nonprofit ArtShare L.A. Not covered by Kines.",
+    categories: ["number", "descriptive"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "7th Place": {
+    name: "7th Place",
+    namedAfter: "A short spur off [[7th Street]] in the numbered downtown grid — not a distinct namesake",
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "Not covered by Kines; no distinct history found beyond its position in the numbered street grid.",
+    categories: ["number", "descriptive"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Channing Street": {
+    name: "Channing Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "In the Arts District warehouse pocket; not covered by Kines and no namesake found yet.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Conway Place": {
+    name: "Conway Place",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "In the Arts District warehouse pocket; not covered by Kines and no namesake found yet.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Lawrence Street": {
+    name: "Lawrence Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "In the Arts District warehouse pocket; not covered by Kines and no namesake found yet.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Avery Street": {
+    name: "Avery Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "In the Arts District warehouse pocket; not covered by Kines and no namesake found yet (unrelated to the Avery McCarthy of Melrose Avenue's origin story, in Hollywood).",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  "Plaza Del Sol": {
+    name: "Plaza Del Sol",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: "not yet researched",
+    note: "Spanish for “Plaza of the Sun” — possibly a modern, descriptive development name rather than a personal namesake, but unconfirmed, flagged as speculation. A short modern lane, in the same naming style as other recent Arts District plaza names (Blossom Plaza, Jerry Moss Plaza). Not covered by Kines.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
+    ]
+  },
+
+  // TODO when South L.A. coverage is added: a third segment — the southern
+  // stretch carried the Central name from 1883 (central to Vernon); the
+  // Wolfskill/original-Central boundary is not yet pinned (see southern
+  // segment's note).
+  "Central Avenue": {
+    name: "Central Avenue",
+    orientation: "NS",
+    segments: [
+      {
+        label: "1st → 2nd (former Vine St)",
+        minLat: 34.0477,
+        name: "Central Avenue",
+        namedAfter: "Extension of the Central Avenue name over this block in the Feb. 1897 citywide renaming",
+        namedAfterLink: null,
+        planned: null,
+        built: "not yet researched",
+        nameHistory: [
+          { from: "?", until: "Feb. 1897", name: "Vine Street",
+            origin: "origin not yet researched; Vine north of 1st kept its name in 1897 (that stretch no longer exists) {{(source)}}",
+            originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" },
+          { from: "Feb. 1897", until: null, name: "Central Avenue", origin: null, originLink: null }
+        ],
+        note: null,
+        categories: ["renamed", "descriptive"],
+        disputed: false,
+        sources: [
+          { title: "Los Angeles Herald, “A Storm of Words” (Vine St, south of 1st, → Central), Feb. 19, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" },
+          { title: "Los Angeles Herald, “Talking Retrenchment,” Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
+        ]
+      },
+      {
+        label: "south of 2nd (former Wolfskill Ave)",
+        maxLat: 34.0477,
+        name: "Central Avenue",
+        namedAfter: "Central not to Los Angeles but to {{Vernon}}, just south of the city limits when it was platted",
+        namedAfterLink: "https://en.wikipedia.org/wiki/Vernon,_California",
+        planned: null,
+        built: "by 1883; put on the map by 1887 via Ezra F. Kysor's Central Park tract",
+        nameHistory: [
+          { from: "?", until: "Feb. 1897", name: "Wolfskill Avenue",
+            origin: "named for {{William Wolfskill}}'s old citrus ranch, which this stretch ran through",
+            originLink: "https://en.wikipedia.org/wiki/William_Wolfskill" },
+          { from: "Feb. 1897", until: null, name: "Central Avenue",
+            origin: "renamed per the city's street-renaming committee's report, among changes made “in response to urgent requests made before the committee” {{(source)}}",
+            originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
+        ],
+        note: "Where Wolfskill Ave ended and the original (1883) Central began is not yet pinned — this segment's southern history may split again. Central's stretch through South L.A. became the heart of Black Los Angeles in the 20th century — a history outside current coverage.",
+        categories: ["descriptive", "renamed"],
+        disputed: false,
+        sources: [
+          { title: "L.A. Street Names: Central Avenue", url: "https://lastreetnames.com/street/central-avenue/" },
+          { title: "Wikipedia: William Wolfskill", url: "https://en.wikipedia.org/wiki/William_Wolfskill" },
+          { title: "Los Angeles Herald, “Talking Retrenchment,” Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" },
+          { title: "Los Angeles Herald, “A Storm of Words” (Vine St extent: south of 1st), Feb. 19, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" }
+        ]
+      }
     ]
   },
 
