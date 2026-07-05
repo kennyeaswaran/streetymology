@@ -110,14 +110,15 @@ const STREET_DATA = {
         name: "Figueroa Street",
         namedAfter: "{{José Figueroa (1792–1835)}}, governor of Alta California 1833–1835",
         namedAfterLink: "https://en.wikipedia.org/wiki/Jos%C3%A9_Figueroa",
-        planned: "not yet researched",
-        built: "not yet researched",
-        note: "Pearl ended at Pico; what this stretch was called before 1897 is not yet researched.",
+        planned: null,
+        built: { text: "already \"Figueroa Street\" by Aug. 1895 (near 20th & Flower)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR059/MR059-056.pdf" },
+        note: "Pearl ended at Pico; this stretch turns out not to have needed an 1897 rename at all. A recorded tract map (Edgar's Subdivision resubdivision, surveyed Aug. 31, 1895 by John Goldsworthy, recorded Mar. 9, 1896) already labels this stretch \"Figueroa Street\" a full year before the citywide renaming — evidence this is the older, southern continuation of the pre-1897 Figueroa Street (the one whose downtown stretch was renamed De La Guerra in 1897), left untouched here rather than being renamed alongside Pearl.",
         categories: ["person", "governor"],
         disputed: false,
         sources: [
           { title: "L.A. Street Names: Figueroa Street", url: "https://lastreetnames.com/street/figueroa-street/" },
-          { title: "Los Angeles Revisited: The Pulchritude of Pearl Street", url: "https://losangelesrevisited.blogspot.com/2019/01/the-pulchritude-of-pearl-street.html" }
+          { title: "Los Angeles Revisited: The Pulchritude of Pearl Street", url: "https://losangelesrevisited.blogspot.com/2019/01/the-pulchritude-of-pearl-street.html" },
+          { title: "Recorded map: Resubdivision of Edgar's Subdivision of part of Lot 3, Block 1, Hancock's Survey City Donation Lots, M.R. 59-56 (surveyed Aug. 31, 1895 by John Goldsworthy; recorded Mar. 9, 1896)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR059/MR059-056.pdf" }
         ]
       }
     ]
@@ -428,7 +429,7 @@ const STREET_DATA = {
         origin: "the renaming commission proposed reverting to “Nevada”; after Major Bell's furious protest the council compromised on Georgia — one of the street's own former names — and Bell dropped his threatened lawsuit {{(source)}}",
         originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970227.2.12" }
     ],
-    note: "The Georgia→Georgia Bell renaming date is unsettled: Kines says 1883; Forman testified Sept. 11, 1890 (or 1880 — OCR unclear). Council ordinance books would settle it.",
+    note: "The Georgia→Georgia Bell renaming date is unsettled: Kines says 1883; Forman testified Sept. 11, 1890 (or 1880 — OCR unclear). Council ordinance books would settle it. The \"other, now-defunct Georgia Street\" that prompted the original rename is very likely the short \"Georgia St\" seen on the 1888-recorded Wolfskill Orchard Tract map, just east of Alameda — now part of [[3rd Street]]'s eastern segment, on the opposite side of downtown from this street.",
     categories: ["person", "alive", "renamed"],
     disputed: false,
     sources: [
@@ -605,7 +606,8 @@ const STREET_DATA = {
     disputed: false,
     sources: [
       { title: "L.A. Street Names: Colyton Street", url: "https://lastreetnames.com/street/colyton-street/" },
-      { title: "Wikipedia: Colyton", url: "https://en.wikipedia.org/wiki/Colyton" }
+      { title: "Wikipedia: Colyton", url: "https://en.wikipedia.org/wiki/Colyton" },
+      { title: "Recorded map: F.P. Howard & Co.'s Subdivision of the Bliss Tract, M.R. 12-42 (Aug. 1886, recorded Dec. 6, 1886) — labels this street \"Colyton\"", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR012/MR012-042.pdf" }
     ]
   },
 
@@ -642,6 +644,7 @@ const STREET_DATA = {
     disputed: false,
     sources: [
       { title: "L.A. Street Names: Colyton Street (Carolina St. → Hewitt St., on the Howard tract)", url: "https://lastreetnames.com/street/colyton-street/" },
+      { title: "Recorded map: F.P. Howard & Co.'s Subdivision of the Bliss Tract, M.R. 12-42 (Aug. 1886, recorded Dec. 6, 1886) — labels this street \"Carolina\"", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR012/MR012-042.pdf" },
       { title: "L.A. Weekly: How the Arts District Got Its Name", url: "https://www.laweekly.com/how-the-arts-district-got-its-name/" }
     ]
   },
@@ -651,11 +654,12 @@ const STREET_DATA = {
     namedAfter: null,
     namedAfterLink: null,
     planned: null,
-    built: "not yet researched",
-    note: "In the Arts District warehouse pocket alongside [[Mateo Street]] and [[Hewitt Street]]; not covered by Kines and no tract record or namesake turned up yet.",
+    built: { text: "1886 (on the Bliss Tract, wholly within it)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR012/MR012-042.pdf" },
+    note: "In the Arts District warehouse pocket alongside [[Mateo Street]] and [[Hewitt Street]]; not covered by Kines and no namesake turned up yet. The recorded Bliss Tract map notes \"Palmetto St as herein shown is 30 feet wide and is wholly within the Bliss Tract\" — the south boundary of Howard's 1886 subdivision (see [[Seaton Street]], [[Colyton Street]], [[Hewitt Street]]).",
     categories: ["unknown"],
     disputed: false,
     sources: [
+      { title: "Recorded map: F.P. Howard & Co.'s Subdivision of the Bliss Tract, M.R. 12-42 (Aug. 1886, recorded Dec. 6, 1886) — labels this street \"Palmetto\"", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR012/MR012-042.pdf" },
       { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
     ]
   },
@@ -741,7 +745,8 @@ const STREET_DATA = {
     categories: ["place", "borrowed"],
     disputed: false,
     sources: [
-      { title: "L.A. Street Names: Seaton Street", url: "https://lastreetnames.com/street/seaton-street/" }
+      { title: "L.A. Street Names: Seaton Street", url: "https://lastreetnames.com/street/seaton-street/" },
+      { title: "Recorded map: F.P. Howard & Co.'s Subdivision of the Bliss Tract, M.R. 12-42 (Aug. 1886, recorded Dec. 6, 1886) — labels this street \"Seaton\"", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR012/MR012-042.pdf" }
     ]
   },
 
@@ -778,11 +783,12 @@ const STREET_DATA = {
     namedAfter: null,
     namedAfterLink: null,
     planned: null,
-    built: "not yet researched",
-    note: "Possibly descriptive, recalling one of early Los Angeles's zanja-powered gristmills (e.g. the 1830s \"Stearns' Mill\" on N. Spring St) — but no source ties this specific street to a mill, so flagged as speculation only. Not covered by Kines.",
+    built: { text: "already \"Mill St.\" by Dec. 1903 (Industrial Tract survey, between Alameda and Mateo, north of 7th St)", url: "https://pw.lacounty.gov/sur/nas/landrecords/tract/MB0005/TR0005-056a.pdf" },
+    note: "Possibly descriptive, recalling one of early Los Angeles's zanja-powered gristmills (e.g. the 1830s \"Stearns' Mill\" on N. Spring St) — but no source ties this specific street to a mill, so flagged as speculation only. The Industrial Tract map (recorded 1904) already shows Mill St as an existing named boundary street; it sits several blocks from [[Molino Street|Molino]]/[[Hewitt Street|Hewitt]]'s cluster near 4th–5th, in a separate 1886 tract that doesn't mention Mill at all — the two \"mill\"-suggesting names appear unrelated. Not covered by Kines.",
     categories: ["unknown"],
     disputed: false,
     sources: [
+      { title: "Recorded map: Industrial Tract, M.B. 5-56 (surveyed Dec. 1903, recorded Mar. 15, 1904)", url: "https://pw.lacounty.gov/sur/nas/landrecords/tract/MB0005/TR0005-056a.pdf" },
       { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
     ]
   },
@@ -820,11 +826,12 @@ const STREET_DATA = {
     namedAfter: null,
     namedAfterLink: null,
     planned: null,
-    built: "not yet researched",
+    built: { text: "already existing by Dec. 1928 (shown cutting the SE corner near Mill/Mateo/Industrial St)", url: "https://pw.lacounty.gov/sur/nas/landrecords/tract/MB0159/TR0159-032.pdf" },
     note: "Runs along the Arts District's southeastern edge toward Boyle Heights; not covered by Kines and no namesake found yet.",
     categories: ["unknown"],
     disputed: false,
     sources: [
+      { title: "Recorded map: Tract No. 10542, M.B. 159-32/33 (Dec. 1928) — shows Jesse St already in place at the SE corner of the tract", url: "https://pw.lacounty.gov/sur/nas/landrecords/tract/MB0159/TR0159-032.pdf" },
       { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
     ]
   },
@@ -905,11 +912,12 @@ const STREET_DATA = {
     namedAfter: null,
     namedAfterLink: null,
     planned: null,
-    built: "not yet researched",
-    note: "In the Arts District warehouse pocket; not covered by Kines and no namesake found yet.",
+    built: { text: "block resubdivided Dec. 1928 as Tract No. 10542, itself carved from Lots K, L, N, O & Q of the 1903–04 Industrial Tract and from Tract No. 1879", url: "https://pw.lacounty.gov/sur/nas/landrecords/tract/MB0159/TR0159-032.pdf" },
+    note: "In the Arts District warehouse pocket; not covered by Kines and no namesake found yet. The parcel NavigateLA returns for a Conway Place address is recorded as \"Lot F\" (20,129 sq. ft.) of the 1928 Tract No. 10542 map — a large interior lot with no street running along or through it on that map; Conway Place itself doesn't appear at all in 1928, so it was evidently cut through (or dedicated along) Lot F sometime after, name and date unconfirmed. (An earlier pass here mis-identified this as the tract's \"Industrial Street\" — that's actually a separate street on this map's south edge, fronting Lots A/9/10, geographically distinct from Lot F; corrected 2026-07.)",
     categories: ["unknown"],
     disputed: false,
     sources: [
+      { title: "Recorded map: Tract No. 10542, M.B. 159-32/33 (Dec. 1928, resubdivision of the Industrial Tract and Tract No. 1879)", url: "https://pw.lacounty.gov/sur/nas/landrecords/tract/MB0159/TR0159-032.pdf" },
       { title: "Wikipedia: Arts District, Los Angeles", url: "https://en.wikipedia.org/wiki/Arts_District,_Los_Angeles" }
     ]
   },
@@ -995,8 +1003,8 @@ const STREET_DATA = {
         planned: null,
         built: "by 1883; put on the map by 1887 via Ezra F. Kysor's Central Park tract",
         nameHistory: [
-          { from: "?", until: "Feb. 1897", name: "Wolfskill Avenue",
-            origin: "named for {{William Wolfskill}}'s old citrus ranch, which this stretch ran through",
+          { from: "by 1887", until: "Feb. 1897", name: "Wolfskill Avenue",
+            origin: "named for {{William Wolfskill}}'s old citrus ranch, which this stretch ran through; already labeled \"Wolfskill\" on the recorded 1887 Wolfskill Orchard Tract map, on the tract's edge nearest Alameda",
             originLink: "https://en.wikipedia.org/wiki/William_Wolfskill" },
           { from: "Feb. 1897", until: null, name: "Central Avenue",
             origin: "renamed per the city's street-renaming committee's report, among changes made “in response to urgent requests made before the committee” {{(source)}}",
@@ -1009,7 +1017,8 @@ const STREET_DATA = {
           { title: "L.A. Street Names: Central Avenue", url: "https://lastreetnames.com/street/central-avenue/" },
           { title: "Wikipedia: William Wolfskill", url: "https://en.wikipedia.org/wiki/William_Wolfskill" },
           { title: "Los Angeles Herald, “Talking Retrenchment,” Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" },
-          { title: "Los Angeles Herald, “A Storm of Words” (Vine St extent: south of 1st), Feb. 19, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" }
+          { title: "Los Angeles Herald, “A Storm of Words” (Vine St extent: south of 1st), Feb. 19, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" },
+          { title: "Recorded map: Wolfskill Orchard Tract, M.R. 30-9/13 (surveyed by J.H. Dockweiler, July–Aug. 1887) — labels this edge \"Wolfskill\"", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR030/MR030-009.pdf" }
         ]
       }
     ]
@@ -1034,13 +1043,14 @@ const STREET_DATA = {
     namedAfter: "Agatha Sabichi (1871–1963), daughter of prominent landowner and City Council president {{Frank Sabichi}} (1842–1900), on whose land the street was platted",
     namedAfterLink: "https://en.wikipedia.org/wiki/Frank_Sabichi",
     planned: null,
-    built: "1897",
-    note: "Her mother Magdalena was a daughter of pioneer settler William Wolfskill; Agatha herself later married water-board president John Joseph Fay Jr.",
+    built: { text: "recorded Sept. 21, 1897 (Wilde and Strong's Subdivision of the Frank Sabichi Tract)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR066/MR066-064.pdf" },
+    note: "Her mother Magdalena was a daughter of pioneer settler William Wolfskill; Agatha herself later married water-board president John Joseph Fay Jr. The recorded tract map (owners Frank and Magdalena Sabichi) shows Agatha as a new cross street laid out through the family's land, running between continuations of [[Towne Avenue]], [[Crocker Street]], [[Stanford Avenue]] (platted \"Ruth\"), and [[Gladys Avenue]] — all extending south from the adjoining 1887 Wolfskill Orchard Tract.",
     categories: ["person", "alive"],
     disputed: false,
     sources: [
       { title: "L.A. Street Names: Agatha Street", url: "https://lastreetnames.com/street/agatha-street/" },
-      { title: "Wikipedia: Frank Sabichi", url: "https://en.wikipedia.org/wiki/Frank_Sabichi" }
+      { title: "Wikipedia: Frank Sabichi", url: "https://en.wikipedia.org/wiki/Frank_Sabichi" },
+      { title: "Recorded map: Wilde and Strong's Subdivision of the Frank Sabichi Tract, M.R. 66-64 (surveyed by V.J. Rowan, Sept. 1897; recorded Sept. 21, 1897)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR066/MR066-064.pdf" }
     ]
   },
 
@@ -1063,12 +1073,15 @@ const STREET_DATA = {
     namedAfter: null,
     namedAfterLink: null,
     planned: null,
-    built: "not yet researched",
-    note: "In the heart of Skid Row (Gladys Park sits at 6th & Gladys). Given its proximity to [[Stanford Avenue]] (originally Ruth Avenue, 1887) and [[Agatha Street]] (1897) — both apparently named for women connected to the Wolfskill family, on land they or their in-laws were subdividing — Gladys might follow the same pattern, but no source names a Wolfskill relative called Gladys, and Kines hasn't covered this street.",
+    built: { text: "1887 (platted as \"Gladys\" in the Wolfskill Orchard Tract)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR030/MR030-009.pdf" },
+    note: "In the heart of Skid Row (Gladys Park sits at 6th & Gladys). The original recorded tract map confirms Gladys was part of the same 1887 subdivision package as [[Towne Avenue]], [[Crocker Street]] (platted \"Stanford\"), and [[Stanford Avenue]] (platted \"Ruth\") — the very next parallel street over from Ruth, one block apart (an 1895 resubdivision map shows them as the two streets bounding the same block). Gladys continues south of that as one of the same run of streets crossing the adjoining Frank Sabichi Tract (recorded Sept. 1897), the same subdivision that produced [[Agatha Street]] — strengthening the women's-name pattern. Still, no source names a specific Wolfskill relative or associate called Gladys, and Kines hasn't covered this street.",
     categories: ["unknown"],
     disputed: false,
     sources: [
-      { title: "LA Parks: Gladys Park (6th & Gladys St.)", url: "https://recreation.parks.lacity.gov/park/6th-gladys-street" }
+      { title: "LA Parks: Gladys Park (6th & Gladys St.)", url: "https://recreation.parks.lacity.gov/park/6th-gladys-street" },
+      { title: "Recorded map: Wolfskill Orchard Tract, M.R. 30-9/13 (surveyed by J.H. Dockweiler, July–Aug. 1887)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR030/MR030-009.pdf" },
+      { title: "Recorded map: H.C. Halfpenny's Resubdivision of a part of Block 24 of the Wolfskill Orchard Tract, M.R. 54-84 (recorded Feb. 28, 1895) — Gladys and Ruth named as the block's bounding streets", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR054/MR054-084.pdf" },
+      { title: "Recorded map: Wilde and Strong's Subdivision of the Frank Sabichi Tract, M.R. 66-64 (recorded Sept. 21, 1897) — Gladys shown continuing south alongside Ruth, Towne, and Crocker", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR066/MR066-064.pdf" }
     ]
   },
 
@@ -1077,12 +1090,27 @@ const STREET_DATA = {
     namedAfter: null,
     namedAfterLink: null,
     planned: null,
-    built: "not yet researched",
-    note: "Ceres was the Roman goddess of agriculture — a tempting fit for a street in the old produce district — but no source confirms that was the actual reasoning here; not covered by Kines.",
+    built: { text: "1887 (platted as \"Ceres\" in the Wolfskill Orchard Tract)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR030/MR030-009.pdf" },
+    note: "Ceres was the Roman goddess of agriculture and the harvest — a tempting fit for a street in the old produce district, and less of a stretch than it first looks: the recorded tract map confirms Ceres was platted in 1887 as part of the Wolfskill Orchard Tract, literally the subdivision of Joseph Wolfskill's DTLA orchard (see [[Towne Avenue]], [[Stanford Avenue]], [[Gladys Avenue]], [[Omar Street]]). No source directly confirms intent, but naming a street for the goddess of the harvest on a freshly subdivided orchard is a plausible thematic choice, not just a coincidence. Not covered by Kines.",
     categories: ["unknown"],
     disputed: false,
     sources: [
-      { title: "Wikipedia: Ceres (mythology)", url: "https://en.wikipedia.org/wiki/Ceres_(mythology)" }
+      { title: "Wikipedia: Ceres (mythology)", url: "https://en.wikipedia.org/wiki/Ceres_(mythology)" },
+      { title: "Recorded map: Wolfskill Orchard Tract, M.R. 30-9/13 (surveyed by J.H. Dockweiler, July–Aug. 1887)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR030/MR030-009.pdf" }
+    ]
+  },
+
+  "Omar Street": {
+    name: "Omar Street",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: null,
+    built: { text: "1887 (platted as \"Omar Ave\" in the Wolfskill Orchard Tract)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR030/MR030-009.pdf" },
+    note: "Part of the same 1887 Wolfskill Orchard Tract package as [[Towne Avenue]], [[Crocker Street]], [[Stanford Avenue]], [[Gladys Avenue]], and [[Ceres Avenue]] — subdivided from Joseph Wolfskill's old DTLA orchard. No source names an actual Omar; not covered by Kines. (NavigateLA lists the modern street as \"Omar Ave,\" matching the tract's original platted name — it may never have been renamed.)",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "Recorded map: Wolfskill Orchard Tract, M.R. 30-9/13 (surveyed by J.H. Dockweiler, July–Aug. 1887) — shows \"Omar Ave\" at 312 Omar St's location", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR030/MR030-009.pdf" }
     ]
   },
 
@@ -1092,11 +1120,12 @@ const STREET_DATA = {
     namedAfterLink: null,
     planned: null,
     built: "1887",
-    note: "Named alongside [[Stanford Avenue]] and [[Crocker Street]] when subdividers of Joseph Wolfskill's old DTLA orchard donated 13 acres at 4th & Alameda for a new SPRR station (the Arcade Depot, opened 1888) and honored the railroad's brass.",
+    note: "Named alongside [[Stanford Avenue]] and [[Crocker Street]] when subdividers of Joseph Wolfskill's old DTLA orchard donated 13 acres at 4th & Alameda for a new SPRR station (the Arcade Depot, opened 1888) and honored the railroad's brass. Confirmed on the original recorded tract map, which labels this street \"Towne\" outright.",
     categories: ["person", "alive"],
     disputed: false,
     sources: [
-      { title: "L.A. Street Names: Towne Avenue", url: "https://lastreetnames.com/street/towne-avenue-dtla/" }
+      { title: "L.A. Street Names: Towne Avenue", url: "https://lastreetnames.com/street/towne-avenue-dtla/" },
+      { title: "Recorded map: Wolfskill Orchard Tract, M.R. 30-9/13 (surveyed by J.H. Dockweiler, July–Aug. 1887)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR030/MR030-009.pdf" }
     ]
   },
 
@@ -1114,12 +1143,13 @@ const STREET_DATA = {
         origin: "renamed for Crocker once the “Stanford” name moved a block over to the former Ruth Avenue {{(source)}}",
         originLink: "https://lastreetnames.com/street/towne-avenue-dtla/" }
     ],
-    note: "Sibling to [[Towne Avenue]] and [[Stanford Avenue]] — all three trace to the 1887 SPRR station land deal. The exact renaming year is not yet researched.",
+    note: "Sibling to [[Towne Avenue]] and [[Stanford Avenue]] — all three trace to the 1887 SPRR station land deal. The exact renaming year is not yet researched. The original recorded tract map confirms this street was platted \"Stanford\" in 1887, one block over from the street platted \"Ruth\" (now [[Stanford Avenue]]).",
     categories: ["person", "renamed"],
     disputed: false,
     sources: [
       { title: "L.A. Street Names: Towne Avenue (recounts the Crocker/Stanford street swap)", url: "https://lastreetnames.com/street/towne-avenue-dtla/" },
-      { title: "Wikipedia: Charles Crocker", url: "https://en.wikipedia.org/wiki/Charles_Crocker" }
+      { title: "Wikipedia: Charles Crocker", url: "https://en.wikipedia.org/wiki/Charles_Crocker" },
+      { title: "Recorded map: Wolfskill Orchard Tract, M.R. 30-9/13 (surveyed by J.H. Dockweiler, July–Aug. 1887)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR030/MR030-009.pdf" }
     ]
   },
 
@@ -1137,13 +1167,15 @@ const STREET_DATA = {
         origin: "took over the Stanford name once the original Stanford Avenue, a block over, was renamed Crocker Street {{(source)}}",
         originLink: "https://lastreetnames.com/street/towne-avenue-dtla/" }
     ],
-    note: "Sibling to [[Towne Avenue]] and [[Crocker Street]] — all three trace to the 1887 SPRR station land deal. Still Ruth Avenue in Feb. 1897; the exact swap year is not yet researched.",
+    note: "Sibling to [[Towne Avenue]] and [[Crocker Street]] — all three trace to the 1887 SPRR station land deal. Still Ruth Avenue in Feb. 1897; the exact swap year is not yet researched. The original recorded tract map confirms \"Ruth\" as the street's 1887 platted name, one block from [[Towne Avenue]] and the street platted \"Stanford\" (now [[Crocker Street]]) — and one block from a street platted \"Gladys\" (see [[Gladys Avenue]]), the same women's-name pattern noted there.",
     categories: ["person", "renamed", "governor"],
     disputed: false,
     sources: [
       { title: "L.A. Street Names: Towne Avenue (recounts the Crocker/Stanford street swap)", url: "https://lastreetnames.com/street/towne-avenue-dtla/" },
       { title: "Los Angeles Herald, “Talking Retrenchment” (Ruth Avenue restored), Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" },
-      { title: "Wikipedia: Leland Stanford", url: "https://en.wikipedia.org/wiki/Leland_Stanford" }
+      { title: "Wikipedia: Leland Stanford", url: "https://en.wikipedia.org/wiki/Leland_Stanford" },
+      { title: "Recorded map: Wolfskill Orchard Tract, M.R. 30-9/13 (surveyed by J.H. Dockweiler, July–Aug. 1887)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR030/MR030-009.pdf" },
+      { title: "Recorded map: H.C. Halfpenny's Resubdivision of a part of Block 24 of the Wolfskill Orchard Tract, M.R. 54-84 (recorded Feb. 28, 1895) — names \"Ruth\" as one of the block's bounding streets", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR054/MR054-084.pdf" }
     ]
   },
 
@@ -1419,26 +1451,182 @@ function numberedStreet(name, opts = {}) {
 
 Object.assign(STREET_DATA, {
   "2nd Street": numberedStreet("2nd Street"),
-  "3rd Street": numberedStreet("3rd Street"),
-  "4th Street": numberedStreet("4th Street", {
-    note: "The 1890 petition that turned Fort Street into Broadway cited confusion between “Fort” and “Fourth”. In the Feb. 1897 citywide renaming, Larkin Street and Short Street (“from Fourth street to Santa Fe grounds”) were folded into 4th's eastern reach, and Boyle Heights' 2nd Street east of the river also became 4th, at ex-Mayor Workman's request.",
-    sources: [
-      { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
-      { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
-      { title: "L.A. Street Names: Broadway (the Fort/Fourth confusion)", url: "https://lastreetnames.com/street/broadway/" },
-      { title: "Los Angeles Herald, “Talking Retrenchment” (renaming committee report), Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" },
-      { title: "Los Angeles Herald, “A Storm of Words” (east-of-river changes), Feb. 19, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" }
+  "3rd Street": {
+    name: "3rd Street",
+    orientation: "EW",
+    segments: [
+      {
+        label: "west of Alameda",
+        maxLng: -118.2381,
+        name: "3rd Street",
+        namedAfter: "Its ordinal position in the downtown grid — the numbering system was in place by 1849",
+        namedAfterLink: null,
+        planned: { text: "by 1849", url: ORD_SURVEY.url },
+        built: "not yet researched",
+        note: null,
+        categories: ["number"],
+        disputed: false,
+        sources: [
+          { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
+          { title: ORD_SURVEY.title, url: ORD_SURVEY.url }
+        ]
+      },
+      {
+        label: "east of Alameda (Georgia St)",
+        minLng: -118.2381,
+        name: "3rd Street",
+        namedAfter: "Its ordinal position in the downtown grid, once this stretch was folded into 3rd Street",
+        namedAfterLink: null,
+        planned: null,
+        built: { text: "already \"Georgia St\" by Jan. 1888 (recorded Wolfskill Orchard Tract map, final sheet)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR030/MR030-009.pdf" },
+        nameHistory: [
+          { from: "by 1888", until: "?", name: "Georgia Street",
+            origin: "labeled \"Georgia St\" on the last sheet of the recorded Wolfskill Orchard Tract map, just east of Alameda St, continuing this block's alignment past where the tract's own \"Third\" street (and \"Omar Ave\") end at the tract boundary — not to be confused with the unrelated, still-existing [[Georgia Street]] at the other end of downtown, whose own history notes it was partly renamed specifically to avoid confusion with \"another, now-defunct Georgia Street\", almost certainly this one",
+            originLink: null },
+          { from: "?", until: null, name: "3rd Street",
+            origin: "not directly documented; presumably folded in during the Feb. 1897 citywide renaming along with other downtown-grid consolidations, though no source specifically names this stretch",
+            originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
+        ],
+        note: "Seen on the final sheet (recorded Jan. 11, 1888) of the same Wolfskill Orchard Tract map that also names [[Omar Street|Omar Ave]], [[Ceres Avenue]], [[Gladys Avenue]], and the old \"Wolfskill Avenue\" stretch of [[Central Avenue]]. Unlike those, this block's modern Tract/Map-Ref (checked via NavigateLA at a couple of nearby addresses) no longer reads back to the Wolfskill tract — the block has evidently been resubdivided at least once since 1888 (one nearby parcel now cites a 20th-century Map Book tract) — so this citation rests on the recorded map's own drawing rather than a matching present-day parcel record. The map's geometry is unambiguous, though: read literally, it shows Third St's platted extent running to a boundary, an unplatted gap (almost certainly Alameda St, though unlabeled on this sheet), and \"Georgia St\" resuming on the far side in direct alignment.",
+        categories: ["number", "renamed"],
+        disputed: false,
+        sources: [
+          { title: "Recorded map: Wolfskill Orchard Tract, M.R. 30-9/13 (surveyed by J.H. Dockweiler, recorded Jan. 11, 1888) — final sheet (5 of 5) shows \"Georgia St\" just east of Alameda, in line with Third St's alignment", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR030/MR030-009.pdf" },
+          { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
+          { title: ORD_SURVEY.title, url: ORD_SURVEY.url }
+        ]
+      }
     ]
-  }),
-  "5th Street": numberedStreet("5th Street", {
-    note: "In the Feb. 1897 citywide renaming, Lugo Street was folded into 5th (extent not yet researched), and Boyle Heights' 4th Street east of the river likewise became 5th.",
-    sources: [
-      { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
-      { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
-      { title: "Los Angeles Herald, “Talking Retrenchment” (renaming committee report), Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" },
-      { title: "Los Angeles Herald, “A Storm of Words” (east-of-river changes), Feb. 19, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" }
+  },
+  "4th Street": {
+    name: "4th Street",
+    orientation: "EW",
+    segments: [
+      {
+        label: "west of Alameda",
+        maxLng: -118.2381,
+        name: "4th Street",
+        namedAfter: "Its ordinal position in the downtown grid — the numbering system was in place by 1849",
+        namedAfterLink: null,
+        planned: { text: "by 1849", url: ORD_SURVEY.url },
+        built: "not yet researched",
+        note: "The 1890 petition that turned Fort Street into Broadway cited confusion between “Fort” and “Fourth”.",
+        categories: ["number"],
+        disputed: false,
+        sources: [
+          { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
+          { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+          { title: "L.A. Street Names: Broadway (the Fort/Fourth confusion)", url: "https://lastreetnames.com/street/broadway/" }
+        ]
+      },
+      {
+        label: "Alameda–Hewitt (Huber St)",
+        minLng: -118.2381,
+        maxLng: -118.2354,
+        name: "4th Street",
+        namedAfter: "Its ordinal position in the downtown grid, once this stretch was folded into 4th Street",
+        namedAfterLink: null,
+        planned: null,
+        built: { text: "already \"Huber Street\" by Aug. 1886 (F.P. Howard & Co.'s Subdivision of the Bliss Tract)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR012/MR012-042.pdf" },
+        nameHistory: [
+          { from: "1886", until: "?", name: "Huber Street",
+            origin: "named on Dr. Frederick Preston Howard's tract; no specific namesake documented, though possibly for his wife Caroline (née Huber), as with [[Hewitt Street]]'s \"Carolina Street\" one block east {{(source)}}",
+            originLink: "https://lastreetnames.com/street/colyton-street/" },
+          { from: "?", until: null, name: "4th Street",
+            origin: "not directly documented, but this exact block is where the Feb. 1897 citywide renaming folded Larkin Street and Short Street (“from Fourth street to Santa Fe grounds”) into 4th's eastern reach — the likely, though unconfirmed, rename event for this stretch",
+            originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
+        ],
+        note: "828 E 4th St, on this block, fronted \"Huber Street\" on the recorded Bliss Tract map — one block north of [[5th Street]]'s \"Poplar Street\" in the same corridor.",
+        categories: ["number", "renamed"],
+        disputed: false,
+        sources: [
+          { title: "Recorded map: F.P. Howard & Co.'s Subdivision of the Bliss Tract, M.R. 12-42 (subdivided Aug. 1886 by Geo. E. Knox) — shows \"Huber Street\" at 828 E 4th St's location", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR012/MR012-042.pdf" },
+          { title: "Los Angeles Herald, “Talking Retrenchment” (renaming committee report), Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
+        ]
+      },
+      {
+        label: "east of Hewitt",
+        minLng: -118.2354,
+        name: "4th Street",
+        namedAfter: "Its ordinal position in the downtown grid — the numbering system was in place by 1849",
+        namedAfterLink: null,
+        planned: "not yet researched",
+        built: "not yet researched",
+        note: "Boyle Heights' 2nd Street, east of the river, also became 4th in the Feb. 1897 renaming (at ex-Mayor Workman's request) — a further predecessor somewhere along this reach; exact extent not yet researched.",
+        categories: ["number"],
+        disputed: false,
+        sources: [
+          { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
+          { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+          { title: "Los Angeles Herald, “A Storm of Words” (east-of-river changes), Feb. 19, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" }
+        ]
+      }
     ]
-  }),
+  },
+  "5th Street": {
+    name: "5th Street",
+    orientation: "EW",
+    segments: [
+      {
+        label: "west of Alameda",
+        maxLng: -118.2382,
+        name: "5th Street",
+        namedAfter: "Its ordinal position in the downtown grid — the numbering system was in place by 1849",
+        namedAfterLink: null,
+        planned: { text: "by 1849", url: ORD_SURVEY.url },
+        built: "not yet researched",
+        note: null,
+        categories: ["number"],
+        disputed: false,
+        sources: [
+          { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
+          { title: ORD_SURVEY.title, url: ORD_SURVEY.url }
+        ]
+      },
+      {
+        label: "Alameda–Hewitt (Poplar St)",
+        minLng: -118.2382,
+        maxLng: -118.2351,
+        name: "5th Street",
+        namedAfter: "Its ordinal position in the downtown grid, once this stretch was folded into 5th Street",
+        namedAfterLink: null,
+        planned: null,
+        built: { text: "already \"Poplar Street\" by Aug. 1886 (F.P. Howard & Co.'s Subdivision of the Bliss Tract)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR012/MR012-042.pdf" },
+        nameHistory: [
+          { from: "1886", until: "?", name: "Poplar Street",
+            origin: "named on Dr. Frederick Preston Howard's tract; no specific namesake documented",
+            originLink: null },
+          { from: "?", until: null, name: "5th Street",
+            origin: "not directly documented, but this exact block is where the Feb. 1897 citywide renaming folded Lugo Street into 5th (extent not yet researched) — the likely, though unconfirmed, rename event for this stretch",
+            originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
+        ],
+        note: "1100 E 5th St, on this block, fronted \"Poplar Street\" on the recorded Bliss Tract map — one block south of [[4th Street]]'s \"Huber Street\" in the same corridor.",
+        categories: ["number", "renamed"],
+        disputed: false,
+        sources: [
+          { title: "Recorded map: F.P. Howard & Co.'s Subdivision of the Bliss Tract, M.R. 12-42 (subdivided Aug. 1886 by Geo. E. Knox) — shows \"Poplar Street\" at 1100 E 5th St's location", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR012/MR012-042.pdf" },
+          { title: "Los Angeles Herald, “Talking Retrenchment” (renaming committee report), Feb. 21, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
+        ]
+      },
+      {
+        label: "east of Hewitt",
+        minLng: -118.2351,
+        name: "5th Street",
+        namedAfter: "Its ordinal position in the downtown grid — the numbering system was in place by 1849",
+        namedAfterLink: null,
+        planned: "not yet researched",
+        built: "not yet researched",
+        note: "Boyle Heights' 4th Street, east of the river, likewise became 5th in the Feb. 1897 renaming — a further predecessor somewhere along this reach; exact extent not yet researched.",
+        categories: ["number"],
+        disputed: false,
+        sources: [
+          { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
+          { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+          { title: "Los Angeles Herald, “A Storm of Words” (east-of-river changes), Feb. 19, 1897", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" }
+        ]
+      }
+    ]
+  },
   "6th Street": numberedStreet("6th Street"),
   "7th Street": numberedStreet("7th Street"),
   "8th Street": numberedStreet("8th Street"),

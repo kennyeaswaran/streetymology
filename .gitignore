@@ -9,3 +9,6 @@
 # editors
 *.swp
 .vscode/
+
+# tract map downloads (re-downloadable; see TRACT-RESEARCH.md)
+tracts/
