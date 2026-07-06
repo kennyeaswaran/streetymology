@@ -18,8 +18,12 @@ try {
   process.exit(1);
 }
 
-// keep in sync with normalizeName in index.html
-const normalize = n => n.replace(/^(North|South|East|West|N\.?|S\.?|E\.?|W\.?)\s+/i, "");
+// keep in sync with normalizeName in index.html (including NAME_ALIASES)
+const NAME_ALIASES = { "2nd Street Tunnel": "2nd Street" };
+const normalize = n => {
+  const stripped = n.replace(/^(North|South|East|West|N\.?|S\.?|E\.?|W\.?)\s+/i, "");
+  return NAME_ALIASES[stripped] || stripped;
+};
 
 const R = 6371000;
 function dist(a, b) { // meters between {lat,lon} points

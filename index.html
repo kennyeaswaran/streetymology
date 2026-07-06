@@ -179,9 +179,17 @@ NEIGHBORHOODS.forEach(nb => {
 // ---------------------------------------------------------------
 // Street name normalization: strip directional prefixes so that
 // "South Spring Street" and "North Spring Street" share one entry.
+// A tiny name-alias table handles the rare case where OSM gives a
+// physically-continuous stretch its own distinct way-name (e.g. the
+// Bunker Hill tunnel segment of 2nd Street) but streets-data.js treats
+// it as just another band of the parent street's segments.
 // ---------------------------------------------------------------
+const NAME_ALIASES = {
+  "2nd Street Tunnel": "2nd Street"
+};
 function normalizeName(n) {
-  return n.replace(/^(North|South|East|West|N\.?|S\.?|E\.?|W\.?)\s+/i, "");
+  const stripped = n.replace(/^(North|South|East|West|N\.?|S\.?|E\.?|W\.?)\s+/i, "");
+  return NAME_ALIASES[stripped] || stripped;
 }
 
 // ---------------------------------------------------------------

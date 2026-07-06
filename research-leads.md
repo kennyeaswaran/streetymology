@@ -90,8 +90,6 @@ Periodically sweep the whole file. Keep entries dated.
 - **Figueroa south of Pico, pre-1897** (2026-07): Pearl ended at Pico; the
   entry's southern segment is open. Old maps (1880s Baist/Sanborn) should show
   what that stretch was called.
-- **2nd Street Tunnel** (2026-07): separate OSM name, 0.5 km, no entry yet;
-  opened 1924 (unverified) — could carry the 2nd Street story plus tunnel dates.
 - **Georgia St → Georgia Bell renaming date** (2026-07): unsettled — Kines says
   1883; Forman's 1897 testimony says Sept. 11, 1890 (or 1880, OCR unclear).
   Council ordinance books would settle it. (Trimmed from Georgia Street's note.)
@@ -99,26 +97,37 @@ Periodically sweep the whole file. Keep entries dated.
   only the stretch south of 6th. Whether the same "Tulip"-era name applied
   further north (toward 1st/3rd, where the depots sat) is unchecked. (Trimmed
   from Santa Fe Avenue's note.)
+- **Court Street (Angelino Heights) as a lost eastern stretch of Temple
+  Street?** (2026-07, Kenny's hunch): Temple Street has two visible bends on
+  the map — one at Fremont Ave, one at Edgeware Rd. Continue Court Street's
+  own alignment straight past its eastern end and it lines up with the
+  Temple/Fremont intersection, closer to matching the eastern stretch of
+  Temple than anything Court currently connects to. Worth pulling tract maps
+  for that stretch of Temple (between Fremont and downtown) to check whether
+  it was ever platted as "Court Street" before Temple absorbed it — same
+  Glassell's Subdivision (M.R. 6-138, sourced into Court Street's entry this
+  pass) or an adjacent tract might show it. Not yet checked.
+- **Arnold Street = Miramar Street?** (2026-07): chasing a tract map for
+  Miramar St's Boylston-St corner (265 S Boylston / 1206 W Miramar) turned up
+  "Compromise Subdivision" / "Washington Tract" (M.R. 66-35, surveyed Mar.
+  1894, recorded May 1897) — bounded by Bixel St, Third St, Figueroa St, and
+  "Arnold St," with no "Miramar" or "Boylston" label anywhere on the sheet.
+  Arnold's position (south side of the block, opposite Third) is at least
+  geographically plausible for Miramar's alignment, but this is a pure
+  positional guess, not label- or lot-confirmed — the parcel's exact lot
+  wasn't checked against the plat before writing this up. Worth a NavigateLA
+  Lot-field check against the map before treating it as anything more than a
+  hunch. (Miramar's other tract lead, "Crownwood" M.B. 15-166, also came up
+  empty — two different unrelated filings share that page number, per the
+  usual Map Book gotcha, and neither the relevant "Crownwood" sheet nor its
+  neighbor labels "Miramar" either.)
 
 ## Sourced finds awaiting entries
 
-From the Herald's Feb. 24, 1897 council report
-(https://cdnc.ucr.edu/?a=d&d=LAH18970224.2.20) — primary citations ready for
-when these streets get entries (cross-check each against its Kines page):
-
-- **Marion Avenue** (in coverage): the 1897 ordinance renamed it "Stilson
-  place"; restored at the Feb. 18 joint session
-  (https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24). Namesake of Marion itself
-  unknown — check Kines for a Marion Avenue page before writing the entry.
-- **Court Street** (in coverage): the commission's proposed change to
-  "Bradbury street" was rejected at the same session — property owners AND
-  Mrs. Bradbury objected — so Court kept its name.
-- **Miramar Street** (in coverage): formerly Ocean View Avenue; the Feb. 1897
-  renaming was protested and the protest denied, so Ocean View→Miramar stands.
-- Also of note in the Feb. 27, 1874 article
-  (https://cdnc.ucr.edu/?a=d&d=LAH18740227.2.10): the same council session
-  established Fort Street's grade and declared Bunker Hill Avenue a public
-  street (40 ft wide, ~3,000 ft) — context for Broadway/Hill-area entries.
+Also of note in the Feb. 27, 1874 article
+(https://cdnc.ucr.edu/?a=d&d=LAH18740227.2.10): the same council session
+established Fort Street's grade and declared Bunker Hill Avenue a public
+street (40 ft wide, ~3,000 ft) — context for Broadway/Hill-area entries.
 
 ## CDNC sweep recipes (ready to run)
 
@@ -153,6 +162,25 @@ can be added here as future leads warrant a CDNC sweep.)
     not the 1875 Thomas Tract, so it's positional evidence only). The OTHER
     unnamed street (further east, lots 13-22 on that sheet) is still
     completely unidentified — not checked against any modern street yet.
+  - **Tract maps for Court St, Olympic Blvd, and Pico Blvd (downtown)**
+    (2026-07, resolved 2026-07): Kenny downloaded the batch found via
+    NavigateLA. Court Street: Glassell's Subdivision of Lot No. 7 etc., Block
+    39, Hancock's Survey No. 1 (M.R. 6-138, recorded Dec. 27, 1884, at request
+    of A. Glassell) labels the street "Court Street" directly — a gently
+    curving street, consistent with a descriptive "court"-shape origin rather
+    than a namesake. Olympic Blvd (former 10th St, west-of-Central segment):
+    TWO independent recorded maps both label it "Tenth" — W.M. Williams's
+    subdivision of Blocks 72 & 73 of Ord's Survey itself (M.R. 3-32/33, Apr.
+    1875) and, a block further west, Thomas S. Ewing's Replat of part of Block
+    B, Dunkelberger Tract (M.R. 59-60, surveyed Mar. 1896) — the first ties
+    "Tenth" directly to the Ord Survey grid, 21 years before the second
+    confirms the same name still held. Pico Blvd (downtown, near Flower St):
+    the Cameron Tract (M.R. 7-21, surveyed by H.J. Stevenson Oct. 1885,
+    recorded Nov. 23, 1885) labels it "Pico" directly at Figueroa — earlier
+    than the previously-cited 1903 Herald item. All three applied as primary
+    sources. Miramar's two candidate tracts ("Crownwood" M.B. 15-166 and
+    "Compromise Subdivision" M.R. 66-35) were also pulled but came up empty —
+    see the open "Arnold Street = Miramar?" lead above.
   - **4th Place west of Hewitt**: Kenny's read of the downloaded Mills and
     Wicks tract suggested 4th Place (west of Hewitt) AND 4th St (east of
     Hewitt) were both once "Third St." Close re-examination of M.R. 13-87
@@ -349,5 +377,68 @@ can be added here as future leads warrant a CDNC sweep.)
   Herald item locates a business at "the southeast corner of Figueroa street
   and Venice boulevard, formerly Sixteenth street"
   (https://cdnc.ucr.edu/?a=d&d=LAH19270226.1.9) — Venice Blvd absorbed 16th.
-  No streets-data.js entries exist yet for Pico or Venice Blvd; these
-  citations are ready for whoever writes those entries.
+  Entries for both Pico Boulevard and Venice Boulevard written 2026-07 using
+  these citations (see the batch note below).
+- **Ord's Survey recorded copy — M.R. 53-66/73** (2026-07, applied 2026-07):
+  809 N Hill St came back Tract ORD'S SURVEY, M-R 53-66/73, Lot 6, Block 37 —
+  the county's recorded copy of E.O.C. Ord's Aug. 29, 1849 "Plan de la Ciudad
+  de Los Angeles" ("Los Angeles City Map No.1"). Certification on sheet 73:
+  **"A full true and correct copy of original … recorded Dec. 2, 1893"**
+  (Arthur Bray, County Recorder, by W.W. Mills, Deputy) — a linkable primary
+  record distinct from the LAPL/tessa scan the ORD_SURVEY constant points at,
+  now the `ORD_RECORDED` constant in streets-data.js. Recorder's note on sheet
+  67 splits the plat: **WEST of Main St on pp. 67-69, EAST of Main on pp.
+  70-72, NORTH of the Plaza on p. 73.** Kenny downloaded 68, 69, 73 (the rest
+  are hills/fields) into tracts/; read locally via pdftoppm.
+  - **Applied (recorded-map source added):** downtown named streets with their
+    recorded 1849 names — Hill (Calle Loma), Broadway/Fort (Calle Fortin),
+    Spring (Calle Primavera), Main (Calle Principal), Grand (Charity St / Calle
+    de Caridad), Olive (Calle Accytuna), Hope (Hope St), Flower (Flower);
+    numbered 1st–8th Streets (Calle 1ª–8ª); and the two Chinatown segments
+    (N Hill = Calle del Toro/Block 37, N Broadway = Calle de Eternidad).
+  - **Sheet-68 note:** the survey shows Spring as "Calle Primavera" and a
+    *separate* "Charity St / Calle de Caridad" (= Grand Ave). So Spring Street's
+    hedged former-name "Calle de Caridad" (still flagged unverified in the
+    entry) looks like a mix-up with Grand — the map assigns Caridad to Grand.
+  - **Chinatown (sheet 73) modern-street correspondences** (Kenny's reading,
+    map-checked): Calle del Toro = Bull St → N Hill (in data ✓); Calle de
+    Eternidad = Eternity → N Broadway (in data ✓); Calle de las Virgenes /
+    Virgin St = W Alpine St (confirmed at lot level — Block 37 = 809 N Hill /
+    427 W Alpine, bounded by Toro and Virgenes); Calle del Colegio / College
+    St = College St (name persists); Calle de las Avispas / Hornet St = Wasp
+    St → Yale St. All entries now written (2026-07) — see the batch note
+    below. Calle Alta / High St = Ord St turned out to be independently
+    confirmed by Kines's own Ord Street page (renamed Walters St 1886, then
+    Ord 1890) rather than just a positional guess. Calle de las Adobes =
+    Cleveland St and Short St = part of Cesar Chavez Ave remain unconfirmed
+    positional guesses only — flagged as such in both entries' notes; Kines's
+    Cleveland Street page actually dates that name to a fresh 1886 Beaudry
+    tract with no mention of an Ord-survey predecessor, casting some doubt on
+    the Adobes match.
+
+- **Streets with research leads but no entry — batch sweep** (2026-07,
+  resolved 2026-07): swept research-leads.md and TRACT-RESEARCH.md for streets
+  already discussed here that had never gotten a streets-data.js entry. Twelve
+  found, all in coverage, all now entered:
+  - **Marion Avenue, Court Street, Miramar Street** — the three 1897-ordinance
+    finds above. Marion and Miramar had full Kines pages (Marion: namesake myth
+    debunked, `unknown`; Miramar: the Ocean View/Nob Hill/Miramar 1886–1915
+    tangle, `renamed`). **Court Street turned out to be a false match**: the
+    in-coverage OSM "Court Street" sits in Angelino Heights/Echo Park (lat
+    34.063–34.069, lng -118.268/-118.254), nowhere near the demolished Bunker
+    Hill "Court Street" the 1897 Bradbury-rename citation actually describes
+    (which no longer exists in current OSM data at all). Entered as `unknown`
+    with a note warning off that citation for future passes — don't apply the
+    Bradbury/1897 material here.
+  - **Alpine, College, Yale, Cleveland, Ord, Cesar E Chavez Avenue** — the
+    Chinatown sheet-73 correspondences above, all written this pass; see that
+    entry for what's confirmed vs. still a positional guess.
+  - **Pico Boulevard, Venice Boulevard** — used the 13th/16th-absorption
+    citations from the "Missing 13th and 16th Streets" resolution above.
+  - **2nd Street Tunnel** — its own entry, cross-linked to [[2nd Street]];
+    construction began 1916 (delayed by property/access lawsuits), opened
+    July 25, 1924.
+  - General lesson banked for next sweep: always check a candidate street's
+    actual OSM geometry (lat/lng bounds) against the historical claim before
+    writing the entry — name collisions between demolished/relocated streets
+    and present-day streets of the same name are real (see Court Street).

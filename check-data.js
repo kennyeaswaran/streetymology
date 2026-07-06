@@ -121,8 +121,10 @@ for (const [key, v] of Object.entries(STREET_DATA)) {
 if (errors) { console.error(`\n${errors} error(s).`); process.exit(1); }
 
 // primary-anchor coverage (see ADDING-STREETS.md): survey, ordinance,
-// contemporary newspaper, or recorded tract map
-const PRIMARY = /tessa2?\.lapl\.org|cdnc\.ucr\.edu|clerk\.lacity\.org|navigatela\.lacity\.org|pqarchiver|newspapers\.com/;
+// contemporary newspaper, or recorded tract map. pw.lacounty.gov/sur/nas/
+// landrecords serves the DPW recorded-map scans (tract maps + the recorded
+// Ord Survey, M.R. 53-66/73) — a recorded-map primary record.
+const PRIMARY = /tessa2?\.lapl\.org|cdnc\.ucr\.edu|clerk\.lacity\.org|navigatela\.lacity\.org|pqarchiver|newspapers\.com|pw\.lacounty\.gov\/sur\/nas\/landrecords/;
 const allEntries = Object.values(STREET_DATA).flatMap(v => v.segments || [v]);
 const anchored = allEntries.filter(v => (v.sources || []).some(s => PRIMARY.test(s.url))).length;
 console.log(`All checks pass: ${Object.keys(STREET_DATA).length} streets, ${allEntries.length} entries. ` +

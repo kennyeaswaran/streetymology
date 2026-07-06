@@ -65,6 +65,17 @@ const ORD_SURVEY = {
   url: "https://tessa2.lapl.org/digital/collection/maps/id/42/"
 };
 
+// The county recorder's certified copy of the Ord survey, filed in Miscellaneous
+// Records book 53 (pages 66–73), "A full true and correct copy of original …
+// recorded Dec. 2, 1893" (Arthur Bray, County Recorder). A recorder's note on
+// sheet 67 splits the plat: portions WEST of Main St on pp. 67-69, EAST of Main
+// on pp. 70-72, and the portion NORTH of the Plaza on p. 73. A recorded-map
+// primary anchor for the 1849 grid, parallel to the LAPL scan above.
+const ORD_RECORDED = {
+  title: "Recorded map: Ord's Survey, county-recorder's certified copy, M.R. 53-66/73 (“A full true and correct copy of original,” recorded Dec. 2, 1893) — sheets 68–69 draw the original downtown grid, including the numbered cross streets (Calle 1ª–8ª)",
+  url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR053/MR053-068.pdf"
+};
+
 const STREET_DATA = {
   "Figueroa Street": {
     name: "Figueroa Street",
@@ -143,6 +154,7 @@ const STREET_DATA = {
     sources: [
       { title: "L.A. Street Names: Spring Street", url: "https://lastreetnames.com/street/spring-street/" },
       { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+      { title: "Recorded map: Ord's Survey, county-recorder's copy, M.R. 53-66/73 (recorded Dec. 2, 1893) — sheet 68 labels this street “Calle Primavera” (primavera = spring); the “Calle de Caridad” of the history above is a separate street on the same sheet (“Charity St,” now Grand Avenue)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR053/MR053-068.pdf" },
       { title: "Wikipedia: Spring Street (Los Angeles)", url: "https://en.wikipedia.org/wiki/Spring_Street_(Los_Angeles)" }
     ]
   },
@@ -158,7 +170,8 @@ const STREET_DATA = {
     disputed: true,
     sources: [
       { title: "L.A. Street Names: Hope Street", url: "https://lastreetnames.com/street/hope-street/" },
-      { title: ORD_SURVEY.title, url: ORD_SURVEY.url }
+      { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+      { title: "Recorded map: Ord's Survey, county-recorder's copy, M.R. 53-66/73 (recorded Dec. 2, 1893) — sheet 68 draws and labels this street “Hope St”", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR053/MR053-068.pdf" }
     ]
   },
 
@@ -180,6 +193,7 @@ const STREET_DATA = {
     sources: [
       { title: "L.A. Street Names: Grand Avenue", url: "https://lastreetnames.com/street/grand-avenue/" },
       { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+      { title: "Recorded map: Ord's Survey, county-recorder's copy, M.R. 53-66/73 (recorded Dec. 2, 1893) — sheet 68 labels this street “Charity St / Calle de Caridad”", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR053/MR053-068.pdf" },
       { title: "Wikipedia: Grand Avenue (Los Angeles)", url: "https://en.wikipedia.org/wiki/Grand_Avenue_(Los_Angeles)" }
     ]
   },
@@ -242,7 +256,8 @@ const STREET_DATA = {
           { title: "Solano Canyon history: Buena Vista Road", url: "https://www.solanocanyon.org/buena-vista-road.html" },
           { title: "Homestead Museum: Calle Eternidad in the 1880s", url: "https://homesteadmuseum.blog/2016/07/18/museum-director-musings-through-the-viewfinder-on-calle-eternidad-1880s/" },
           { title: "L.A. Street Names: Broadway", url: "https://lastreetnames.com/street/broadway/" },
-          { title: ORD_SURVEY.title, url: ORD_SURVEY.url }
+          { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+          { title: "Recorded map: Ord's Survey (E.O.C. Ord's Aug. 29, 1849 “Plan de la Ciudad de Los Angeles”), county-recorder's copy, M.R. 53-66/73 (recorded Dec. 2, 1893) — sheet 73, the “portion north of Plaza,” labels this street “Calle de Eternidad / Eternity St”", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR053/MR053-073.pdf" }
         ]
       },
       {
@@ -265,6 +280,7 @@ const STREET_DATA = {
         sources: [
           { title: "L.A. Street Names: Broadway", url: "https://lastreetnames.com/street/broadway/" },
           { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+          { title: "Recorded map: Ord's Survey, county-recorder's copy, M.R. 53-66/73 (recorded Dec. 2, 1893) — sheets 68–69 label this street “Fort Street / Calle Fortin”", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR053/MR053-069.pdf" },
           { title: "Wikipedia: Broadway (Los Angeles)", url: "https://en.wikipedia.org/wiki/Broadway_(Los_Angeles)" }
         ]
       }
@@ -282,7 +298,8 @@ const STREET_DATA = {
     disputed: false,
     sources: [
       { title: "L.A. Street Names: Olive Street", url: "https://lastreetnames.com/street/olive-street/" },
-      { title: ORD_SURVEY.title, url: ORD_SURVEY.url }
+      { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+      { title: "Recorded map: Ord's Survey, county-recorder's copy, M.R. 53-66/73 (recorded Dec. 2, 1893) — sheet 68 labels this street “Olive St / Calle Accytuna” (aceituna = olive)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR053/MR053-068.pdf" }
     ]
   },
 
@@ -307,6 +324,7 @@ const STREET_DATA = {
     sources: [
       { title: "L.A. Street Names: Main Street", url: "https://lastreetnames.com/street/main-street-los-angeles/" },
       { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+      { title: "Recorded map: Ord's Survey, county-recorder's copy, M.R. 53-66/73 (recorded Dec. 2, 1893) — sheets 68–69 label this street “Main Street / Calle Principal”", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR053/MR053-069.pdf" },
       { title: "Wikipedia: Main Street (Los Angeles)", url: "https://en.wikipedia.org/wiki/Main_Street_(Los_Angeles)" }
     ]
   },
@@ -367,7 +385,8 @@ const STREET_DATA = {
     disputed: false,
     sources: [
       { title: "L.A. Street Names: 1st Street", url: "https://lastreetnames.com/street/0001st-street/" },
-      { title: ORD_SURVEY.title, url: ORD_SURVEY.url }
+      { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+      { title: ORD_RECORDED.title, url: ORD_RECORDED.url }
     ]
   },
 
@@ -382,7 +401,8 @@ const STREET_DATA = {
     disputed: true,
     sources: [
       { title: "L.A. Street Names: Flower Street", url: "https://lastreetnames.com/street/flower-street/" },
-      { title: ORD_SURVEY.title, url: ORD_SURVEY.url }
+      { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+      { title: "Recorded map: Ord's Survey, county-recorder's copy, M.R. 53-66/73 (recorded Dec. 2, 1893) — sheet 68 draws and labels this street “Flower” (the westernmost platted street, against the hills)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR053/MR053-068.pdf" }
     ]
   },
 
@@ -491,6 +511,7 @@ const STREET_DATA = {
           { title: "L.A. Street Names: Hill Street", url: "https://lastreetnames.com/street/hill-street/" },
           { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
           { title: "Wikipedia: Hill Street (Los Angeles)", url: "https://en.wikipedia.org/wiki/Hill_Street_(Los_Angeles)" },
+          { title: "Recorded map: Ord's Survey (E.O.C. Ord's Aug. 29, 1849 “Plan de la Ciudad de Los Angeles”), county-recorder's copy, M.R. 53-66/73 (recorded Dec. 2, 1893) — sheet 73, the “portion north of Plaza,” labels this street “Calle del Toro” and shows the 809 N Hill St parcel as Lot 6, Block 37 (bounded west by Calle de las Virgenes, now W Alpine St)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR053/MR053-073.pdf" },
           { title: "Los Angeles Herald, Feb. 14, 1874: “Common Council” (petition renaming Bull St. to Castelar)", url: "http://cdnc.ucr.edu/cgi-bin/cdnc?a=d&d=LAH18740214.2.12" },
           { title: "Los Angeles Times, Mar. 25, 1960: “Castelar St. Now Is Hill”", url: "https://web.archive.org/web/20151125171258/https://pqasb.pqarchiver.com/latimes/doc/167676581.html" }
         ]
@@ -509,6 +530,7 @@ const STREET_DATA = {
         sources: [
           { title: "L.A. Street Names: Hill Street", url: "https://lastreetnames.com/street/hill-street/" },
           { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+          { title: "Recorded map: Ord's Survey, county-recorder's copy, M.R. 53-66/73 (recorded Dec. 2, 1893) — sheets 68–69 label this street “Hill Street / Calle Loma” (loma = hill/knoll)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR053/MR053-068.pdf" },
           { title: "Wikipedia: Hill Street (Los Angeles)", url: "https://en.wikipedia.org/wiki/Hill_Street_(Los_Angeles)" },
           { title: "Wikipedia: Bunker Hill (Los Angeles)", url: "https://en.wikipedia.org/wiki/Bunker_Hill_(Los_Angeles)" }
         ]
@@ -1508,7 +1530,42 @@ Object.assign(STREET_DATA, {
     orientation: "EW",
     segments: [
       {
-        label: "west of Alameda",
+        label: "west of Figueroa",
+        maxLng: -118.2530,
+        name: "2nd Street",
+        namedAfter: "Its ordinal position in the downtown grid — the numbering system was in place by 1849",
+        namedAfterLink: null,
+        planned: { text: "by 1849", url: ORD_SURVEY.url },
+        built: "not yet researched",
+        note: null,
+        categories: ["number"],
+        disputed: false,
+        sources: [
+          { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
+          { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+          { title: ORD_RECORDED.title, url: ORD_RECORDED.url }
+        ]
+      },
+      {
+        label: "Bunker Hill Tunnel (Figueroa–Hill)",
+        minLng: -118.2530,
+        maxLng: -118.2480,
+        name: "2nd Street",
+        namedAfter: "Its ordinal position in the downtown grid, same as the rest of 2nd Street — this stretch just tunnels under Bunker Hill instead of running at grade",
+        namedAfterLink: null,
+        planned: null,
+        built: { text: "construction began 1916, delayed for years by lawsuits over property and access; formally opened July 25, 1924", url: "https://en.wikipedia.org/wiki/2nd_Street_Tunnel" },
+        note: "Built to relieve congestion on the older 3rd Street Tunnel. Its glossy German-tile lining (controversial amid WWI-era anti-German sentiment) later made it one of L.A.'s most filmed locations — Blade Runner, The Terminator, and Kill Bill among them.",
+        categories: ["number", "descriptive"],
+        disputed: false,
+        sources: [
+          { title: "Wikipedia: 2nd Street Tunnel", url: "https://en.wikipedia.org/wiki/2nd_Street_Tunnel" },
+          { title: "Los Angeles Times: “The automakers' tunnel of love is a cause for reflection” (Dan Neil, Apr. 21, 2009)", url: "https://www.latimes.com/archives/la-xpm-2009-apr-21-fi-ct-neil21-story.html" }
+        ]
+      },
+      {
+        label: "Hill St to Alameda",
+        minLng: -118.2480,
         maxLng: -118.2381,
         name: "2nd Street",
         namedAfter: "Its ordinal position in the downtown grid — the numbering system was in place by 1849",
@@ -1520,7 +1577,8 @@ Object.assign(STREET_DATA, {
         disputed: false,
         sources: [
           { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
-          { title: ORD_SURVEY.title, url: ORD_SURVEY.url }
+          { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+          { title: ORD_RECORDED.title, url: ORD_RECORDED.url }
         ]
       },
       {
@@ -1567,7 +1625,8 @@ Object.assign(STREET_DATA, {
         disputed: false,
         sources: [
           { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
-          { title: ORD_SURVEY.title, url: ORD_SURVEY.url }
+          { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+          { title: ORD_RECORDED.title, url: ORD_RECORDED.url }
         ]
       },
       {
@@ -1615,7 +1674,8 @@ Object.assign(STREET_DATA, {
         sources: [
           { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
           { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
-          { title: "L.A. Street Names: Broadway (the Fort/Fourth confusion)", url: "https://lastreetnames.com/street/broadway/" }
+          { title: "L.A. Street Names: Broadway (the Fort/Fourth confusion)", url: "https://lastreetnames.com/street/broadway/" },
+          { title: ORD_RECORDED.title, url: ORD_RECORDED.url }
         ]
       },
       {
@@ -1681,7 +1741,8 @@ Object.assign(STREET_DATA, {
         disputed: false,
         sources: [
           { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
-          { title: ORD_SURVEY.title, url: ORD_SURVEY.url }
+          { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+          { title: ORD_RECORDED.title, url: ORD_RECORDED.url }
         ]
       },
       {
@@ -1728,9 +1789,21 @@ Object.assign(STREET_DATA, {
       }
     ]
   },
-  "6th Street": numberedStreet("6th Street"),
-  "7th Street": numberedStreet("7th Street"),
-  "8th Street": numberedStreet("8th Street"),
+  "6th Street": numberedStreet("6th Street", { sources: [
+    { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
+    { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+    { title: ORD_RECORDED.title, url: ORD_RECORDED.url }
+  ] }),
+  "7th Street": numberedStreet("7th Street", { sources: [
+    { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
+    { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+    { title: ORD_RECORDED.title, url: ORD_RECORDED.url }
+  ] }),
+  "8th Street": numberedStreet("8th Street", { sources: [
+    { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
+    { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+    { title: ORD_RECORDED.title, url: ORD_RECORDED.url }
+  ] }),
   "9th Street": numberedStreet("9th Street", {
     note: "A donor street twice over: its stretch west of Figueroa became [[James M Wood Boulevard|James M. Wood Blvd]] in 1997, and its continuation east of Central Ave was absorbed by [[Olympic Boulevard|Olympic Blvd]] by 1945. It was also a receiver: between San Pedro and Alameda, this stretch absorbed the path of an earlier, separate [[Kohler Street]].",
     sources: [
@@ -1769,7 +1842,7 @@ Object.assign(STREET_DATA, {
         namedAfter: "The {{1932 Summer Olympics}}, held in Los Angeles",
         namedAfterLink: "https://en.wikipedia.org/wiki/1932_Summer_Olympics",
         planned: { text: "by 1849 (as 10th Street)", url: ORD_SURVEY.url },
-        built: "not yet researched",
+        built: { text: "already \"Tenth\" by Apr. 1875 (W.M. Williams's subdivision of Blocks 72 & 73 of Ord's Survey)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR003/MR003-032.pdf" },
         nameHistory: [
           { from: "by 1849", until: "1935", name: "10th Street",
             origin: "ordinal position in the downtown grid", originLink: null },
@@ -1783,7 +1856,9 @@ Object.assign(STREET_DATA, {
         sources: [
           { title: "L.A. Street Names: Olympic Boulevard", url: "https://lastreetnames.com/street/olympic-boulevard/" },
           { title: "L.A. Street Names: 10th Street", url: "https://lastreetnames.com/street/010th-street/" },
-          { title: "Wikipedia: Olympic Boulevard (Los Angeles)", url: "https://en.wikipedia.org/wiki/Olympic_Boulevard_(Los_Angeles)" }
+          { title: "Wikipedia: Olympic Boulevard (Los Angeles)", url: "https://en.wikipedia.org/wiki/Olympic_Boulevard_(Los_Angeles)" },
+          { title: "Recorded map: W.M. Williams's subdivision of Blocks 72 & 73 of Ord's Survey, M.R. 3-32/33 (Apr. 1875) — labels this street \"Tenth,\" directly tying it to the Ord Survey grid", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR003/MR003-032.pdf" },
+          { title: "Recorded map: Thomas S. Ewing's Replat of part of Block B, Dunkelberger Tract, M.R. 59-60 (surveyed Mar. 1896) — labels this street \"Tenth St\" again, a block further west", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR059/MR059-060.pdf" }
         ]
       },
       {
@@ -1969,6 +2044,231 @@ Object.assign(STREET_DATA, {
       { title: "Metro ExpressLanes (official)", url: "https://www.metroexpresslanes.net/" },
       { title: "Wikipedia: Interstate 10 in California", url: "https://en.wikipedia.org/wiki/Interstate_10_in_California" },
       { title: "Wikipedia: High-occupancy toll lane", url: "https://en.wikipedia.org/wiki/High-occupancy_toll_lane" }
+    ]
+  },
+
+  "Marion Avenue": {
+    name: "Marion Avenue",
+    namedAfter: null,
+    namedAfterLink: null,
+    planned: { text: "by Aug. 1886", url: "https://lastreetnames.com/street/marion-avenue/" },
+    built: "by Aug. 1886",
+    note: "Some historians credit co-developer Everett E. Hall (1854–1936) with naming this for a daughter, Marion — but Kines found no record of her existing, and the street was named a month before Hall's first marriage. An 1897 ordinance briefly renamed it \"Stilson place\" (for co-developer William W. Stilson); restored Feb. 18, 1897.",
+    categories: ["unknown"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Marion Avenue", url: "https://lastreetnames.com/street/marion-avenue/" },
+      { title: "Los Angeles Herald, Feb. 19, 1897 (restoration of Marion Ave. and other names)", url: "https://cdnc.ucr.edu/?a=d&d=LAH18970219.2.24" }
+    ]
+  },
+
+  "Court Street": {
+    name: "Court Street",
+    namedAfter: "Descriptive — likely for the street's own gently curving alignment, a common source for the generic \"court\" street-type name",
+    namedAfterLink: null,
+    planned: { text: "by Dec. 27, 1884 (recorded)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR006/MR006-138.pdf" },
+    built: { text: "by Dec. 27, 1884 (recorded)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR006/MR006-138.pdf" },
+    note: "Confirmed unrelated to Bunker Hill's demolished \"Court Street\" (Court Flight's base sat at Broadway & Temple, lat ~34.056): this street runs entirely at lat 34.063–34.069, ~1.2 km north across the Hollywood Freeway, in Angelino Heights/Echo Park — the 1897 Bradbury-rename fight does NOT belong here. Not covered by Kines.",
+    categories: ["descriptive", "disputed"],
+    disputed: true,
+    sources: [
+      { title: "Recorded map: Glassell's Subdivision of Lot No. 7 etc., Block 39, Hancock's Survey No. 1, M.R. 6-138 (recorded Dec. 27, 1884, at request of A. Glassell) — labels this street \"Court Street\" directly", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR006/MR006-138.pdf" },
+      { title: "Wikipedia: Angelino Heights, Los Angeles", url: "https://en.wikipedia.org/wiki/Angelino_Heights,_Los_Angeles" },
+      { title: "On Bunker Hill: Court Flight — The Other Funicular (base location, for comparison)", url: "https://www.onbunkerhill.org/court_flight/" }
+    ]
+  },
+
+  "Miramar Street": {
+    name: "Miramar Street",
+    namedAfter: "Descriptive coinage — “Miramar” blends the Spanish mira al mar (“looks toward the sea”)",
+    namedAfterLink: null,
+    planned: { text: "by 1886 (as an extension of Ocean View Avenue)", url: "https://lastreetnames.com/street/miramar-street/" },
+    built: "by 1886",
+    nameHistory: [
+      { from: "1886", until: "1896", name: "Ocean View Avenue",
+        origin: "an eastward extension, in two unconnected portions, of Ocean View Avenue — opened 1886 on the Nob Hill tract, itself borrowing the name of San Francisco's Nob Hill",
+        originLink: null },
+      { from: "1896", until: "1897", name: "Nob Hill Avenue",
+        origin: "residents petitioned to rename the extension \"Nob Hill Avenue\"", originLink: null },
+      { from: "1897", until: "1915", name: "Ocean View Avenue",
+        origin: "an 1897 city ordinance changed Nob Hill Ave. back to Ocean View Ave., while a separately grown section of Ocean View was renamed Miramar in that same ordinance",
+        originLink: null },
+      { from: "1915", until: null, name: "Miramar Street",
+        origin: "the city unified the rest of Ocean View Avenue under the Miramar name, except for the original 1886 diagonal segment (outside this map's coverage), which still carries \"Ocean View Avenue\" today",
+        originLink: null }
+    ],
+    note: null,
+    categories: ["renamed", "descriptive"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Miramar Street / Ocean View Avenue", url: "https://lastreetnames.com/street/miramar-street/" }
+    ]
+  },
+
+  "Alpine Street": {
+    name: "Alpine Street",
+    namedAfter: "Possibly California's Alpine County or the Sierra Nevada — real estate agent William P. McIntosh (1849–1930) petitioned for the 1887 rename without stating a reason",
+    namedAfterLink: null,
+    planned: { text: "by 1849 (as Calle de las Vírgenes / Virgin Street)", url: ORD_SURVEY.url },
+    built: "not yet researched",
+    nameHistory: [
+      { from: "1849", until: "Aug. 1887", name: "Virgin Street (Calle de las Vírgenes)",
+        origin: "no explanation given on the 1849 survey — possibly a reference to bachelorettes, nuns, or the Virgin Mary {{(source)}}",
+        originLink: "https://lastreetnames.com/street/alpine-street/" },
+      { from: "Aug. 1887", until: null, name: "Alpine Street",
+        origin: "renamed by petition of real estate agent William P. McIntosh, who'd run a Sierra lumber company near Alpine County in the 1870s but gave no stated reason",
+        originLink: null }
+    ],
+    note: "Confirmed at the lot level via [[Hill Street]]'s Ord-survey citation: 809 N Hill St / 427 W Alpine St share Lot 6, Block 37, bounded by Calle del Toro (Hill) and Calle de las Vírgenes (Alpine).",
+    categories: ["renamed", "place", "disputed"],
+    disputed: true,
+    sources: [
+      { title: "L.A. Street Names: Alpine Street", url: "https://lastreetnames.com/street/alpine-street/" },
+      { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+      { title: "Recorded map: Ord's Survey, county-recorder's copy, M.R. 53-66/73 (recorded Dec. 2, 1893) — sheet 73 labels this street “Calle de las Vírgenes / Virgin St” and shows the 809 N Hill St parcel (Lot 6, Block 37) bounded west by it", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR053/MR053-073.pdf" }
+    ]
+  },
+
+  "College Street": {
+    name: "College Street",
+    namedAfter: "Descriptive — a June 1849 church request for a colegio (secondary school) here prompted Ord and Hutton's “College Street” label a month later, though no school was ever built",
+    namedAfterLink: null,
+    planned: { text: "by 1849 (as Calle del Colegio / College Street)", url: ORD_SURVEY.url },
+    built: "not yet researched",
+    note: "One of only three Chinatown streets — with Main and part of Adobe — to keep its 1849 Ord-survey name.",
+    categories: ["descriptive"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: College Street", url: "https://lastreetnames.com/street/college-street/" },
+      { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+      { title: "Recorded map: Ord's Survey, county-recorder's copy, M.R. 53-66/73 (recorded Dec. 2, 1893) — sheet 73 labels this street “College”", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR053/MR053-073.pdf" }
+    ]
+  },
+
+  "Yale Street": {
+    name: "Yale Street",
+    namedAfter: "Possibly {{Yale University}} — no namesake was documented in the 1874 renaming petition, and Kines found no Yale graduates among the neighborhood's known 1870s figures",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Yale_University",
+    planned: { text: "by 1849 (as Calle de las Avispas / Hornet Street)", url: ORD_SURVEY.url },
+    built: "not yet researched",
+    nameHistory: [
+      { from: "1849", until: "Feb. 1874", name: "Hornet Street (Calle de las Avispas, “Wasp Street”)",
+        origin: "avispa means “wasp”; insects were a common naming source in the young pueblo (cf. [[Figueroa Street|Grasshopper St]])",
+        originLink: null },
+      { from: "Feb. 1874", until: null, name: "Yale Street",
+        origin: "renamed by the same petition that changed Bull St to Castelar (now [[Hill Street|N. Hill St]]) and proposed Grasshopper St to Union (Council chose Pearl St instead)",
+        originLink: null }
+    ],
+    note: null,
+    categories: ["renamed", "nature", "disputed"],
+    disputed: true,
+    sources: [
+      { title: "L.A. Street Names: Yale Street", url: "https://lastreetnames.com/street/yale-street/" },
+      { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+      { title: "Recorded map: Ord's Survey, county-recorder's copy, M.R. 53-66/73 (recorded Dec. 2, 1893) — sheet 73 labels this street “Calle de las Arispas” / “Hornet St”", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR053/MR053-073.pdf" }
+    ]
+  },
+
+  "Cleveland Street": {
+    name: "Cleveland Street",
+    namedAfter: "Possibly {{Grover Cleveland}} (1837–1908), elected president in 1884 — named Jan. 1886 on the Beaudry brothers' tract, which favored Americana-themed street names",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Grover_Cleveland",
+    planned: "not yet researched",
+    built: { text: "named Jan. 1886 on the Beaudry brothers' subdivision tract", url: "https://lastreetnames.com/street/cleveland-street/" },
+    note: "An open positional guess ties this to the Ord Survey's “Calle de las Adobes” (sheet 73's northernmost platted street) — but Kines dates the name to a fresh 1886 Beaudry tract with no mention of an 1849 predecessor, so the two may be unrelated streets; unresolved.",
+    categories: ["person", "governor", "disputed"],
+    disputed: true,
+    sources: [
+      { title: "L.A. Street Names: Cleveland Street", url: "https://lastreetnames.com/street/cleveland-street/" }
+    ]
+  },
+
+  "Ord Street": {
+    name: "Ord Street",
+    namedAfter: "{{Edward Otho Cresap Ord}} (1818–1883), U.S. Army engineer who surveyed and mapped the city in 1849 with William Rich Hutton — Fort Ord near Monterey also honors him",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Edward_Ord",
+    planned: { text: "by 1849 (as Calle Alta / High Street)", url: ORD_SURVEY.url },
+    built: "not yet researched",
+    nameHistory: [
+      { from: "1849", until: "1886", name: "High Street (Calle Alta)", origin: "no namesake documented", originLink: null },
+      { from: "1886", until: "1890", name: "Walters Street", origin: "renamed for resident George Walters", originLink: null },
+      { from: "1890", until: null, name: "Ord Street",
+        origin: "renamed for surveyor E.O.C. Ord, who had not named it after himself when he mapped the city in 1849 {{(source)}}",
+        originLink: "https://lastreetnames.com/street/ord-street/" }
+    ],
+    note: null,
+    categories: ["person", "renamed"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Ord Street", url: "https://lastreetnames.com/street/ord-street/" },
+      { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
+      { title: "Recorded map: Ord's Survey, county-recorder's copy, M.R. 53-66/73 (recorded Dec. 2, 1893) — sheet 73 labels this street “Calle Alta” / “High St”", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR053/MR053-073.pdf" }
+    ]
+  },
+
+  "Cesar E Chavez Avenue": {
+    name: "Cesar E Chavez Avenue",
+    namedAfter: "{{Cesar Chavez}} (1927–1993), labor leader who co-founded the United Farm Workers",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Cesar_Chavez",
+    planned: null,
+    built: "not yet researched",
+    nameHistory: [
+      { from: "not yet researched", until: "Mar. 31, 1994", name: "Macy Street",
+        origin: "named for pioneer merchants Obed and Oscar Macy; ran this name along the whole stretch through the Old Plaza/Chinatown area covered by this map",
+        originLink: null },
+      { from: "Mar. 31, 1994", until: null, name: "Cesar E. Chavez Avenue",
+        origin: "Macy Street, Brooklyn Avenue (Boyle Heights/East L.A., outside this map's coverage), and a new Sunset Blvd connector were united and renamed for Chavez on his would-be 67th birthday, pushed by Supervisor Gloria Molina after his 1993 death {{(source)}}",
+        originLink: "https://laist.com/news/entertainment/brooklyn-cesar" }
+    ],
+    note: "Kenny's positional-only guess ties the Ord Survey's “Calle Corta”/Short St (sheet 73's southern tip) to this street's westernmost stub — unconfirmed. In Mar. 2026 a New York Times investigation reported Chavez sexually abused several women and minors, including UFW co-founder Dolores Huerta; California and Denver subsequently renamed the associated holiday.",
+    categories: ["person", "renamed"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Cesar E. Chavez Avenue", url: "https://lastreetnames.com/street/cesar-e-chavez-avenue/" },
+      { title: "Wikipedia: Cesar Chavez Avenue", url: "https://en.wikipedia.org/wiki/Cesar_Chavez_Avenue" },
+      { title: "LAist: How L.A.'s Brooklyn Avenue Became Avenida Cesar Chavez", url: "https://laist.com/news/entertainment/brooklyn-cesar" },
+      { title: "Wikipedia: Cesar Chavez sexual abuse allegations", url: "https://en.wikipedia.org/wiki/Cesar_Chavez_sexual_abuse_allegations" }
+    ]
+  },
+
+  "Pico Boulevard": {
+    name: "Pico Boulevard",
+    namedAfter: "{{Pío de Jesús Pico}} (1801–1894), Alta California's last Mexican governor (1845–1846) and a major landowner",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Pio_Pico",
+    planned: { text: "by 1855 (most likely 1853), as Pico Street", url: "https://lastreetnames.com/street/pico-boulevard/" },
+    built: { text: "already \"Pico\" by Oct. 1885 (Cameron Tract survey)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR007/MR007-021.pdf" },
+    note: "Los Angeles never had an official 13th Street downtown — Pico Street picked up straight after 12th — though a 1903 item still locates a church at “Flower street, corner Pico (Thirteenth) street.” Became Pico Boulevard in 1914.",
+    categories: ["person", "governor"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Pico Boulevard", url: "https://lastreetnames.com/street/pico-boulevard/" },
+      { title: "Wikipedia: Pío Pico", url: "https://en.wikipedia.org/wiki/Pio_Pico" },
+      { title: "Los Angeles Herald, Mar. 8, 1903 (Christ Episcopal Church, “Flower street, corner Pico (Thirteenth) street”)", url: "https://cdnc.ucr.edu/?a=d&d=LAH19030308.2.145" },
+      { title: "Recorded map: Cameron Tract, M.R. 7-21 (surveyed by H.J. Stevenson, Oct. 1885; recorded Nov. 23, 1885) — labels this street \"Pico\" directly, at Figueroa", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR007/MR007-021.pdf" }
+    ]
+  },
+
+  "Venice Boulevard": {
+    name: "Venice Boulevard",
+    namedAfter: "Descriptive/borrowed — named for the {{Venice}} beach resort the roadway leads to, itself modeled on Venice, Italy",
+    namedAfterLink: "https://en.wikipedia.org/wiki/Venice,_Los_Angeles",
+    planned: null,
+    built: "not yet researched",
+    nameHistory: [
+      { from: "not yet researched", until: "1938", name: "West 16th Street",
+        origin: "part of the numbered downtown grid, absorbed at this end of the corridor only when the 13-mile Venice Boulevard rebranding — championed by Culver City founder Harry H. Culver — finally reached it",
+        originLink: null },
+      { from: "1938", until: null, name: "Venice Boulevard",
+        origin: "consolidated the roadway's many segment names (Center St., St. Marks Blvd., Electric Ave./Blvd., Front St., West 16th St.) under one Venice-themed name, an idea Venice residents floated in 1912 {{(source)}}",
+        originLink: "https://lastreetnames.com/street/venice-boulevard/" }
+    ],
+    note: "A 1927 item locates a business at “the southeast corner of Figueroa street and Venice boulevard, formerly Sixteenth street” — confirming the absorption at this end of the corridor.",
+    categories: ["place", "borrowed", "renamed"],
+    disputed: false,
+    sources: [
+      { title: "L.A. Street Names: Venice Boulevard", url: "https://lastreetnames.com/street/venice-boulevard/" },
+      { title: "Wikipedia: Venice, Los Angeles", url: "https://en.wikipedia.org/wiki/Venice,_Los_Angeles" },
+      { title: "Los Angeles Herald, Feb. 26, 1927 (business at Figueroa & Venice Blvd., “formerly Sixteenth street”)", url: "https://cdnc.ucr.edu/?a=d&d=LAH19270226.1.9" }
     ]
   }
 });
