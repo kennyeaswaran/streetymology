@@ -92,6 +92,13 @@ Periodically sweep the whole file. Keep entries dated.
   what that stretch was called.
 - **2nd Street Tunnel** (2026-07): separate OSM name, 0.5 km, no entry yet;
   opened 1924 (unverified) — could carry the 2nd Street story plus tunnel dates.
+- **Georgia St → Georgia Bell renaming date** (2026-07): unsettled — Kines says
+  1883; Forman's 1897 testimony says Sept. 11, 1890 (or 1880, OCR unclear).
+  Council ordinance books would settle it. (Trimmed from Georgia Street's note.)
+- **Santa Fe Ave "Tulip" extent** (2026-07): the Goodwin Tract citation covers
+  only the stretch south of 6th. Whether the same "Tulip"-era name applied
+  further north (toward 1st/3rd, where the depots sat) is unchecked. (Trimmed
+  from Santa Fe Avenue's note.)
 
 ## Sourced finds awaiting entries
 

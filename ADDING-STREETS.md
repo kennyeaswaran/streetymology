@@ -15,13 +15,26 @@ are all legitimate values.
 
 1. Find the street's OSM name; the data key strips any leading North/South/East/West
    (key "Main Street", not "South Main Street").
-2. Research, in rough order: lastreetnames.com → Los Angeles Revisited →
-   Homestead Museum blog → Wikipedia → historic maps (LAPL/Calisphere) →
-   newspaper archives. (Full list in README.)
-3. Decide: single entry, or segments? Segment ONLY if different stretches had
+2. **Start from the original map, not from secondary sources.** Find the plat
+   the street first appears on:
+   - old core of downtown → often the Ord/Hutton 1849 survey (`ORD_SURVEY`);
+   - elsewhere → a recorded subdivision. Check `tracts/` first (`ls tracts/` —
+     nearby streets' tract maps are often already downloaded and may name your
+     street), then follow TRACT-RESEARCH.md (downloads-first rule included).
+   This grounds the entry in a recording date and the original platted name
+   before anyone's retelling gets a vote. **While the map is open, follow
+   TRACT-RESEARCH.md's "Cross-link every street a map touches": note EVERY
+   street named anywhere on the plat** — cite the ones already in the data,
+   bank the rest in research-leads.md.
+3. THEN the secondary/narrative sources, in rough order: lastreetnames.com →
+   Los Angeles Revisited → Homestead Museum blog → Wikipedia → newspaper
+   archives (CDNC). (Full list in README.) Where they conflict with the
+   recorded map, the map wins on names/dates; the narrative sources win on
+   why.
+4. Decide: single entry, or segments? Segment ONLY if different stretches had
    different name lineages. Different build dates alone can be handled in one
    entry's text.
-4. Write the entry (template below), run `node check-data.js`, reload the map.
+5. Write the entry (template below), run `node check-data.js`, reload the map.
 
 ## Field conventions
 

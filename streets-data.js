@@ -112,7 +112,7 @@ const STREET_DATA = {
         namedAfterLink: "https://en.wikipedia.org/wiki/Jos%C3%A9_Figueroa",
         planned: null,
         built: { text: "already \"Figueroa Street\" by Aug. 1895 (near 20th & Flower)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR059/MR059-056.pdf" },
-        note: "Pearl ended at Pico; this stretch turns out not to have needed an 1897 rename at all. A recorded tract map (Edgar's Subdivision resubdivision, surveyed Aug. 31, 1895 by John Goldsworthy, recorded Mar. 9, 1896) already labels this stretch \"Figueroa Street\" a full year before the citywide renaming — evidence this is the older, southern continuation of the pre-1897 Figueroa Street (the one whose downtown stretch was renamed De La Guerra in 1897), left untouched here rather than being renamed alongside Pearl.",
+        note: "Pearl ended at Pico, so this stretch needed no 1897 rename. A recorded tract map (Edgar's Subdivision resubdivision, 1895) already labels it \"Figueroa Street\" a year before the citywide renaming — evidence it is the older southern continuation of the pre-1897 Figueroa Street whose downtown stretch became De La Guerra, left untouched rather than renamed alongside Pearl.",
         categories: ["person", "governor"],
         disputed: false,
         sources: [
@@ -429,7 +429,7 @@ const STREET_DATA = {
         origin: "the renaming commission proposed reverting to “Nevada”; after Major Bell's furious protest the council compromised on Georgia — one of the street's own former names — and Bell dropped his threatened lawsuit {{(source)}}",
         originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970227.2.12" }
     ],
-    note: "The Georgia→Georgia Bell renaming date is unsettled: Kines says 1883; Forman testified Sept. 11, 1890 (or 1880 — OCR unclear). Council ordinance books would settle it. The \"other, now-defunct Georgia Street\" that prompted the original rename is very likely the short \"Georgia St\" seen on the 1888-recorded Wolfskill Orchard Tract map, just east of Alameda — now part of [[3rd Street]]'s eastern segment, on the opposite side of downtown from this street.",
+    note: "The Georgia→Georgia Bell renaming date is unsettled: Kines says 1883; Forman testified Sept. 11, 1890 (or 1880 — OCR unclear). The \"other, now-defunct Georgia Street\" that prompted the original rename is very likely the short \"Georgia St\" on the 1888-recorded Wolfskill Orchard Tract map east of Alameda — now part of [[3rd Street]]'s eastern segment, across downtown from this street.",
     categories: ["person", "alive", "renamed"],
     disputed: false,
     sources: [
@@ -564,7 +564,7 @@ const STREET_DATA = {
     namedAfterLink: "https://en.wikipedia.org/wiki/Matthew_Keller",
     planned: null,
     built: { text: "already \"Mateo\" by Jan. 1887 (the Jan. 1887 additional-lots sheet of the Mills and Wicks Extension of Second St. tract), directly bordering the \"Keller Est.\" label", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR013/MR013-087.pdf" },
-    note: "Keller's Rising Sun Vineyard once covered the ground just west of the street; he also owned Rancho Topanga Malibu, sold by his son to the {{Rindge}} family in 1892. This is the tract long flagged in research-leads.md as \"Mills and Wicks Subdn.\" (spotted via a margin note on the neighboring Bliss Tract map) — its Jan. 1887 sheet confirms Mateo, labeled right against \"Keller Est.,\" but still doesn't mention [[Molino Street|Molino]].",
+    note: "Keller's Rising Sun Vineyard once covered the ground just west of the street; he also owned Rancho Topanga Malibu, sold by his son to the {{Rindge}} family in 1892. The tract's Jan. 1887 sheet confirms Mateo, labeled right against \"Keller Est.,\" but still doesn't mention [[Molino Street|Molino]].",
     categories: ["person"],
     disputed: false,
     sources: [
@@ -591,7 +591,7 @@ const STREET_DATA = {
         origin: "renamed to avoid confusion with the Eastside's bigger, busier Stephenson Avenue, which itself was renamed Whittier Boulevard just five years later {{(source)}}",
         originLink: "https://lastreetnames.com/street/traction-avenue/" }
     ],
-    note: "Ground zero for the Arts District's punk-era scene: Al's Bar (1979–2001) and Joel Bloom's General Store (1994) both sat at Traction & [[Hewitt Street|Hewitt]]. The \"Second St\" plat name explains the streetcar-era \"Traction\" rename better than the tract map alone: this was laid out as a westward-grid street, not a destination road, so the later name shift (via Stephenson) to something describing the traction-motor streetcars is a more complete break from the numbered grid than most renamed downtown streets get.",
+    note: "Ground zero for the Arts District's punk-era scene: Al's Bar (1979–2001) and Joel Bloom's General Store (1994) both sat at Traction & [[Hewitt Street|Hewitt]]. Platted as \"Second St,\" a westward-grid street rather than a destination road, it took the streetcar-era \"Traction\" name (via Stephenson) — a fuller break from the numbered grid than most renamed downtown streets get.",
     categories: ["renamed", "descriptive"],
     disputed: false,
     sources: [
@@ -630,7 +630,7 @@ const STREET_DATA = {
         origin: "renamed for the {{Atchison, Topeka & Santa Fe Railway}} when it reached Los Angeles in May 1887, a few months after the Goodwin Tract's \"Tulip\" plat",
         originLink: "https://en.wikipedia.org/wiki/Atchison,_Topeka_and_Santa_Fe_Railway" }
     ],
-    note: "“Santa Fe” was aspirational even for the railroad itself — no AT&SF train reached the city of Santa Fe until 1880. The company's “La Grande” station opened at Santa Fe & 3rd in 1893; passenger service moved to Union Station in 1939 and the AT&SF folded in 1996. The old freight depot near 2nd is now home to SCI-Arc. This citation covers the stretch south of 6th shown on the Goodwin Tract; whether the same \"Tulip\"-era name applied further north (toward 1st/3rd, where the depots actually sat) hasn't been checked.",
+    note: "“Santa Fe” was aspirational even for the railroad itself — no AT&SF train reached the city of Santa Fe until 1880. The company's “La Grande” station opened at Santa Fe & 3rd in 1893; passenger service moved to Union Station in 1939 and the AT&SF folded in 1996. The old freight depot near 2nd is now home to SCI-Arc.",
     categories: ["place", "aspiration", "renamed"],
     disputed: false,
     sources: [
@@ -675,7 +675,7 @@ const STREET_DATA = {
             origin: "not yet researched — namesake and rename date unconfirmed; not covered by Kines",
             originLink: null }
         ],
-        note: "Home to Al's Bar (1979–2001) and Joel Bloom's General Store (opened 1994 at Traction & Hewitt) — the punk-and-DIY-era venues credited with giving the Arts District its name and its first unofficial mayor. The name-change boundary (this segment vs. the \"Hewitt\"-from-the-start stretch north of 4th) lines up with the Mills and Wicks tract's own internal boundary between its Apr.–May 1886 sheet (labels \"Hewitt\") and its Jan. 1887 addition (labels \"Carolina\") — both parts of one recorded filing, making this an unusually direct primary source for exactly where and when the name changed.",
+        note: "Home to Al's Bar (1979–2001) and Joel Bloom's General Store (opened 1994 at Traction & Hewitt) — the punk-era venues credited with giving the Arts District its name and first unofficial mayor. The name-change boundary (vs. the \"Hewitt\" stretch north of 4th) matches the Mills and Wicks tract's internal boundary: its Apr.–May 1886 sheet labels \"Hewitt,\" its Jan. 1887 addition \"Carolina\" — both one recorded filing.",
         categories: ["renamed", "unknown"],
         disputed: false,
         sources: [
@@ -833,7 +833,7 @@ const STREET_DATA = {
     namedAfterLink: null,
     planned: null,
     built: { text: "already \"Mill St.\" by Dec. 1903 (Industrial Tract survey, between Alameda and Mateo, north of 7th St)", url: "https://pw.lacounty.gov/sur/nas/landrecords/tract/MB0005/TR0005-056a.pdf" },
-    note: "Possibly descriptive, recalling one of early Los Angeles's zanja-powered gristmills (e.g. the 1830s \"Stearns' Mill\" on N. Spring St) — but no source ties this specific street to a mill, so flagged as speculation only. The Industrial Tract map (recorded 1904) already shows Mill St as an existing named boundary street; it sits several blocks from [[Molino Street|Molino]]/[[Hewitt Street|Hewitt]]'s cluster near 4th–5th, in a separate 1886 tract that doesn't mention Mill at all — the two \"mill\"-suggesting names appear unrelated. Not covered by Kines.",
+    note: "Possibly descriptive, recalling one of early L.A.'s zanja-powered gristmills (e.g. the 1830s \"Stearns' Mill\" on N. Spring St), but no source ties this street to a mill — speculation only. It sits several blocks from the [[Molino Street|Molino]]/[[Hewitt Street|Hewitt]] cluster near 4th–5th, whose separate 1886 tract doesn't mention Mill at all — the two \"mill\"-suggesting names appear unrelated. Not covered by Kines.",
     categories: ["unknown"],
     disputed: false,
     sources: [
@@ -921,7 +921,7 @@ const STREET_DATA = {
     namedAfterLink: null,
     planned: null,
     built: { text: "the 813 E 4th Place parcel (Lot 77) is platted on the Mills and Wicks Extension of Second St. tract, M.R. 13-87/88 (surveyed Apr.–May 1886, additional lots Jan. 1887), fronting the street labeled \"Third\" there", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR013/MR013-087.pdf" },
-    note: "Runs between Mateo and Molino streets; home to the 1980s gallery/performance space Dangerous Curve (on an unsafe bend of the street) and, around the corner on Hewitt, the youth arts nonprofit ArtShare L.A. Not covered by Kines. The lot-77/813-E-4th-Place match comes from NavigateLA's own parcel record, not an alignment guess — but the plat itself just says \"Third,\" one row north of Huber St (which fronts the same tract and is separately documented as becoming [[4th Street|4th Street]]); read as inferred renaming/renumbering of that row into 4th Place, not a literal label match.",
+    note: "Runs between Mateo and Molino streets; home to the 1980s gallery/performance space Dangerous Curve (on an unsafe bend of the street) and, around the corner on Hewitt, the youth arts nonprofit ArtShare L.A. Not covered by Kines.",
     categories: ["number", "descriptive"],
     disputed: false,
     sources: [
@@ -964,7 +964,7 @@ const STREET_DATA = {
     namedAfterLink: null,
     planned: null,
     built: { text: "block resubdivided Dec. 1928 as Tract No. 10542, itself carved from Lots K, L, N, O & Q of the 1903–04 Industrial Tract and from Tract No. 1879", url: "https://pw.lacounty.gov/sur/nas/landrecords/tract/MB0159/TR0159-032.pdf" },
-    note: "In the Arts District warehouse pocket; not covered by Kines and no namesake found yet. The parcel NavigateLA returns for a Conway Place address is recorded as \"Lot F\" (20,129 sq. ft.) of the 1928 Tract No. 10542 map — a large interior lot with no street running along or through it on that map; Conway Place itself doesn't appear at all in 1928, so it was evidently cut through (or dedicated along) Lot F sometime after, name and date unconfirmed. (An earlier pass here mis-identified this as the tract's \"Industrial Street\" — that's actually a separate street on this map's south edge, fronting Lots A/9/10, geographically distinct from Lot F; corrected 2026-07.)",
+    note: "In the Arts District warehouse pocket; not covered by Kines and no namesake found yet. The parcel NavigateLA returns for a Conway Place address is \"Lot F\" (20,129 sq. ft.) of the 1928 Tract No. 10542 map — a large interior lot with no street through it; Conway Place itself doesn't appear in 1928, so it was evidently cut through Lot F later, name and date unconfirmed.",
     categories: ["unknown"],
     disputed: false,
     sources: [
@@ -1095,7 +1095,7 @@ const STREET_DATA = {
     namedAfterLink: "https://en.wikipedia.org/wiki/Frank_Sabichi",
     planned: null,
     built: { text: "recorded Sept. 21, 1897 (Wilde and Strong's Subdivision of the Frank Sabichi Tract)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR066/MR066-064.pdf" },
-    note: "Her mother Magdalena was a daughter of pioneer settler William Wolfskill; Agatha herself later married water-board president John Joseph Fay Jr. The recorded tract map (owners Frank and Magdalena Sabichi) shows Agatha as a new cross street laid out through the family's land, running between continuations of [[Towne Avenue]], [[Crocker Street]], [[Stanford Avenue]] (platted \"Ruth\"), and [[Gladys Avenue]] — all extending south from the adjoining 1887 Wolfskill Orchard Tract.",
+    note: "Her mother Magdalena was a daughter of pioneer settler William Wolfskill; Agatha later married water-board president John Joseph Fay Jr. The tract map (owners Frank and Magdalena Sabichi) shows Agatha as a new cross street through the family's land, between [[Towne Avenue]], [[Crocker Street]], [[Stanford Avenue]] (platted \"Ruth\"), and [[Gladys Avenue]] — all continuing south from the 1887 Wolfskill Orchard Tract.",
     categories: ["person", "alive"],
     disputed: false,
     sources: [
@@ -1125,7 +1125,7 @@ const STREET_DATA = {
     namedAfterLink: null,
     planned: null,
     built: { text: "1887 (platted as \"Gladys\" in the Wolfskill Orchard Tract)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR030/MR030-009.pdf" },
-    note: "In the heart of Skid Row (Gladys Park sits at 6th & Gladys). The original recorded tract map confirms Gladys was part of the same 1887 subdivision package as [[Towne Avenue]], [[Crocker Street]] (platted \"Stanford\"), and [[Stanford Avenue]] (platted \"Ruth\") — the very next parallel street over from Ruth, one block apart (an 1895 resubdivision map shows them as the two streets bounding the same block). Gladys continues south of that as one of the same run of streets crossing the adjoining Frank Sabichi Tract (recorded Sept. 1897), the same subdivision that produced [[Agatha Street]] — strengthening the women's-name pattern. Still, no source names a specific Wolfskill relative or associate called Gladys, and Kines hasn't covered this street.",
+    note: "In the heart of Skid Row (Gladys Park sits at 6th & Gladys). Platted in the 1887 Wolfskill Orchard Tract with [[Towne Avenue]], [[Crocker Street]], and [[Stanford Avenue]] (platted \"Ruth\") — the next street over from Ruth, continuing south across the Frank Sabichi Tract that produced [[Agatha Street]], the women's-name pattern. No source names a Wolfskill relative or associate called Gladys; not covered by Kines.",
     categories: ["unknown"],
     disputed: false,
     sources: [
@@ -1142,7 +1142,7 @@ const STREET_DATA = {
     namedAfterLink: null,
     planned: null,
     built: { text: "1887 (platted as \"Ceres\" in the Wolfskill Orchard Tract)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR030/MR030-009.pdf" },
-    note: "Ceres was the Roman goddess of agriculture and the harvest — a tempting fit for a street in the old produce district, and less of a stretch than it first looks: the recorded tract map confirms Ceres was platted in 1887 as part of the Wolfskill Orchard Tract, literally the subdivision of Joseph Wolfskill's DTLA orchard (see [[Towne Avenue]], [[Stanford Avenue]], [[Gladys Avenue]], [[Omar Street]]). No source directly confirms intent, but naming a street for the goddess of the harvest on a freshly subdivided orchard is a plausible thematic choice, not just a coincidence. Not covered by Kines.",
+    note: "Ceres was the Roman goddess of agriculture and the harvest — a tempting fit for a street platted in 1887 in the Wolfskill Orchard Tract, from Joseph Wolfskill's DTLA orchard (see [[Towne Avenue]], [[Stanford Avenue]], [[Gladys Avenue]], [[Omar Street]]). No source confirms intent, but a harvest goddess on a freshly subdivided orchard is a plausible thematic choice, not mere coincidence. Not covered by Kines.",
     categories: ["unknown"],
     disputed: false,
     sources: [
@@ -1218,7 +1218,7 @@ const STREET_DATA = {
         origin: "took over the Stanford name once the original Stanford Avenue, a block over, was renamed Crocker Street {{(source)}}",
         originLink: "https://lastreetnames.com/street/towne-avenue-dtla/" }
     ],
-    note: "Sibling to [[Towne Avenue]] and [[Crocker Street]] — all three trace to the 1887 SPRR station land deal. Still Ruth Avenue in Feb. 1897; the exact swap year is not yet researched. The original recorded tract map confirms \"Ruth\" as the street's 1887 platted name, one block from [[Towne Avenue]] and the street platted \"Stanford\" (now [[Crocker Street]]) — and one block from a street platted \"Gladys\" (see [[Gladys Avenue]]), the same women's-name pattern noted there.",
+    note: "Sibling to [[Towne Avenue]] and [[Crocker Street]] — all three trace to the 1887 SPRR station land deal. Still Ruth Avenue in Feb. 1897; the exact swap year is not yet researched. The tract map confirms \"Ruth\" as its 1887 platted name, one block from the street platted \"Stanford\" (now [[Crocker Street]]) and one platted \"Gladys\" (see [[Gladys Avenue]]), the same women's-name pattern.",
     categories: ["person", "renamed", "governor"],
     disputed: false,
     sources: [
@@ -1236,7 +1236,7 @@ const STREET_DATA = {
     namedAfterLink: null,
     planned: null,
     built: "not yet researched",
-    note: "The Southern California Flower Market (1912, at 421 Wall St.) and later the American Florists' Exchange settled here, making it the core of today's Flower District. The name's own origin is not yet researched: not covered by Kines, and a search across Wikipedia, Homestead Museum, Los Angeles Revisited, LAPL, and a citywide SurveyLA historic context statement turned up no source tying it to New York's Wall Street or to an actual wall.",
+    note: "The Southern California Flower Market (1912, at 421 Wall St.) and later the American Florists' Exchange settled here, making it the core of today's Flower District. The name's origin is not yet researched: not covered by Kines, and no source found (Wikipedia, Homestead Museum, Los Angeles Revisited, LAPL, SurveyLA) ties it to New York's Wall Street or to an actual wall.",
     categories: ["unknown"],
     disputed: false,
     sources: [
@@ -1292,7 +1292,7 @@ const STREET_DATA = {
 
   "San Julian Street": {
     name: "San Julian Street",
-    namedAfter: "Possibly {{St. Julian the Hospitaller}}, patron saint of travelers and innkeepers — an interpretive reading (per J. Michael Walker's 2008 book on L.A.'s saint-named streets) rather than a documented namesake",
+    namedAfter: "Possibly {{St. Julian the Hospitaller}}, patron saint of travelers and innkeepers — an interpretive reading per J. Michael Walker's 2008 book, not a documented namesake",
     namedAfterLink: "https://en.wikipedia.org/wiki/Julian_the_Hospitaller",
     planned: null,
     built: { text: "1880s", url: "https://uscatholic.org/articles/200909/street-saints-los-angeles-is-full-of-them/" },
@@ -1413,7 +1413,7 @@ const STREET_DATA = {
     namedAfterLink: null,
     planned: null,
     built: "by 1898 (Sanjuro Mizuno's Santa Fe Hotel, the city's first Japanese boardinghouse, stood at 1st and Rose)",
-    note: "Not covered by Kines; no source found for the name's origin. Likely candidate for an earlier primary date: the recorded Thomas Tract map (1875, which names [[Garey Street|Garey]] and the north end of [[Hewitt Street|Hewitt]]) shows an unnamed platted street running through roughly this position, between \"Guadalupe\" and the tract's east edge — but the map itself gives it no label, so this is a positional inference, not a literal name match, and is flagged here rather than folded into the dated citation above.",
+    note: "Not covered by Kines; no source found for the name's origin. The 1875 Thomas Tract map (which names [[Garey Street|Garey]] and the north end of [[Hewitt Street|Hewitt]]) shows an unlabeled platted street in roughly this position — a positional inference toward an earlier date, not a literal name match.",
     categories: ["unknown"],
     disputed: false,
     sources: [
@@ -1536,7 +1536,7 @@ Object.assign(STREET_DATA, {
             origin: "labeled \"Guadalupe\" on the recorded Thomas Tract map, one block north of (and parallel to) \"Georgia St\" — the tract's own name for this stretch's [[3rd Street|3rd Street]] counterpart, itself later folded into the numbered grid — putting Guadalupe in the 2nd Street position",
             originLink: null },
           { from: "?", until: null, name: "2nd Street",
-            origin: "not directly documented; presumably folded in during the Feb. 1897 citywide renaming along with other downtown-grid consolidations, though no source specifically names this stretch",
+            origin: "not directly documented; presumably folded in during the {{Feb. 1897 citywide renaming}} along with other downtown-grid consolidations, though no source specifically names this stretch",
             originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
         ],
         note: "Seen on the second sheet (M.R. 3-61) of the same Thomas Tract map that names [[Garey Street]] and the north end of [[Hewitt Street]]. Inferred from position (one block north of \"Georgia St,\" which the neighboring [[3rd Street]] entry already ties to this same tract and grid), not from a matching modern parcel — the block hasn't been checked address-by-address the way Garey and Hewitt were.",
@@ -1580,13 +1580,13 @@ Object.assign(STREET_DATA, {
         built: { text: "already \"Georgia St\" by Jan. 1888 (recorded Wolfskill Orchard Tract map, final sheet)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR030/MR030-009.pdf" },
         nameHistory: [
           { from: "by 1888", until: "?", name: "Georgia Street",
-            origin: "labeled \"Georgia St\" on the last sheet of the recorded Wolfskill Orchard Tract map, just east of Alameda St, continuing this block's alignment past where the tract's own \"Third\" street (and \"Omar Ave\") end at the tract boundary — not to be confused with the unrelated, still-existing [[Georgia Street]] at the other end of downtown, whose own history notes it was partly renamed specifically to avoid confusion with \"another, now-defunct Georgia Street\", almost certainly this one",
+            origin: "labeled \"Georgia St\" on the recorded Wolfskill Orchard Tract map, east of Alameda — not the unrelated, still-existing [[Georgia Street]] across downtown, which was partly renamed to avoid confusion with \"another, now-defunct Georgia Street,\" almost certainly this one",
             originLink: null },
           { from: "?", until: null, name: "3rd Street",
-            origin: "not directly documented; presumably folded in during the Feb. 1897 citywide renaming along with other downtown-grid consolidations, though no source specifically names this stretch",
+            origin: "not directly documented; presumably folded in during the {{Feb. 1897 citywide renaming}} along with other downtown-grid consolidations, though no source specifically names this stretch",
             originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
         ],
-        note: "Seen on the final sheet (recorded Jan. 11, 1888) of the same Wolfskill Orchard Tract map that also names [[Omar Street|Omar Ave]], [[Ceres Avenue]], [[Gladys Avenue]], and the old \"Wolfskill Avenue\" stretch of [[Central Avenue]]. Unlike those, this block's modern Tract/Map-Ref (checked via NavigateLA at a couple of nearby addresses) no longer reads back to the Wolfskill tract — the block has evidently been resubdivided at least once since 1888 (one nearby parcel now cites a 20th-century Map Book tract) — so this citation rests on the recorded map's own drawing rather than a matching present-day parcel record. The map's geometry is unambiguous, though: read literally, it shows Third St's platted extent running to a boundary, an unplatted gap (almost certainly Alameda St, though unlabeled on this sheet), and \"Georgia St\" resuming on the far side in direct alignment.",
+        note: "Seen on the final sheet (recorded Jan. 11, 1888) of the same Wolfskill Orchard Tract map that also names [[Omar Street|Omar Ave]], [[Ceres Avenue]], [[Gladys Avenue]], and the old \"Wolfskill Avenue\" stretch of [[Central Avenue]]. The map shows Third St's platted extent running to a boundary, an unplatted gap (almost certainly Alameda, unlabeled here), and \"Georgia St\" resuming on the far side in direct alignment.",
         categories: ["number", "renamed"],
         disputed: false,
         sources: [
@@ -1629,10 +1629,10 @@ Object.assign(STREET_DATA, {
         built: { text: "already \"Huber St\" by Apr.–May 1886 (Mills and Wicks Extension of Second St. tract, one block north), and again by Aug. 1886 (F.P. Howard & Co.'s Subdivision of the Bliss Tract)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR013/MR013-087.pdf" },
         nameHistory: [
           { from: "1886", until: "?", name: "Huber Street",
-            origin: "named on Dr. Frederick Preston Howard's tract; no specific namesake documented, though possibly for his wife Caroline (née Huber), as with [[Hewitt Street]]'s \"Carolina Street\" one block east {{(source)}} — the Mills and Wicks Extension tract, bordering the same Huber St one block north, corroborates the name a few months earlier, in spring 1886",
+            origin: "named on Dr. Frederick Preston Howard's tract; no specific namesake documented, though possibly for his wife Caroline (née Huber), as with [[Hewitt Street]]'s \"Carolina Street\" one block east {{(source)}} — the Mills and Wicks Extension tract one block north corroborates \"Huber\" a few months earlier, in spring 1886",
             originLink: "https://lastreetnames.com/street/colyton-street/" },
           { from: "?", until: null, name: "4th Street",
-            origin: "not directly documented, but this exact block is where the Feb. 1897 citywide renaming folded Larkin Street and Short Street (“from Fourth street to Santa Fe grounds”) into 4th's eastern reach — the likely, though unconfirmed, rename event for this stretch",
+            origin: "not directly documented, but this exact block is where the {{Feb. 1897 citywide renaming}} folded Larkin Street and Short Street (“from Fourth street to Santa Fe grounds”) into 4th's eastern reach — the likely, though unconfirmed, rename event for this stretch",
             originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
         ],
         note: "828 E 4th St, on this block, fronted \"Huber Street\" on the recorded Bliss Tract map — one block north of [[5th Street]]'s \"Poplar Street\" in the same corridor. The Mills and Wicks Extension tract, immediately north of the Bliss Tract, also runs along Huber St as its south boundary and already labels it \"Huber\" that same year.",
@@ -1652,7 +1652,7 @@ Object.assign(STREET_DATA, {
         namedAfterLink: null,
         planned: "not yet researched",
         built: { text: "the block immediately east of Hewitt was already \"Third St\" by Apr.–May 1886 (Mills and Wicks Extension of Second St. tract)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR013/MR013-087.pdf" },
-        note: "Boyle Heights' 2nd Street, east of the river, also became 4th in the Feb. 1897 renaming (at ex-Mayor Workman's request) — a further predecessor somewhere along this reach; exact extent not yet researched. Immediately east of Hewitt, the Mills and Wicks tract shows a \"Third\" St band one row north of \"Huber\" St (Huber already documented as this same street's Alameda–Hewitt stretch, see that segment) — this citation covers only the block right at Hewitt; [[4th Place]]'s own entry also traces to the same \"Third\" band, immediately adjacent, so the exact point where the old \"Third\" plat splits into modern 4th Place vs. 4th Street proper is not yet pinned down.",
+        note: "Boyle Heights' 2nd Street, east of the river, also became 4th in the Feb. 1897 renaming (at ex-Mayor Workman's request) — a further predecessor, exact extent not yet researched. East of Hewitt, the Mills and Wicks tract shows a \"Third\" band one row north of \"Huber\" (its Alameda–Hewitt stretch); [[4th Place]] traces to the same \"Third\" band, so where it splits into 4th Place vs. 4th Street proper isn't pinned down.",
         categories: ["number"],
         disputed: false,
         sources: [
@@ -1698,7 +1698,7 @@ Object.assign(STREET_DATA, {
             origin: "named on Dr. Frederick Preston Howard's tract; no specific namesake documented",
             originLink: null },
           { from: "?", until: null, name: "5th Street",
-            origin: "not directly documented, but this exact block is where the Feb. 1897 citywide renaming folded Lugo Street into 5th (extent not yet researched) — the likely, though unconfirmed, rename event for this stretch",
+            origin: "not directly documented, but this exact block is where the {{Feb. 1897 citywide renaming}} folded Lugo Street into 5th (extent not yet researched) — the likely, though unconfirmed, rename event for this stretch",
             originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
         ],
         note: "1100 E 5th St, on this block, fronted \"Poplar Street\" on the recorded Bliss Tract map — one block south of [[4th Street]]'s \"Huber Street\" in the same corridor.",
@@ -1848,7 +1848,7 @@ Object.assign(STREET_DATA, {
     namedAfterLink: "https://en.wikipedia.org/wiki/Port_of_Los_Angeles",
     planned: { text: "proposed as a Figueroa St widening to the harbor in the 1924 Major Traffic Street Plan; adopted into the master freeway plan as the Harbor Parkway, later the Harbor Freeway", url: "https://en.wikipedia.org/wiki/Interstate_110_and_State_Route_110_(California)" },
     built: { text: "first link opened July 30, 1952 (Four Level south to 3rd St, within this coverage); pushed south through the 1950s and completed to San Pedro in 1970", url: "https://en.wikipedia.org/wiki/Interstate_110_and_State_Route_110_(California)" },
-    note: "Signed I-110 south of the I-10 junction and SR 110 from there north to the Four Level; renumbered from Sign Route 11 in 1981. As a three-digit Interstate, I-110 hangs off parent I-10 (its last two digits): the odd leading digit marks a spur — touching the Interstate grid at just one end, here its north end at I-10, then running down to the harbor — where an even leading digit would mark a loop rejoining the grid at both ends. SR 110 is a California number chosen simply to match I-110, not a position in any directional grid. In OSM both one-way carriageways carry the \"Harbor Freeway\" name, so either direction opens this box; the name gives way to the [[Arroyo Seco Parkway]] about 0.9 km north of the Four Level (near the Figueroa Street tunnels), a bit past the interchange usually cited as the boundary.",
+    note: "Signed I-110 south of the I-10 junction, SR 110 north to the Four Level; renumbered from Sign Route 11 in 1981. As a three-digit Interstate, I-110 is a spur off parent I-10 (its last two digits) — odd leading digit = spur, even = loop. SR 110 is a California number picked to match I-110. Both carriageways carry the name; it gives way to the [[Arroyo Seco Parkway]] about 0.9 km north of the Four Level.",
     categories: ["destination", "system"],
     disputed: false,
     sources: [
@@ -1865,7 +1865,7 @@ Object.assign(STREET_DATA, {
     namedAfterLink: "https://en.wikipedia.org/wiki/Santa_Ana,_California",
     planned: { text: "a downtown-Los-Angeles-to-Orange-County freeway was planned by 1939", url: "https://en.wikipedia.org/wiki/Santa_Ana_Freeway" },
     built: { text: "constructed 1947–1956; the ~3-mile stretch in this coverage is signed US 101 between the Four Level and East L.A. interchanges", url: "https://en.wikipedia.org/wiki/Santa_Ana_Freeway" },
-    note: "Signed US 101; originally US 101 its whole length before the 1964 renumbering redesignated everything southeast of the East L.A. Interchange as I-5. US route numbers ending in 1 mark major north–south highways, and since US numbers rise east-to-west a low-hundreds 101 sits far west; 101 is the odd case among three-digit US routes — treated as a primary route in its own right (the westernmost major US highway) rather than a branch of US 1. Many downtown ways here also keep a historical \"US 99\" ref, a fossil of the decommissioned inland north–south route (its corridor is now I-5 / SR 99). Both one-way carriageways share the name; it changes to the [[Hollywood Freeway]] right at the Four Level.",
+    note: "Signed US 101; originally US 101 its whole length until the 1964 renumbering made everything SE of the East L.A. Interchange I-5. Routes ending in 1 are major north–south highways; 101 is treated as a primary route, not a branch of US 1. Some ways here keep a \"US 99\" ref, a fossil of the old inland route (now I-5 / SR 99). Both carriageways share the name; it changes to the [[Hollywood Freeway]] at the Four Level.",
     categories: ["destination", "place", "system"],
     disputed: false,
     sources: [
@@ -1922,7 +1922,7 @@ Object.assign(STREET_DATA, {
       { from: "?", until: null, name: "San Bernardino Freeway",
         origin: "renamed for its destination city of San Bernardino", originLink: null }
     ],
-    note: "Shares the I-10 designation with the [[Santa Monica Freeway]], whose entry explains that number, the two linked by a short overlap on I-5 at the East L.A. Interchange. In this coverage only a single carriageway stub appears at the eastern edge, and OSM still tags it with the old \"US 99\" ref rather than I-10 — a fossil of the pre-1964 inland north–south route that ran through here before I-10 and I-5 took over the corridor.",
+    note: "Shares the I-10 designation with the [[Santa Monica Freeway]], whose entry explains that number, the two linked by a short I-5 overlap at the East L.A. Interchange. In this coverage only a single carriageway stub appears at the eastern edge, and OSM still tags it with the old \"US 99\" ref — a fossil of the pre-1964 inland route that ran here before I-10 and I-5 took over the corridor.",
     categories: ["destination", "place", "renamed", "system"],
     disputed: false,
     sources: [
@@ -1946,7 +1946,7 @@ Object.assign(STREET_DATA, {
       { from: "2010", until: null, name: "Arroyo Seco Parkway",
         origin: "the historic parkway name was restored, reflecting its standing as a National Historic Civil Engineering Landmark and National Scenic Byway", originLink: null }
     ],
-    note: "Signed SR 110; continues south of the Four Level Interchange as the [[Harbor Freeway]] (on this map the name switch sits a little north of the interchange). When it opened in 1940 it became the Los Angeles leg of US 66 — the OSM ways still carry historical US 66, US 6, and US 99 refs. SR 110 is a California route number picked to match the adjoining I-110, not a directional-grid position. A National Historic Civil Engineering Landmark (1999) and National Scenic Byway (2002).",
+    note: "Signed SR 110; continues south of the Four Level as the [[Harbor Freeway]] (the map's switch sits a little north of it). When it opened in 1940 it became L.A.'s leg of US 66 — the OSM ways still carry historical US 66, US 6, and US 99 refs. SR 110 is a California number picked to match the adjoining I-110, not a grid position. A National Historic Civil Engineering Landmark (1999) and National Scenic Byway (2002).",
     categories: ["nature", "place", "renamed", "system"],
     disputed: false,
     sources: [
@@ -1962,7 +1962,7 @@ Object.assign(STREET_DATA, {
     namedAfterLink: "https://en.wikipedia.org/wiki/High-occupancy_toll_lane",
     planned: null,
     built: { text: "the I-10 (El Monte Busway) carpool corridor, converted to congestion-priced toll lanes and opened as Metro ExpressLanes in February 2013", url: "https://en.wikipedia.org/wiki/Interstate_10_in_California" },
-    note: "“Metro” is the L.A. County Metropolitan Transportation Authority, which operates the toll lanes; “ExpressLanes” is its brand for the HOT lanes it runs on the 10 and the 110. OSM refs them “I 10 EXPR” — an Interstate corridor's toll lanes, not a route of their own. They read as a strand set apart from the I-10 main lanes here for two reasons: through downtown and East L.A. they follow the separate El Monte Busway alignment rather than sitting in the I-10 median, and the parallel mainline in this stretch is tagged by its freeway name ([[San Bernardino Freeway]], with a historic US 99 ref) rather than “I 10” — so nothing literally labeled I-10 sits beside them on this map.",
+    note: "“Metro” is the L.A. County Metropolitan Transportation Authority; “ExpressLanes” is its brand for the HOT lanes on the 10 and 110. OSM refs them “I 10 EXPR.” They sit apart from the I-10 main lanes here: through downtown and East L.A. they follow the El Monte Busway, not the I-10 median, and the parallel mainline is tagged by its freeway name ([[San Bernardino Freeway]], historic US 99 ref) rather than “I 10.”",
     categories: ["descriptive", "system"],
     disputed: false,
     sources: [

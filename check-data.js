@@ -55,9 +55,16 @@ function checkEntry(id, v) {
   (v.nameHistory || []).forEach((h, j) => {
     if (h.origin && h.origin.length > 320) warn(id, `nameHistory[${j}].origin is ${h.origin.length} chars — sub-bullets should be short`);
   });
-  for (const text of [v.namedAfter, ...(v.nameHistory || []).map(h => h.origin)]) {
-    const m = text && text.match(/\{\{(.+?)\}\}/);
-    if (m && m[1].length > 45) warn(id, `{{}} span "${m[1].slice(0, 30)}..." is ${m[1].length} chars — link a few words, not a clause`);
+  const spanChecks = [
+    ["namedAfter", v.namedAfter, v.namedAfterLink],
+    ...(v.nameHistory || []).map((h, j) => [`nameHistory[${j}].origin`, h.origin, h.originLink])
+  ];
+  for (const [field, text, link] of spanChecks) {
+    if (!text) continue;
+    const m = text.match(/\{\{(.+?)\}\}/);
+    if (m && m[1].length > 45) warn(id, `${field}: {{}} span "${m[1].slice(0, 30)}..." is ${m[1].length} chars — link a few words, not a clause`);
+    // a link with no marker makes the ENTIRE text the link — always mark a span
+    if (link && !m && text.length > 45) warn(id, `${field}: has a link but no {{}} marker — the whole text becomes the link; wrap a few words`);
   }
 }
 
