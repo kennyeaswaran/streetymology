@@ -1536,14 +1536,15 @@ Object.assign(STREET_DATA, {
         namedAfter: "Its ordinal position in the downtown grid — the numbering system was in place by 1849",
         namedAfterLink: null,
         planned: { text: "by 1849", url: ORD_SURVEY.url },
-        built: "not yet researched",
+        built: { text: "already \"2nd St\" (drawn but unlabeled directly — confirmed via its \"W. 2nd\" bearing annotation) by Nov. 1909, curving through Crown Hill near Witmer/Columbia/Crown Hill Ave", url: "https://pw.lacounty.gov/smpm/landrecords/pdf/TR0015-166a.pdf" },
         note: null,
         categories: ["number"],
         disputed: false,
         sources: [
           { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" },
           { title: ORD_SURVEY.title, url: ORD_SURVEY.url },
-          { title: ORD_RECORDED.title, url: ORD_RECORDED.url }
+          { title: ORD_RECORDED.title, url: ORD_RECORDED.url },
+          { title: "Recorded map: \"Crownwood\" (Witmer's Subdivision of parts of Lots 2 and 7, Block 38, Hancock Survey; surveyed Nov. 1909 by Chas. Forman Jr.), M.B. 15-166 — shows 2nd St's curving Crown Hill alignment, labeled \"W. 2nd\" along its centerline; alignment against the modern street grid confirms this stretch, multiple points matching to within meters", url: "https://pw.lacounty.gov/smpm/landrecords/pdf/TR0015-166a.pdf" }
         ]
       },
       {
@@ -1613,7 +1614,32 @@ Object.assign(STREET_DATA, {
     orientation: "EW",
     segments: [
       {
-        label: "west of Alameda",
+        label: "west of Boylston (Arnold St)",
+        maxLng: -118.2578,
+        name: "3rd Street",
+        namedAfter: "Its ordinal position in the downtown grid, once this stretch was folded in — before that, a separately named street",
+        namedAfterLink: null,
+        planned: null,
+        built: { text: "already \"Arnold St\" by Mar. 1894 (Compromise Subdivision/Washington Tract survey)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR066/MR066-035.pdf" },
+        nameHistory: [
+          { from: "by 1894", until: "?", name: "Arnold Street",
+            origin: "labeled \"Arnold St\" on the Compromise Subdivision/Washington Tract map, immediately south of that same sheet's \"Third St\" (today's [[Miramar Street]]) — namesake untraced",
+            originLink: null },
+          { from: "?", until: null, name: "3rd Street",
+            origin: "not directly documented; presumably folded in during the {{Feb. 1897 citywide renaming}} along with other downtown-grid consolidations, though no source specifically names this stretch",
+            originLink: "https://cdnc.ucr.edu/?a=d&d=LAH18970221.2.28" }
+        ],
+        note: "On the same 1894 sheet, the block immediately north — now Miramar Street's Bixel–Boylston stretch — was labeled \"Third St,\" the reverse of what a name-continuity guess would suggest. Found via pixel-to-coordinate alignment of the tract image against the modern street grid, not a lot-level record.",
+        categories: ["number", "renamed"],
+        disputed: false,
+        sources: [
+          { title: "Recorded map: Compromise Subdivision / \"Washington Tract,\" M.R. 66-35/36 (surveyed Mar. 1894 by E.D. Severance; recorded May 1, 1897) — labels the Bixel–Boylston block's south side \"Arnold St.\"; alignment against the modern street grid confirms this is 3rd Street's Bixel–Boylston stretch", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR066/MR066-035.pdf" },
+          { title: "L.A. Street Names: 1st Street (on the numbering system)", url: "https://lastreetnames.com/street/0001st-street/" }
+        ]
+      },
+      {
+        label: "Boylston to Alameda",
+        minLng: -118.2578,
         maxLng: -118.2381,
         name: "3rd Street",
         namedAfter: "Its ordinal position in the downtown grid — the numbering system was in place by 1849",
@@ -2097,11 +2123,13 @@ Object.assign(STREET_DATA, {
         origin: "the city unified the rest of Ocean View Avenue under the Miramar name, except for the original 1886 diagonal segment (outside this map's coverage), which still carries \"Ocean View Avenue\" today",
         originLink: null }
     ],
-    note: null,
+    note: "Bixel–Boylston appears as \"Third St\" on an 1894 tract map — one pre-1915 name this street absorbed (that sheet's \"Arnold St,\" one block south, is 3rd Street instead). Further west through Crown Hill, an 1909 tract's stretch \"establ[ished]\" as 3rd St by Ord. 39,578 is, per alignment, also Miramar — not 3rd Street. Confirmed via pixel-to-coordinate alignment, not lot-level records.",
     categories: ["renamed", "descriptive"],
     disputed: false,
     sources: [
-      { title: "L.A. Street Names: Miramar Street / Ocean View Avenue", url: "https://lastreetnames.com/street/miramar-street/" }
+      { title: "L.A. Street Names: Miramar Street / Ocean View Avenue", url: "https://lastreetnames.com/street/miramar-street/" },
+      { title: "Recorded map: Compromise Subdivision / \"Washington Tract,\" M.R. 66-35/36 (surveyed Mar. 1894 by E.D. Severance; recorded May 1, 1897) — labels the Bixel–Boylston block's north side \"Third St.\"; alignment against the modern street grid via a pixel-to-coordinate overlay tool confirms this is Miramar's Bixel–Boylston stretch (the sheet's \"Arnold St\", one block south, is modern 3rd Street instead)", url: "https://pw.lacounty.gov/sur/nas/landrecords/misc/MR066/MR066-035.pdf" },
+      { title: "Recorded map: \"Crownwood\" (Witmer's Subdivision of parts of Lots 2 & 7, Block 38, Hancock Survey), M.B. 15-166 (surveyed Nov. 1909 by Chas. Forman Jr.) — annotates a Crown Hill stretch \"Name establ. por. of 3rd St. Ord. 39,578\"; alignment against the modern street grid, checked at multiple points, matches this stretch to modern Miramar Street (within ~20m) rather than modern 3rd Street (100m+ off)", url: "https://pw.lacounty.gov/smpm/landrecords/pdf/TR0015-166a.pdf" }
     ]
   },
 

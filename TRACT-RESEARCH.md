@@ -152,6 +152,92 @@ them directly as images — no browser needed for the reading step at all:
 This also decouples the roles: a browser session harvests Map-Refs; a
 non-browser session (cheaper, faster) does the map-reading and data entry.
 
+## Alignment: HUMAN DOES THE FITTING (`align.html`) — read this first
+
+Hard-won division of labor (2026-07, MR006-138): instances are unreliable at
+estimating pixel coordinates on scans — every georeferencing error in this
+project's history (junction-contaminated samples, off-the-ink traces,
+misplaced hypothesis anchors) came from Claude eyeballing pixels. Humans do
+this in seconds by sight. So:
+
+1. Instance prepares: render the scan (`pdftoppm -png -r 100 … tracts/renders/x`)
+   and tell Kenny the file name and the approximate view center (lat, lng).
+2. **Kenny aligns**: open `align.html` (serve the folder locally, same as
+   index.html), load the render, set the view center, then drag / wheel-resize /
+   rotate the semi-transparent scan until the drawn streets sit on the red
+   modern lines. Export — this saves `<name>-alignment.json`, which encodes the
+   human alignment as three virtual control points, directly usable by georef.py.
+3. Instance reads off: `python3 georef.py overlay <alignment.json>` for the
+   record, then `trace` along each drawn street (endpoints from the gridded
+   render) for the verdict table. The precision protocol below still applies to
+   INTERPRETING results — junctions, margins, realignments — but the fit itself
+   is no longer the instance's guess.
+
+Use the georef.py-only path (below) only when a human isn't available and at
+least two intersections are beyond doubt; label all conclusions from that path
+as provisional.
+
+## Georeferencing: when labels can't be trusted (`georef.py`)
+
+Old plats routinely show names that DON'T match modern streets in the obvious
+way — MR066-035's block reads Bixel/Third/Figueroa/Arnold but is today's
+Bixel/Miramar/Boylston/3rd, and naive label-matching (old Third = modern 3rd)
+is geometrically impossible there. Don't match by name; match by geometry:
+
+1. `pdftoppm -png -r 100 tracts/MAP.pdf tracts/renders/map` then
+   `python3 georef.py grid tracts/renders/map-1.png` — Read the gridded image
+   and estimate pixel coords of 2+ points you can identify CONFIDENTLY
+   (intersections of streets with unchanged names, or renamings already
+   documented in the data). Prefer points far apart; aim for the street
+   intersection center, not the lot corner (nudge into the drawn roadway).
+2. Modern lat/lng for those intersections: `node intersect.js "A" "B"`.
+3. Control file + `python3 georef.py fit control.json` (2 pts = similarity;
+   3+ = affine, preferred — and residuals become meaningful; >15 m means a
+   bad point). `overlay` draws every modern street, labeled, onto the scan —
+   Read it and see which red line lies in which drawn corridor. `locate
+   control.json X Y` names the nearest modern streets for any pixel.
+4. If you're unsure which label-mapping is right, fit each hypothesis and
+   keep the one whose overlay superposes EVERYWHERE, not just at the control
+   points. Expect up to a street-width of offset (corner-vs-centerline,
+   1890s surveying, regrades); systematic large misfit = wrong hypothesis.
+5. Cite conclusions as "georeferenced against OSM via georef.py" in the note
+   or leads file — it's an inference layer on top of the map, so say so.
+
+### Precision protocol (learned the hard way on MR006-138)
+
+The MR006-138 first pass got three streets wrong. Every error came from
+sampling, not from the transform. Rules:
+
+- **Trace lines, never points.** Use `georef.py trace control.json x1 y1 x2 y2`
+  with the pixel ENDPOINTS of the drawn street — it samples along the line
+  and votes. Single `locate` points fail two ways: junction points match
+  whichever cross-street is closest (a point at old State×Hobart matched
+  three unrelated streets within 21 m), and off-the-ink points bias toward
+  the wrong neighbor (an "Aztec" sample 33 px east of the line flipped its
+  answer). Read endpoint pixels off the drawn line on the grid image.
+- **Verdict bands** (median distance + vote share): under ~15 m with a clear
+  margin = match. 20–50 m with a vote win = "corresponds, but realigned or
+  regraded — flag it" (old Home vs. modern Rockwood: 7/9 votes but ~43 m;
+  the block really was recut at a different angle). Over ~60 m or split
+  votes = no modern counterpart; the street is gone. Never report a
+  junction-adjacent minimum as an identification.
+- **Anchors: ironclad only.** Both names unchanged (or a change documented in
+  our own data), intersection center not lot corner, spread as wide as the
+  sheet allows. Sanity-check the fit by tracing the anchors' own streets at
+  midspan (<15 m expected) BEFORE trusting far-field results. Do not add
+  hypothesis-laden anchors: a plausible-seeming 4-point affine with two
+  sloppy new pixels performed WORSE than the clean 2-point similarity —
+  residuals under 15 m only police anchors whose pixels are precise.
+- **Overlay labels sit at way midpoints,** which may be far from where the
+  line crosses your map. Identify by following the red LINE, not by which
+  label lands nearby.
+- **Beware later diagonal cuts** (Beverly Blvd, Glendale Blvd): they slice
+  across old grids and can sit nearest to a vanished street's alignment
+  without being its successor. If the nearest street postdates the tract and
+  crosses it diagonally, treat as coincidence unless the whole trace tracks it.
+- **Report full tool output** — and don't `tail` it into garbage; one clipped
+  line cost half an hour of confusion.
+
 ## Gotchas found the hard way
 
 - **Page-number suffixes are common and not guessable.** A single page number

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Streetymology — tract map aligner</title>
+<style>
+  html, body { margin: 0; height: 100%; font-family: Georgia, serif; overflow: hidden; }
+  #cv { position: absolute; inset: 0; cursor: grab; }
+  #panel {
+    position: absolute; top: 10px; left: 10px; z-index: 10; width: 270px;
+    background: rgba(255,255,250,0.96); border: 1px solid #c9b98a; border-radius: 6px;
+    padding: 10px 14px; font-size: 13px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  #panel label { display: block; margin: 6px 0 2px; }
+  #panel input[type=range] { width: 100%; }
+  #panel input[type=text] { width: 100%; box-sizing: border-box; }
+  #panel button { margin-top: 8px; width: 100%; }
+  #status { position: absolute; bottom: 8px; left: 10px; z-index: 10; background: rgba(40,40,40,0.85);
+            color: #fff; padding: 4px 10px; border-radius: 10px; font-size: 12px; }
+  .hint { color: #666; font-size: 11px; }
+</style>
+</head>
+<body>
+<canvas id="cv"></canvas>
+<div id="panel">
+  <b>Tract map aligner</b>
+  <div class="hint">Load the SAME png you'll use with georef.py (e.g. tracts/renders/mr6-1.png).
+  Drag = move scan · wheel = resize scan · sliders below. Align the drawn streets to the
+  red modern lines, then Export.</div>
+  <label>Tract scan: <input type="file" id="file" accept="image/*"></label>
+  <label>View center (lat, lng) & m/px:
+    <input type="text" id="view" value="34.0645, -118.2610, 0.7"></label>
+  <button id="setview">Set view</button>
+  <label>Scan opacity <input type="range" id="op" min="10" max="100" value="65"></label>
+  <label>Scan rotation (°) <input type="range" id="rot" min="-180" max="180" value="0" step="0.2"></label>
+  <label>Scan scale (m/px of scan) <input type="range" id="sc" min="0.1" max="1.5" value="0.55" step="0.005"></label>
+  <button id="export">Export alignment JSON (for georef.py)</button>
+</div>
+<div id="status">load a scan to begin</div>
+
+<script src="streets-geometry.js"></script>
+<script>
+const geom = (STREET_GEOMETRY.data || STREET_GEOMETRY).elements;
+const normalize = n => n.replace(/^(North|South|East|West|N\.?|S\.?|E\.?|W\.?)\s+/i, "");
+
+const cv = document.getElementById("cv"), ctx = cv.getContext("2d");
+const statusEl = document.getElementById("status");
+let img = null, imgName = "";
+// viewport: geographic center + meters-per-screen-pixel
+let view = { lat: 34.0645, lng: -118.2610, mpp: 0.7 };
+// scan transform: screen position of scan center, rotation (rad), scan meters-per-scan-pixel
+let scan = { x: 400, y: 300, rot: 0, mppx: 0.55 };
+
+const KY = 110540, kx = () => 111320 * Math.cos(view.lat * Math.PI / 180);
+function llToScreen(lat, lng) {
+  return [ (lng - view.lng) * kx() / view.mpp + cv.width / 2,
+           cv.height / 2 - (lat - view.lat) * KY / view.mpp ];
+}
+function screenToLL(x, y) {
+  return [ view.lat + (cv.height / 2 - y) * view.mpp / KY,
+           view.lng + (x - cv.width / 2) * view.mpp / kx() ];
+}
+// scan pixel -> screen
+function scanToScreen(px, py) {
+  const s = scan.mppx / view.mpp, c = Math.cos(scan.rot), sn = Math.sin(scan.rot);
+  const dx = (px - img.width / 2) * s, dy = (py - img.height / 2) * s;
+  return [ scan.x + dx * c - dy * sn, scan.y + dx * sn + dy * c ];
+}
+
+function draw() {
+  cv.width = innerWidth; cv.height = innerHeight;
+  ctx.fillStyle = "#fffef7"; ctx.fillRect(0, 0, cv.width, cv.height);
+  if (img) {
+    ctx.save();
+    ctx.globalAlpha = document.getElementById("op").value / 100;
+    ctx.translate(scan.x, scan.y); ctx.rotate(scan.rot);
+    const s = scan.mppx / view.mpp;
+    ctx.scale(s, s);
+    ctx.drawImage(img, -img.width / 2, -img.height / 2);
+    ctx.restore();
+  }
+  // modern streets
+  ctx.lineWidth = 2.5; ctx.strokeStyle = "rgba(220,30,30,0.9)";
+  ctx.font = "bold 15px Georgia"; ctx.fillStyle = "rgba(160,0,200,0.95)";
+  const labeled = new Set();
+  for (const w of geom) {
+    if (!w.geometry || !w.tags || !w.tags.name) continue;
+    const pts = w.geometry.map(p => llToScreen(p.lat, p.lon));
+    if (!pts.some(([x, y]) => x > -100 && x < cv.width + 100 && y > -100 && y < cv.height + 100)) continue;
+    ctx.beginPath();
+    pts.forEach(([x, y], i) => i ? ctx.lineTo(x, y) : ctx.moveTo(x, y));
+    ctx.stroke();
+    const name = normalize(w.tags.name);
+    if (!labeled.has(name)) {
+      const [mx, my] = pts[Math.floor(pts.length / 2)];
+      if (mx > 0 && mx < cv.width && my > 0 && my < cv.height) {
+        ctx.fillText(name, mx + 5, my - 5); labeled.add(name);
+      }
+    }
+  }
+}
+
+// interactions
+let dragging = false, last = null;
+cv.addEventListener("mousedown", e => { dragging = true; last = [e.clientX, e.clientY]; });
+addEventListener("mouseup", () => dragging = false);
+addEventListener("mousemove", e => {
+  if (dragging && img) {
+    scan.x += e.clientX - last[0]; scan.y += e.clientY - last[1];
+    last = [e.clientX, e.clientY]; draw();
+  } else if (img) {
+    const [lat, lng] = screenToLL(e.clientX, e.clientY);
+    statusEl.textContent = `cursor: ${lat.toFixed(5)}, ${lng.toFixed(5)}  ·  scan scale ${scan.mppx.toFixed(3)} m/px  ·  rot ${(scan.rot * 180 / Math.PI).toFixed(1)}°`;
+  }
+});
+cv.addEventListener("wheel", e => {
+  e.preventDefault();
+  if (!img) return;
+  const f = e.deltaY < 0 ? 1.03 : 1 / 1.03;
+  // zoom scan about cursor
+  scan.mppx *= f;
+  scan.x = e.clientX + (scan.x - e.clientX) * f;
+  scan.y = e.clientY + (scan.y - e.clientY) * f;
+  document.getElementById("sc").value = scan.mppx;
+  draw();
+}, { passive: false });
+
+document.getElementById("file").addEventListener("change", e => {
+  const f = e.target.files[0]; if (!f) return;
+  imgName = f.name;
+  img = new Image();
+  img.onload = () => { scan.x = cv.width / 2; scan.y = cv.height / 2; draw(); };
+  img.src = URL.createObjectURL(f);
+});
+document.getElementById("rot").addEventListener("input", e => { scan.rot = e.target.value * Math.PI / 180; draw(); });
+document.getElementById("sc").addEventListener("input", e => { scan.mppx = +e.target.value; draw(); });
+document.getElementById("op").addEventListener("input", draw);
+document.getElementById("setview").addEventListener("click", () => {
+  const [a, b, c] = document.getElementById("view").value.split(",").map(s => parseFloat(s));
+  if (a && b && c) { view = { lat: a, lng: b, mpp: c }; draw(); }
+});
+
+document.getElementById("export").addEventListener("click", () => {
+  if (!img) return alert("load a scan first");
+  // three virtual control points = scan corners mapped through the human alignment
+  const corners = [[0, 0], [img.width, 0], [0, img.height]];
+  const points = corners.map(([px, py]) => {
+    const [sx, sy] = scanToScreen(px, py);
+    const [lat, lng] = screenToLL(sx, sy);
+    return { px: [px, py], ll: [+lat.toFixed(6), +lng.toFixed(6)], note: `align.html corner (${px},${py})` };
+  });
+  const blob = new Blob([JSON.stringify({ image: "tracts/renders/" + imgName, points }, null, 2)],
+                        { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = imgName.replace(/\.[^.]+$/, "") + "-alignment.json";
+  a.click();
+});
+
+addEventListener("resize", draw);
+draw();
+</script>
+</body>
+</html>

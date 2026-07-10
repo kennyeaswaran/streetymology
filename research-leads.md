@@ -9,6 +9,104 @@ Workflow: when doing a street's full pass, check here first and consume its
 leads (verify → into the entry; debunk → delete, noting why if instructive).
 Periodically sweep the whole file. Keep entries dated.
 
+## align.html findings awaiting follow-up
+
+- **TR0015-166a ("Crownwood," Witmer's Subdivision of parts of Lots 2 & 7,
+  Block 38 Hancock Survey; M.B. 15-166, surveyed Nov. 1909)** (2026-07):
+  align.html batch 2, a deliberately more complex test case (rotated,
+  multi-street sheet in Crown Hill). Verified via multiple points per line
+  (not just one), per the MR066-035 lesson:
+  - **2nd Street**: confirmed — the plat's own "W. 2nd" label, traced at 3
+    points along its curve, matches modern 2nd Street to within 4-16m.
+    Applied to 2nd Street's "west of Figueroa" segment as a `built` date
+    (Nov. 1909) and source, upgrading it from "not yet researched."
+  - **Columbia Avenue**: confirmed — 2 points match modern Columbia Avenue
+    to within 7-8m. No streets-data.js entry exists yet for Columbia Ave;
+    banking this tract as a future source (labels it directly, so this
+    would be a strong "planned/built by Nov. 1909" anchor whenever it gets
+    an entry).
+  - **Crown Hill Avenue**: confirmed — 2 points match modern Crown Hill
+    Avenue to within 3-20m. Same as Columbia: no entry yet, banking this
+    tract as a future source.
+  - **Witmer Street**: confirmed, and a bonus find — the plat shows Witmer
+    running straight from the top of the sheet, then terminating/jogging
+    around (34.0599, -118.2622) into a second, disconnected-looking OSM
+    Witmer segment ~50m further southwest. Both pixel-traced segments
+    matched their respective real segments to within 1-9m, meaning the
+    plat itself directly explains why modern Witmer's OSM geometry looks
+    like two separate ways with a gap: it's a real jog, not a data gap.
+    No entry yet either; banking as a future source.
+  - **"3rd St" ordinance stub — RESOLVED 2026-07, turned out to be
+    Miramar**: the sheet has an explicit annotation, "Name establ. por. of
+    3rd St. Ord. 39,578," next to a short stub connecting the 2nd St curve
+    area down toward Witmer. Every point sampled along that stub transforms
+    to real-world coordinates ~100-145m off modern 3rd Street's known Crown
+    Hill alignment — too far to be pixel-picking noise, given every other
+    street on this sheet fit within tens of meters. Kenny asked to check
+    whether some OTHER modern street fit those same coordinates better:
+    it does — **Miramar Street**, within ~18-27m at every point (vs. 3rd
+    Street's 100m+), using Miramar's known westward extension through Crown
+    Hill (the same way already used for the Bixel–Boylston "Third St"
+    finding above). So this 1909 ordinance-named "3rd St" stretch is a
+    THIRD pre-1915 name/designation Miramar absorbed, on top of Ocean View
+    Ave. and the "Third St" Bixel–Boylston stretch. Applied to Miramar
+    Street's entry (note + new source). No mystery about 3rd Street moving
+    twice after all — it just never included this stretch.
+
+## Georeferenced findings awaiting sources (georef.py)
+
+- **MR066-035 (Compromise Subdivision / Washington Tract, surveyed Mar.–Apr.
+  1894, recorded May 1, 1897)** (2026-07, Third/Miramar line VERIFIED and
+  applied 2026-07 via align.html precise re-check — see the align.html
+  entry under Resolved for the full story): georeferenced against OSM —
+  block bounded by Bixel/Third/Figueroa/Arnold in 1894 = modern
+  Bixel/Miramar/Boylston/3rd.
+  - Old "Third St" alignment = modern **Miramar Street** — confirmed, applied
+    to Miramar's entry. Miramar's nameHistory still only sources Ocean View
+    Ave/Nob Hill Ave/Miramar for a different portion; whether/how "Third"
+    fits into a dated sequence for this specific Bixel–Boylston stretch is
+    still open — noted in the entry as a match without a full naming
+    timeline for this block.
+  - Old "Arnold St" alignment = modern **3rd Street** here (confirmed,
+    reverse of the pairing first guessed) — 3rd's modern Crown Hill
+    alignment isn't its 1894 one; segment implications for 3rd west of
+    downtown, which has no entry yet. Also: who was Arnold? Not yet
+    researched.
+  - Old "Figueroa St" edge = modern **Boylston** ✓ (documented 1897 transfer;
+    NB this map was recorded May 1, 1897, months AFTER the renaming, with
+    stale survey-date labels — recorded maps preserve survey-date names, a
+    dating caveat worth remembering).
+  - Signatories: O.T. Johnson, Pinney, Cleveland, Libby, Hodgkins, Chase,
+    Heizman, L.A. Improvement Co. (N.M./H.C. Witmer) — namesake candidates
+    for small streets in this area (cf. Witmer, Bixel entries).
+
+- **MR006-138 (Glassell's Subdivision, Lot 7 etc. Block 39 Hancock Survey,
+  recorded Dec. 27, 1884)** (2026-07): georeferenced via georef.py (anchors:
+  Court×Patton, Council×Welcome; scale 0.55 m/px). Echo Park/Filipinotown
+  edge. Findings to verify and apply:
+  - Unchanged since 1884 (citable primary for all): **Court, Council,
+    Welcome, Patton, Diamond** — an 1884 "planned" anchor for each entry.
+  - Old **State St** = modern **Colton Street** along its length (5.7 m at
+    midspan; the earlier "Rockwood west of Glendale" reading was a
+    junction-sampling artifact — see TRACT-RESEARCH.md precision protocol).
+  - Old **Home St** ≈ modern **Rockwood Street** — wins the trace vote (7/9)
+    but sits ~43 m off: the block was recut at a different angle, so treat as
+    "renamed AND realigned"; needs a map between 1884 and today to pin when.
+  - Old **Hobart St** = modern **Lake Shore Terrace** (21.9 m at midspan).
+  - Old **Waters St** = modern **Douglas Street** (3.0 m).
+  - Old **Lake St** = modern **Glendale Boulevard** alignment (1.9 m!) — old
+    Lake's diagonal is today's Glendale Blvd through here.
+  - Old **Aztec Ave**: UNRESOLVED. Automated traces put Belmont ~90 m off and
+    favored "vacated," but the trace endpoints were Claude-estimated pixels —
+    the same failure mode that misplaced other lines on this map — and the
+    attempted falsification fit was itself misplaced (its Belmont line missed
+    the Aztec drawing entirely). Redo with a human alignment via align.html
+    before concluding anything; Kenny's hunch is Aztec = Belmont.
+  - "Glendale Boulevard" lands at Patton's north continuation — Patton may be
+    a Glendale Blvd donor stretch; check.
+  - A. Glassell = Andrew Glassell (Glassell Park namesake) — this map is a
+    primary tie of the family to Filipinotown-area streets.
+
 ## Omnibus documents
 
 - **omnibus-1897-renaming.md** (Herald, Feb. 21, 1897 committee report):
@@ -107,21 +205,6 @@ Periodically sweep the whole file. Keep entries dated.
   it was ever platted as "Court Street" before Temple absorbed it — same
   Glassell's Subdivision (M.R. 6-138, sourced into Court Street's entry this
   pass) or an adjacent tract might show it. Not yet checked.
-- **Arnold Street = Miramar Street?** (2026-07): chasing a tract map for
-  Miramar St's Boylston-St corner (265 S Boylston / 1206 W Miramar) turned up
-  "Compromise Subdivision" / "Washington Tract" (M.R. 66-35, surveyed Mar.
-  1894, recorded May 1897) — bounded by Bixel St, Third St, Figueroa St, and
-  "Arnold St," with no "Miramar" or "Boylston" label anywhere on the sheet.
-  Arnold's position (south side of the block, opposite Third) is at least
-  geographically plausible for Miramar's alignment, but this is a pure
-  positional guess, not label- or lot-confirmed — the parcel's exact lot
-  wasn't checked against the plat before writing this up. Worth a NavigateLA
-  Lot-field check against the map before treating it as anything more than a
-  hunch. (Miramar's other tract lead, "Crownwood" M.B. 15-166, also came up
-  empty — two different unrelated filings share that page number, per the
-  usual Map Book gotcha, and neither the relevant "Crownwood" sheet nor its
-  neighbor labels "Miramar" either.)
-
 ## Sourced finds awaiting entries
 
 Also of note in the Feb. 27, 1874 article
@@ -179,8 +262,37 @@ can be added here as future leads warrant a CDNC sweep.)
     recorded Nov. 23, 1885) labels it "Pico" directly at Figueroa — earlier
     than the previously-cited 1903 Herald item. All three applied as primary
     sources. Miramar's two candidate tracts ("Crownwood" M.B. 15-166 and
-    "Compromise Subdivision" M.R. 66-35) were also pulled but came up empty —
-    see the open "Arnold Street = Miramar?" lead above.
+    "Compromise Subdivision" M.R. 66-35) were pulled too; neither labels
+    "Miramar" directly, but see the "align.html" entry below for how the
+    Compromise Subdivision one paid off anyway.
+  - **"align.html" map-alignment tool, batch 1 (MR066-035)** (2026-07,
+    resolved 2026-07, CORRECTED 2026-07): Kenny built a tool that overlays a
+    rotated tract-map image on the modern street map and exports a 3-point
+    pixel↔lat/lng alignment (`tracts/renders/*-alignment.json`). First run,
+    on the Compromise Subdivision/Washington Tract map (M.R. 66-35, surveyed
+    Mar. 1894): computed the affine transform from the 3 corner points and
+    initially checked only the plat's "Arnold St" label, concluding (wrongly)
+    that Arnold = modern Miramar St. Kenny caught this from his own careful
+    alignment — the sheet's "Third St" (north side of the block) and "Arnold
+    St" (south side) had been swapped. Re-verified by sampling multiple
+    points along each drawn boundary line (not just label positions) and
+    transforming all of them: the "Third St" line matches modern **Miramar
+    Street** to within single-digit meters at three independent points
+    (including landing almost exactly on Bixel's own recorded vertex next to
+    the real Miramar×Bixel corner), while the "Arnold St" line matches
+    modern **3rd Street** to within ~3-30m — both a much tighter fit than the
+    reverse pairing (~90-100m off). This also matches the independent
+    georef.py finding for this same sheet (see above) that had reached the
+    same conclusion. Corrected in Miramar Street's entry: the "Arnold St"
+    note/source was replaced with "Third St," and a note added that the
+    sheet's actual "Arnold St" is modern 3rd Street (which has no entry yet).
+    Bixel and Figueroa on the same sheet are unchanged names, already
+    anchored elsewhere or not yet due for their own entries. Lesson for the
+    next five alignment files: always cross-check a label match against
+    multiple points along the line, not just the label's own position, and
+    check both plausible pairings before concluding — see
+    TRACT-RESEARCH.md's "verifying a map-feature guess against reality"
+    caveat, which this repeats almost exactly.
   - **4th Place west of Hewitt**: Kenny's read of the downloaded Mills and
     Wicks tract suggested 4th Place (west of Hewitt) AND 4th St (east of
     Hewitt) were both once "Third St." Close re-examination of M.R. 13-87
